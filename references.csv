@@ -1,0 +1,50 @@
+title,date,url,author,country,category,reference,type
+Information Security Manual Guidelines for Cryptography,september 2024,https://www.cyber.gov.au/sites/default/files/2024-09/22.%20ISM%20-%20Guidelines%20for%20Cryptography%20%28September%202024%29.pdf,ACSC,australia,QRA,,PDF
+Securing Tomorrow Today: Transitioning to Post-Quantum Cryptography,november 2024,https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Crypto/PQC-joint-statement.pdf?__blob=publicationFile&v=5,BSI,EU,Transition,,PDF
+preparing your organization for the quantum threat to cryptography,february 2021,https://www.cyber.gc.ca/sites/default/files/cyber/publications/itsap00017-e.pdf,CCCS,canada,Transition,ITSAP.00.017,PDF
+becoming cryptographically agile,may 2022,https://www.cyber.gc.ca/sites/default/files/ITSAP40018-guidance-on-becoming-cryptographically-agile.pdf,CCCS,canada,Agile,ITSAP.40.018,PDF
+guidance for cryptographic algorithms to incorporate new standards,march 2024,https://www.cyber.gc.ca/sites/default/files/itsp.40.111_1-e.pdf,CCCS,canada,QRA,ITSP.40.111,PDF
+Strategy for Migrating to Automated Post-Quantum Cryptography Discovery and Inventory Tools,august 2024,https://www.cisa.gov/sites/default/files/2024-09/Strategy-for-Migrating-to-Automated-PQC-Discovery-and-Inventory-Tools.pdf,CCCS,canada,Discovery,,PDF
+COMMISSION RECOMMENDATION  of 11.4.2024  on a Coordinated Implementation Roadmap for the transition to Post-Quantum  Cryptography,April 2024,https://ec.europa.eu/newsroom/dae/redirection/document/104249,European Commission,EU,QRA,C_2024_2393_EN,PDF
+G7 CYBER EXPERT GROUP STATEMENT ON PLANNING FOR THE OPPORTUNITIES AND RISKS OF QUANTUM COMPUTING,September 2024,https://home.treasury.gov/system/files/136/G7-CYBER-EXPERT-GROUP-STATEMENT-PLANNING-OPPORTUNITIES-RISKS-QUANTUM-COMPUTING.pdf,G7,G7,Transition,,PDF
+Advisory on Addressing the Cybersecurity Risks Associated with Quantum,February 2024,https://www.mas.gov.sg/-/media/mas-media-library/regulation/circulars/trpd/mas-quantum-advisory/mas-quantum-advisory.pdf,Monetary Authority of Singapore,singapore,Guidelines,MAS/TCRS/2024/01',PDF
+Post-quantum cryptography: what comes next?,August 2024,  https://www.ncsc.gov.uk/pdfs/blog-post/post-quantum-cryptography-what-comes-next.pdf, NCSC (UK National Cyber Security Centre),UK,Transition,,PDF
+Next steps in preparing for post-quantum cryptography version 2.0. NCSC, August 2024, https://www.ncsc.gov.uk/pdfs/whitepaper/next-steps-preparing-for-post-quantum-cryptography.pdf, NCSC (UK National Cyber Security Centre),UK,Transition,,PDF
+Post Quantum Cryptography – Guidelines for Telecom Use Cases Version 2.0,October 2024,https://www.gsma.com/newsroom/wp-content/uploads//PQ.03-Post-Quantum-Cryptography-Guidelines-for-Telecom-Use-Cases-v2.0-2.pdf,GSMA,NA,Telecom,,PDF
+Quantum security technologies,March 2020,https://www.ncsc.gov.uk/pdfs/whitepaper/quantum-security-technologies.pdf,NCSC,UK,QKD,,PDF
+Position Paper on Quantum Key Distribution,, https://cyber.gouv.fr/sites/default/files/document/Quantum_Key_Distribution_Position_Paper.pdf,EU,,QKD,,PDF
+Planning for Post-Quantum Cryptography,August 2023,https://www.cyber.gov.au/sites/default/files/2023-08/PROTECT%20-%20Planning%20for%20Post-Quantum%20Cryptography%20%28August%202023%29.pdf,ACSC,australia,Transition,,PDF
+Transition to Post-Quantum Cryptography Standards,November 2024,https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf,NIST,US,QRA,NIST IR 8547 ipd,PDF
+Module-Lattice-Based Key-Encapsulation Mechanism Standard, August 2024,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf,NIST,US,QRA,FIPS 203,PDF
+Module-Lattice-Based Digital Signature Standard,August 2024,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf,NIST,US,QRA,FIPS 204,PDF
+Stateless Hash-Based Digital Signature Standard,August 2024,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf,NIST,US,QRA,FIPS 205,PDF
+Quantum Threat Timeline Report 2024,December 2024,https://globalriskinstitute.org/mp-files/quantum-threat-timeline-report-2024.pdf,Global Risk Institute,NA,Transition,,PDF
+The PQC Migration Handbook,December 2024,https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf,AIVDCWITNO,NL,Guidelines,,PDF
+PQC Transition in Hardware: Processors SoCs IoT Secure Element,November 2024,https://mjos.fi/doc/20241118-ausqrc-microchips.pdf, Marllu-Juhani O.Saarinen,Finland,Hardware,,PDF
+The Post-Quantum Cryptography Migration Starts Today,September 2024,https://www.tech.gov.sg/files/media/Reports/DGX_2024_Cyber_Working_Group_Report.pdf,MAS,SG,Transition,,PDF
+Post-Quantum Policy and Activities of the BSI, November 2024,https://www.creachlabs.fr/sites/default/files/public/media/document/2024-12/ecw2024-pqc-bashirikaveh-20241119.pdf,BSI,EU,Transition,,PDF
+Cryptographic security: Critical to Europe's digital sovereignty,November 2024,https://www.europarl.europa.eu/RegData/etudes/BRIE/2024/766237/EPRS_BRI(2024)766237_EN.pdf,European Parliament,EU,Transition,,PDF
+Post-Quantum Considerations for Operational Technology,October 2024,https://www.cisa.gov/sites/default/files/2024-10/Post-Quantum%20Considerations%20for%20Operational%20Technology%20%28508%29.pdf,CISA,US,Transition,,PDF
+POST-QUANTUM CRYPTOGRAPHY IN THE INDO-PACIFIC PROGRAM,April 2024,https://ocsc.com.au/wp-content/uploads/2024/04/PQCIP-Handbook.pdf,OCSC,Oceania,Transition,,PDF
+"NIST Releases First 3 Finalized Post-Quantum Encryption Standards","August 2024","https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards","NIST","US","Standards","FIPS 203, 204, 205",HTML
+"AWS Outlines Its Post-Quantum Cryptography Migration Plan","December 2024","https://www.infoq.com/news/2024/12/aws-post-quantum-cryptography/","AWS","US","Transition","AWS Plan",HTML
+"Post-Quantum Cryptography Preparedness 101","December 2024","https://www.isaca.org/resources/news-and-trends/isaca-now-blog/2024/post-quantum-cryptography-preparedness-101","ISACA","US",Transition,"ISACA Blog",HTML
+"Post-Quantum Cryptography: 15th International Workshop, PQCrypto 2024","June 2024","https://link.springer.com/book/10.1007/978-3-031-62743-9","PQCrypto Workshop","International","Research","PQCrypto 2024",HTML
+"Google's Quantum Chip and RSA","December 2024","https://www.theverge.com/2024/12/12/24319879/google-willow-cant-break-rsa-cryptography","The Verge","US","Media","The Verge",HTML
+"'Q Day' Is Coming. It's Time to Worry About Quantum Security.","October 2024","https://www.wsj.com/articles/q-day-is-coming-its-time-to-worry-about-quantum-security-ca88c576","Wall Street Journal","US","Transition","WSJ Article",HTML
+"Battle Begins to Stop Quantum Computers Smashing Cyber Defences","August 2024","https://www.thetimes.co.uk/article/battle-begins-to-stop-quantum-computers-smashing-cyber-defences-rzmlwqw7f","The Times","UK","Transition","The Times Article",HTML
+"Companies Prepare to Fight Quantum Hackers","August 2024","https://www.wsj.com/articles/companies-prepare-to-fight-quantum-hackers-c9fba1ae","Wall Street Journal","US","Transition","WSJ Article",HTML
+"US Nears Milestone in Race to Prevent Quantum Hacking","August 2024","https://www.ft.com/content/f602b685-8226-42b4-9336-e488c63c37bf","Financial Times","US","Transition","FT Article",HTML
+"Post-Quantum Cryptography: Securing Digital Communication in the Quantum Era","March 2024","https://arxiv.org/abs/2403.11741","Dr. G S Mamatha, Namya Dimri, Rasha Sinha","International","Telecom","arXiv Paper",HTML
+"Homomorphic Encryption Based on Post-Quantum Cryptography","February 2024","https://arxiv.org/abs/2402.14193","Abel C. H. Chen","International","Blockchain","arXiv Paper",HTML
+"The Security Performance Analysis of Blockchain System Based on Post-Quantum Cryptography","April 2024","https://arxiv.org/abs/2404.16837","Abel C. H. Chen","International","Blockchain","arXiv Paper",HTML
+"Towards Post-Quantum Blockchain: A Review on Blockchain Cryptography Resistant to Quantum Computing Attacks","February 2024","https://arxiv.org/abs/2402.00922","Tiago M. Fernandez-Carames, Paula Fraga-Lamas","International","Blockchain","arXiv Paper",HTML
+"Post-Quantum Cryptography Standardization","August 2024","https://en.wikipedia.org/wiki/NIST_Post-Quantum_Cryptography_Standardization","Wikipedia","International","Overview","Wikipedia Article",HTML
+"Post-Quantum Cryptography","August 2024","https://en.wikipedia.org/wiki/Post-quantum_cryptography","Wikipedia","International","Overview","Wikipedia Article",HTML
+"Sealsq 'Advancing' Field of Post-Quantum Cryptography","December 2024","https://markets.businessinsider.com/news/stocks/sealsq-advancing-field-of-post-quantum-cryptography-1034168759","Business Insider","International","QRA","Business Insider Article",HTML
+"What Can Be Done to Prepare for Post-Quantum Cryptography?","December 2024","https://www.eeworldonline.com/what-can-be-done-to-prepare-for-post-quantum-cryptography/","EE World Online","International","Transition","EE World Online Article",HTML
+"NIST Roadmap to Post-Quantum Cryptography: IR 8547 Report","November 2024","https://www.infosecglobal.com/posts/nist-post-quantum-cryptography-deadlines-ir-8547","InfoSec Global","US","Transition","InfoSec Global Article",HTML
+"Could Google's New Quantum Chip Mean Your Bitcoin Could Soon Be Hacked?","December 2024","https://www.investopedia.com/can-quantum-computing-revolutionize-crypto-8759455","Investopedia","US","Blockchain","Investopedia Article",HTML
+
+
+
