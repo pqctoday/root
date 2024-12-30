@@ -7,12 +7,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="script.js" defer></script>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
         th {
+            background-color: #f4f4f4;
             cursor: pointer;
+        }
+
+        th:hover {
+            background-color: #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
         }
     </style>
 </head>
 <body>
+    <h1>Transition to Post Quantum Cryptography</h1>
     <table border="1" id="outputTable">
         <thead>
             <tr>
@@ -31,3 +60,4 @@
     </table>
 </body>
 </html>
+
