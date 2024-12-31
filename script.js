@@ -124,11 +124,17 @@
       "Quantum Technology": "Explore the latest advancements in quantum technology."
     };
 
-    document.querySelectorAll('.carousel-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const topic = item.getAttribute('data-topic');
+       
+  document.querySelectorAll('.carousel-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const topic = item.getAttribute('data-topic');
+      console.log(topic)
+      if (topic === 'Quizz') {
+        window.location.href = '/sections/Quizz/index.html';
+      } else {
         document.getElementById('summary-title').textContent = topic;
         document.getElementById('summary-content').textContent = summaries[topic];
         document.getElementById('main-topic-summary').style.display = 'block';
-      });
+      }
     });
+  });

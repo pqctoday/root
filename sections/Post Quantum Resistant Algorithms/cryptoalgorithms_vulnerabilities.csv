@@ -1,11 +1,14 @@
-Crypto Algorithm,Effort to break with classical computing,Effort to break with quantum computing,Current size (bits),Max size (bits),Usages,Vulnerabilities
-AES-128,2^128,2^64,128,256,Encryption,"Vulnerable to Grover's algorithm on quantum computers, reducing security by half."
-SHA-256,2^256,2^128,256,512,Hashing,"Vulnerable to Grover's algorithm on quantum computers, reducing security by half."
-ECC-256,2^128,2^64,256,512,"Encryption, Key Exchange","Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."
-RSA-2048,2^112,2^56,2048,4096,"Encryption, Signature","Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."
-DSA-1024,2^64,2^32,1024,2048,Signature,"Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."
-DH-1024,2^64,2^32,1024,2048,Key Exchange,"Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."
-ML-DSA,2^256,2^256,256,512,Signature,"Currently no known vulnerabilities to quantum computing."
-ML-KEM,2^256,2^256,256,512,Key Exchange,"Currently no known vulnerabilities to quantum computing."
-SLH-DSA,2^256,2^256,256,512,Signature,"Currently no known vulnerabilities to quantum computing."
-HSS,2^256,2^256,256,512,Signature,"Currently no known vulnerabilities to quantum computing."
+Crypto Algorithm,Effort to break with classical computing,Effort to break with quantum computing,Current size (bits),Max size (bits),Usages,Vulnerabilities,Estimated logical qubits required (when known),Main Security Principle
+AES-128,2^128 operations,2^64 operations (Grover's algorithm),128,256,Encryption,"Grover's algorithm effectively halves the security level to 64 bits. Using AES-256 provides 128-bit quantum resistance.",Unknown,Symmetric-key cryptography (Substitution-permutation network)
+SHA-256,2^256 operations,2^128 operations (Grover's algorithm),256,512,Hashing,"Grover's algorithm reduces collision resistance to 128 bits. Transitioning to SHA-3 is recommended for long-term security.",Unknown,Cryptographic hash function (Merkle-Damgård construction)
+ECC-256,2^128 operations,Polynomial time (Shor's algorithm),256,512,"Encryption, Key Exchange","Shor's algorithm breaks ECC via the discrete logarithm problem. Transitioning to lattice-based or hash-based algorithms is required.","~2,300",Elliptic curve discrete logarithm problem
+RSA-2048,2^112 operations,Polynomial time (Shor's algorithm),2048,4096,"Encryption, Signature","Shor's algorithm efficiently factors large numbers, breaking RSA. Transition to post-quantum cryptography is essential.","~4,096",Integer factorization problem
+DSA-1024,2^64 operations,Polynomial time (Shor's algorithm),1024,2048,Signature,"Shor's algorithm compromises DSA via the discrete logarithm problem. Transitioning to SPHINCS+ is recommended.","~2,048",Discrete logarithm problem
+DH-1024,2^64 operations,Polynomial time (Shor's algorithm),1024,2048,Key Exchange,"Shor's algorithm breaks Diffie-Hellman key exchange. Adopting CRYSTALS-Kyber is advised.","~2,048",Discrete logarithm problem
+ChaCha20,2^256 operations,2^128 operations (Grover's algorithm),256,N/A,Encryption,"ChaCha20 remains secure under Grover's algorithm with 128-bit effective security.",Unknown,Stream cipher (Add-rotate-XOR (ARX) design)
+Salsa20,2^256 operations,2^128 operations (Grover's algorithm),256,N/A,Encryption,"Salsa20 shares similar quantum resistance as ChaCha20.",Unknown,Stream cipher (Add-rotate-XOR (ARX) design)
+CRYSTALS-Kyber or ML-KEM,Classical hardness assumed,Classical hardness assumed,Public Key: ~8000 bits,~17000 bits,Key Exchange,"Kyber is a lattice-based KEM considered quantum-resistant and a leading NIST candidate.",N/A,Lattice-based cryptography (Module Learning with Rounding (MLWR) problem)
+Dilithium or ML-DSA,Classical hardness assumed,Classical hardness assumed,Signature: ~2700 bits,~7000 bits,Signature,"Dilithium is a lattice-based signature scheme designed for quantum resistance and NIST standardization.",N/A,Lattice-based cryptography (Module Learning with Errors (MLWE) problem)
+Falcon or FN-DSA,Classical hardness assumed,Classical hardness assumed,Signature: ~900 bits,~1700 bits,Signature,"Falcon provides compact signatures and is designed for quantum resistance.",N/A,Lattice-based cryptography (Short Integer Solution (SIS) problem)
+SPHINCS+ or SLH-DSA,Classical hardness assumed,Classical hardness assumed,Signature: ~7800 bits,~17000 bits,Signature,"SPHINCS+ is a stateless, hash-based signature scheme, part of the NIST PQC standards.",N/A,Hash-based cryptography
+HSS,Classical hardness assumed,Classical hardness assumed,Signature: ~2700 bits,~10000 bits,Signature,"HSS (Hierarchical Signature System) is stateful and designed for quantum resistance.",N/A,Hash-based cryptography
