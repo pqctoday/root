@@ -1,0 +1,13 @@
+Standardisation Body,Description,URL,Country,Scope
+NIST,National Institute of Standards and Technology,https://www.nist.gov/,US,Standards (including cryptographic standards like FIPS 140 and cybersecurity frameworks)
+ISO,International Organization for Standardization,https://www.iso.org/,WW,Standards (including ISO 27001 for information security management and digital identity frameworks)
+ITU-T,Telecommunication Standardization Sector of ITU,https://www.itu.int/ITU-T/,International,Telecommunication standards including digital identity frameworks (e.g., X.509)
+Kantara Initiative,Industry consortium focused on digital identity interoperability,https://kantarainitiative.org/,International,Develops specifications and best practices for digital identity interoperability
+W3C,World Wide Web Consortium,https://www.w3.org/,International,"Develops open standards for the World Wide Web, including digital identity protocols (e.g., SAML)"
+OpenID Foundation,Non-profit organization promoting open standards for digital identity,https://openid.net/,International,Develops open standards for digital identity like OpenID Connect
+ICAO,International Civil Aviation Organization,https://www.icao.int/,International,"Standards for international civil aviation, including travel documents and digital identity"
+FIPS 201,Federal Information Processing Standard for PKI Cryptography,https://csrc.nist.gov/publications/detail?pub_id=800-201,US,Standard for public key cryptography used in digital identity management
+NIST SP 800-63,NIST Special Publication for Digital Identity Management,https://csrc.nist.gov/publications/detail?pub_id=800-63,US,Guidance for digital identity lifecycle management
+Sovrin Foundation,Non-profit organization focused on self-sovereign identity,https://sovrin.org/,International,Develops and promotes self-sovereign identity standards and technologies
+Hyperledger Aries,Open-source framework for building self-sovereign identity solutions,https://github.com/hyperledger/aries,International,Provides tools and libraries for implementing SSI solutions
+Trust Over IP Foundation,Non-profit organization focused on decentralized identity and data sovereignty,https://trustoverip.org/,International,Develops and promotes interoperable SSI solutions based on decentralized identifiers (DIDs)

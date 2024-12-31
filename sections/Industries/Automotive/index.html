@@ -3,60 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Threat on the automotive industry</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script src="script.js" defer></script>
+    <title>CSV Table Display</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
         table {
-            border-collapse: collapse;
             width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
-
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
+            text-align: left;
         }
-
         th {
             background-color: #f4f4f4;
-            cursor: pointer;
-        }
-
-        th:hover {
-            background-color: #ddd;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #f1f1f1;
         }
     </style>
 </head>
 <body>
-    <h1>Quantum Threat on the automotive industry</h1>
-    <table border="1" id="outputTable">
-        <thead>
-            <tr>
-                <th onclick="sortTable('title')">Title</th>
-                <th onclick="sortTable('date')">Date</th>
-                <th>URL</th>
-                <th onclick="sortTable('author')">Author</th>
-                <th onclick="sortTable('country')">Country</th>
-                <th>Category</th>
-                <th onclick="sortTable('reference')">Reference</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <div id="csvTable"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script>
+        function loadCSV(filePath) {
+            Papa.parse(filePath, {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    renderTable(results.data);
+                }
+            });
+        }
+
+        function renderTable(data) {
+            const tableDiv = document.getElementById('csvTable');
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            // Create header row
+            const headerRow = document.createElement('tr');
+            Object.keys(data[0]).forEach(key => {
+                const th = document.createElement('th');
+                th.textContent = key;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+
+            // Create data rows
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                Object.values(row).forEach(value => {
+                    const td = document.createElement('td');
+                    td.textContent = value;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            tableDiv.appendChild(table);
+        }
+
+        // Load the CSV file
+        document.addEventListener('DOMContentLoaded', () => {
+            const csvFilePath = 'standardisation_bodies_auto.csv'; // Update with the actual path to your CSV file
+            loadCSV(csvFilePath);
+        });
+    </script>
 </body>
 </html>

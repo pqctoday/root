@@ -1,7 +1,16 @@
-Country, Body,Description,URL,Scope
-US,NIST,National Institute of Standards and Technology,https://www.nist.gov/,Standards
-US,NSA,National Security Agency,https://www.nsa.gov/,Security
-US,CISA,Cybersecurity and Infrastructure Security Agency,https://www.cisa.gov/,Security
-EU,ENISA,European Union Agency for Cybersecurity,https://www.enisa.europa.eu/,Security
-France,ANSSI,National Cybersecurity Agency of France,https://www.ssi.gouv.fr/,Security
-
+Country,Body, Long name, Description,URL,Scope
+United States,CISA,Cybersecurity and Infrastructure Security Agency (CISA),"Cybersecurity risk management, incident response, infrastructure protection",cisa.gov
+China,CNCISC, National Computer Network and Information Security Supervision Management Office (CNCISC),"Cybersecurity supervision and management, critical information infrastructure protection",https://www.google.com/url?sa=E&source=gmail&q=ncscc.gov.cn
+United Kingdom,NCSC,National Cyber Security Centre (NCSC),"Cyber security advice, guidance, and support for government and the private sector",https://www.google.com/url?sa=E&source=gmail&q=ncsc.gov.uk
+Russia,FSB,Federal Security Service (FSB),"Counter-intelligence, border security, and counterterrorism, including cybersecurity",https://www.google.com/url?sa=E&source=gmail&q=fsb.ru
+Netherlands,NCSC,National Cyber Security Centre (NCSC-NL),"Cybersecurity advice, incident response, and research",https://www.google.com/url?sa=E&source=gmail&q=ncsc.nl
+France,ANSSI,Agence nationale de la sécurité des systèmes d'information (ANSSI),"Cybersecurity policy, incident response, and certification",ssi.gouv.fr
+Germany,BSI,Federal Office for Information Security (BSI),"IT security advice, certification, and incident response",https://www.google.com/url?sa=E&source=gmail&q=bsi.bund.de
+Canada,CCCS,Canadian Centre for Cyber Security (CCCS),"Cybersecurity advice, incident response, and research",https://www.google.com/url?sa=E&source=gmail&q=cyber.gc.ca
+Japan,NISC,National Center of Incident Readiness and Strategy for Cybersecurity (NISC),"Cybersecurity policy, incident response, and international cooperation",https://www.google.com/url?sa=E&source=gmail&q=nisc.go.jp
+Australia,ACSC,Australian Cyber Security Centre (ACSC),"Cybersecurity advice, incident response, and threat intelligence",https://www.google.com/url?sa=E&source=gmail&q=cyber.gov.au
+Israel,NCD,National Cyber Directorate (NCD),"Cybersecurity policy, research, and development",https://www.google.com/url?sa=E&source=gmail&q=gov.il/he/departments/national-cyber-directorate
+South Korea,KISA, Korea Internet & Security Agency (KISA),"Cybersecurity policy, incident response, and education",https://www.google.com/url?sa=E&source=gmail&q=kisa.or.kr
+India,CERT-In,Indian Computer Emergency Response Team (CERT-In),"Cybersecurity incident response and threat analysis",https://www.google.com/url?sa=E&source=gmail&q=cert-in.org.in
+Singapore,CSA,Cyber Security Agency of Singapore (CSA),"Cybersecurity policy, risk management, and incident response",https://www.google.com/url?sa=E&source=gmail&q=csa.gov.sg
+Brazil,Anatel,National Agency for Telecommunications (Anatel),"Telecommunications regulation, including cybersecurity aspects",https://www.google.com/url?sa=E&source=gmail&q=anatel.gov.br

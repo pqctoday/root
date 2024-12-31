@@ -1,0 +1,10 @@
+Standardisation Body,Description,URL,Country,Scope
+SAE International,Society of Automotive Engineers,https://www.sae.org/,WW,"Standards for automotive engineering, including vehicle safety, performance, and emerging technologies"
+UNECE,United Nations Economic Commission for Europe,https://unece.org/,Europe,"Global technical regulations for vehicles, including cybersecurity"
+ISO,International Organization for Standardization,https://www.iso.org/,WW,Standards (including ISO 26262 for functional safety in road vehicles)"
+IEEE,Institute of Electrical and Electronics Engineers,https://www.ieee.org/,WW,"Standards for electrical, electronics, and computer engineering (relevant for vehicle electrification and ADAS)"
+3GPP,3rd Generation Partnership Project,https://www.3gpp.org/,WW,"Standards for mobile telecommunications, crucial for connected and autonomous vehicles"
+ETSI,European Telecommunications Standards Institute,https://www.etsi.org/,Europe,"Develops standards for information and communication technologies, crucial for V2X communication"
+AUTOSAR,AUTomotive Open System Architecture,https://www.autosar.org/,WW,"Industry-wide standards for automotive E/E architectures"
+5G Automotive Association (5GAA),Industry association focused on promoting the development and deployment of 5G cellular technology for connected and autonomous vehicles,https://5gaa.org/,WW,5G technology for connected and autonomous vehicles
+Car Connectivity Consortium (CCC),Cross-industry organization focused on developing and promoting Bluetooth® technology for automotive applications,https://www.carconnectivityconsortium.org/,WW,Bluetooth® technology for automotive applications
