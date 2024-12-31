@@ -18,6 +18,33 @@
         th {
             background-color: #f4f4f4;
         }
+        body {
+            font-family: sans-serif;
+        }
+
+        #quiz-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        #quiz-selection, #quiz-area, #results-area {
+            margin-bottom: 20px;
+        }
+
+        #answer-area label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -27,5 +54,33 @@
     <p>As quantum computing technology advances, it poses a significant threat to current cryptographic systems. Understanding the quantum threat is crucial for preparing and adapting to these changes. Educating yourself on this topic ensures that you are aware of the potential risks and the necessary steps to mitigate them.</p>
     <p>This quiz is designed to help you check your understanding of the main concepts related to the quantum threat. By taking this quiz, you can assess your knowledge and identify areas where you may need further study.</p>
 </section>
+
+<div id="quiz-container">
+    <div id="quiz-selection">
+        <h1>Select a Quiz</h1>
+        <select id="topic-dropdown">
+            <option value="">Select Topic</option>
+        </select>
+        <select id="subtopic-dropdown" disabled>
+            <option value="">Select Subtopic</option>
+        </select>
+        <button id="start-quiz-button" disabled>Start Quiz</button>
+    </div>
+
+    <div id="quiz-area" style="display: none;">
+        <div id="question-area"></div>
+        <div id="answer-area"></div>
+        <button id="next-question-button" disabled>Next Question</button>
+        <button id="submit-quiz-button" style="display: none;">Submit Quiz</button>
+    </div>
+
+    <div id="results-area" style="display: none;">
+        <h2>Your Score:</h2>
+        <p id="score"></p>
+        <button id="restart-button">Restart</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

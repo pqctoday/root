@@ -1,0 +1,11 @@
+question,answer1,answer2,answer3,answer4,correct_answers
+What is the capital of France?,London,Berlin,Paris,Madrid,3
+Select all fruits:,Apple,Carrot,Banana,Broccoli,1;3
+What is your name?, , , , ,
+Which of these are mammals?,Dog,Cat,Fish,Snake,1;2
+What colors make purple?,Red,Blue,Yellow,Orange,1;2
+Select all that apply: planets in our solar system,Earth,Mars,Sun,Jupiter,1;2;4
+When was Javascript created?,1995,1985,2005,2015,1
+Is development fun?, Yes, No, Maybe, I don't know, 
+Choose the correct statement:,1+1=3,4/2=2,5-2=4,3*3=6,2
+Which programming language is this quiz written in?,HTML,CSS,JavaScript,Python,3
