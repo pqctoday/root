@@ -6,42 +6,22 @@
     <title>Software Supply Chain</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="script.js" defer></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #f4f4f4;
-            cursor: pointer;
-        }
-
-        th:hover {
-            background-color: #ddd;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <h1>Software Supply Chain</h1>
+<h1>Software Supply Chain</h1>
+<section>
+    <h2>Summary</h2>
+    <p>The software supply chain is a critical aspect of modern software development, involving the sourcing, building, and delivering of software products. With the advent of quantum computing, there are emerging threats that could compromise the integrity and security of the software supply chain, particularly in relation to code signing keys.</p>
+</section>
+<section>
+    <h2>Detailed Explanation</h2>
+    <p>Quantum computing poses a significant threat to the software supply chain due to its potential to break traditional cryptographic algorithms. Code signing keys, which are used to verify the authenticity and integrity of software, are particularly vulnerable. If these keys are compromised, malicious actors could sign and distribute malicious software, leading to widespread security breaches.</p>
+    <p>Current cryptographic algorithms, such as RSA and ECC, rely on the difficulty of factoring large numbers or solving discrete logarithm problems. Quantum computers, with their ability to perform complex calculations at unprecedented speeds, could solve these problems efficiently using algorithms like Shor's algorithm. This would render traditional code signing methods obsolete and necessitate the adoption of quantum-resistant cryptographic techniques.</p>
+    <p>To mitigate these risks, it is essential for organizations to stay informed about advancements in quantum computing and to begin transitioning to quantum-resistant cryptographic algorithms. This proactive approach will help ensure the continued security and integrity of the software supply chain in the face of emerging quantum threats.</p>
+</section>
+    <h1>References</h1>
     <table border="1" id="outputTable">
         <thead>
             <tr>
@@ -58,5 +38,8 @@
         <tbody>
         </tbody>
     </table>
+    <footer>
+        <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
+    </footer>
 </body>
 </html>

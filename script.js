@@ -111,3 +111,24 @@
       }
     });
 
+    const summaries = {
+      "Quizz": "Test your knowledge with our Post Quantum Cryptography quizzes.",
+      "Threats": "Learn about the potential threats posed by quantum computing to current cryptographic systems.",
+      "Protocols": "Explore the protocols designed to secure communications in a post-quantum world.",
+      "Standardization Bodies": "Discover the organizations working on standardizing post-quantum cryptographic algorithms.",
+      "Countries": "See how different countries are preparing for the quantum future.",
+      "Industries": "Find out how various industries are adapting to post-quantum cryptography.",
+      "Post Quantum Resistant Algorithms": "Understand the algorithms that are resistant to quantum attacks.",
+      "Quantum Cryptography": "Dive into the world of quantum cryptography and its applications.",
+      "Certificates Formats": "Learn about the new certificate formats designed for post-quantum security.",
+      "Quantum Technology": "Explore the latest advancements in quantum technology."
+    };
+
+    document.querySelectorAll('.carousel-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const topic = item.getAttribute('data-topic');
+        document.getElementById('summary-title').textContent = topic;
+        document.getElementById('summary-content').textContent = summaries[topic];
+        document.getElementById('main-topic-summary').style.display = 'block';
+      });
+    });
