@@ -16,6 +16,7 @@
       background-color: #f4f4f9;
     }
 
+    /* MAIN CAROUSEL STYLES */
     .carousel-container {
       width: 80%;
       margin: 20px auto;
@@ -114,29 +115,42 @@
       align-items: center;
     }
 
-    /* Subtopic carousel title uses space-between
-       so the subtopic arrows can be on each side */
+    /* Subtopic carousel title: position relative for absolute arrows, center the H2 */
     .subtopic-carousel .carousel-title {
+      position: relative;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       margin-top: 20px;
-      padding: 0 20px;
-      position: relative; /* If you want absolute-positioned arrows */
+      margin-bottom: 10px;
     }
 
-    /* Different classes for subtopic arrows so they don't overlap text */
+    /* Subtopic arrows: absolute, same style & alignment as main carousel */
     .subtopic-carousel .carousel-button.subtopic-prev,
     .subtopic-carousel .carousel-button.subtopic-next {
-      position: static; /* No absolute positioning */
-      transform: none;
-      margin: 0 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       background-color: #333;
       color: #fff;
       border: none;
       border-radius: 5px;
       padding: 10px 15px;
       cursor: pointer;
+      z-index: 10;
+    }
+
+    /* Left/right positions for subtopic arrows */
+    .subtopic-carousel .carousel-button.subtopic-prev {
+      left: 10px;
+    }
+    .subtopic-carousel .carousel-button.subtopic-next {
+      right: 10px;
+    }
+
+    /* Center H2 in subtopic carousel */
+    .subtopic-carousel .carousel-title h2 {
+      margin: 0 auto;
     }
 
     .subtopic-carousel .carousel {
@@ -159,6 +173,7 @@
       background: #f4f4f9;
     }
 
+    /* NAVIGATE BUTTON */
     .link-button {
       margin-top: 20px;
       padding: 10px 20px;
@@ -168,13 +183,14 @@
       border-radius: 5px;
       cursor: pointer;
       font-size: 16px;
-      display: none; /* Hidden by default, shown upon subtopic selection */
+      display: none; /* hidden until a subtopic is selected */
     }
 
     .link-button:hover {
       background-color: #0056b3;
     }
 
+    /* MEDIA QUERIES */
     @media (max-width: 768px) {
       .carousel-container {
         width: 100%;
@@ -275,14 +291,14 @@
   <!-- SUBTOPIC CAROUSEL -->
   <div class="subtopic-carousel" id="subtopic-carousel">
     <div class="carousel-title">
-      <!-- Different classes for subtopic prev/next -->
+      <!-- Absolute-positioned arrows for subtopic carousel -->
       <button class="carousel-button subtopic-prev">&#10094;</button>
       <h2>Subtopics</h2>
       <button class="carousel-button subtopic-next">&#10095;</button>
     </div>
     <div class="carousel">
       <div class="carousel-track" id="subtopic-track">
-        <!-- Subtopics will be dynamically populated -->
+        <!-- Subtopics will be dynamically populated here -->
       </div>
     </div>
   </div>
@@ -291,23 +307,25 @@
   <button class="link-button" id="navigate-button">Go to Page</button>
 
   <script>
-    // MAIN CAROUSEL
+    // ===== MAIN TOPIC CAROUSEL =====
     const carouselTrack = document.querySelector('.carousel-track');
     const prevButton = document.querySelectorAll('.carousel-title .prev')[0];
     const nextButton = document.querySelectorAll('.carousel-title .next')[0];
     const items = Array.from(carouselTrack.children);
-
     let currentIndex = 0;
+
     function updateCarousel() {
       const width = items[0].offsetWidth;
       carouselTrack.style.transform = `translateX(-${currentIndex * width}px)`;
     }
+
     prevButton.addEventListener('click', () => {
       if (currentIndex > 0) {
         currentIndex--;
         updateCarousel();
       }
     });
+
     nextButton.addEventListener('click', () => {
       if (currentIndex < items.length - 1) {
         currentIndex++;
@@ -315,19 +333,17 @@
       }
     });
 
-    // SUBTOPIC CAROUSEL
+    // ===== SUBTOPIC CAROUSEL =====
     const subtopicCarousel = document.getElementById('subtopic-carousel');
     const subtopicTrack = document.getElementById('subtopic-track');
-    // Updated selectors for subtopic arrows
     const subtopicPrevButton = document.querySelectorAll('.subtopic-carousel .subtopic-prev')[0];
     const subtopicNextButton = document.querySelectorAll('.subtopic-carousel .subtopic-next')[0];
     const navigateButton = document.getElementById('navigate-button');
-
     let subtopicIndex = 0;
     let selectedTopic = "";
     let selectedSubtopic = "";
 
-    // Dictionary updated to match "Certificates Formats" key
+    // Dictionary updated to match "Certificates Formats"
     const subtopics = {
       "Threats": ["Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
       "Protocols": ["SSH", "TLS", "IPSEC"],
@@ -336,19 +352,18 @@
       "Industries": ["Telecom", "Automotive", "Banking", "Government", "Enterprises"],
       "Post Quantum Resistant Algorithms": ["ML-KEM", "ML-DSA", "SLH-DSA"],
       "Quantum Cryptography": ["QRNG", "QKD"],
-      "Certificates Formats": ["Pure", "Hybrid", "Composite"],
-      // "PQC Lab": ["OQS", "EJBCA", "OpenSSL", "OpenSSH", "OpenVPN", "OpenSwan", "StrongSwan"] // Example only
+      "Certificates Formats": ["Pure", "Hybrid", "Composite"]
     };
 
     function updateSubtopics(topic) {
       subtopicTrack.innerHTML = "";
       if (subtopics[topic]) {
-        subtopics[topic].forEach(subtopic => {
+        subtopics[topic].forEach(sub => {
           const subtopicItem = document.createElement('div');
           subtopicItem.className = 'carousel-item';
-          subtopicItem.textContent = subtopic;
+          subtopicItem.textContent = sub;
           subtopicItem.addEventListener('click', () => {
-            selectedSubtopic = subtopic;
+            selectedSubtopic = sub;
             navigateButton.textContent = `Go to ${selectedTopic} / ${selectedSubtopic}`;
             navigateButton.style.display = 'block';
           });
@@ -382,7 +397,7 @@
     items.forEach(item => {
       item.addEventListener('click', () => {
         selectedTopic = item.getAttribute('data-topic');
-        // Reset the subtopic index whenever a new topic is selected
+        // Reset the subtopic index when picking a new topic
         subtopicIndex = 0;
 
         // Show the subtopic carousel
@@ -395,7 +410,7 @@
       });
     });
 
-    // NAVIGATE BUTTON
+    // ===== NAVIGATE BUTTON =====
     navigateButton.addEventListener('click', () => {
       if (selectedTopic && selectedSubtopic) {
         const path = `/sections/${selectedTopic}/${selectedSubtopic}/index.html`;

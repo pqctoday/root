@@ -113,21 +113,53 @@
             align-items: center;
         }
 
-  
-
         .subtopic-carousel .carousel-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Use space-between for better button spacing */
-    margin-top: 20px;
-    padding: 0 20px; /* Add padding to create space around buttons */
-}
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .subtopic-carousel .carousel-title .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .subtopic-carousel .carousel-title .prev {
+            left: 10px;
+        }
+
+        .subtopic-carousel .carousel-title .next {
+            right: 10px;
+        }
 
         .subtopic-carousel .carousel {
             overflow-x: auto;
             display: flex;
             justify-content: flex-start;
             scroll-behavior: smooth;
+        }
+
+        #subtopic-track {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next row */
+            justify-content: center; /* Center align the items in both rows */
+            gap: 10px; /* Add spacing between items */
+        }
+
+        .subtopic-carousel .carousel-item {
+            flex: 0 1 calc(50% - 20px); /* Adjust width for two items per row */
+            margin: 10px; /* Maintain spacing */
+            box-sizing: border-box; /* Ensure padding and border are included in the width */
         }
 
         .subtopic-carousel .carousel::-webkit-scrollbar {
@@ -211,9 +243,9 @@
 <body>
     <div class="carousel-container">
         <div class="carousel-title">
-            <button class="carousel-button prev">&#10094;</button>
+            <button class="carousel-button prev" style="left: 10px;">&#10094;</button>
             <h1>Choose a Topic</h1>
-            <button class="carousel-button next">&#10095;</button>
+            <button class="carousel-button next" style="right: 10px;">&#10095;</button>
         </div>
         <div class="carousel">
             <div class="carousel-track">
@@ -255,9 +287,7 @@
 
     <div class="subtopic-carousel" id="subtopic-carousel">
         <div class="carousel-title">
-            <button class="carousel-button prev">&#10094;</button>
             <h2>Subtopics</h2>
-            <button class="carousel-button next">&#10095;</button>
         </div>
         <div class="carousel">
             <div class="carousel-track" id="subtopic-track">
@@ -272,8 +302,6 @@
         const carouselTrack = document.querySelector('.carousel-track');
         const prevButton = document.querySelectorAll('.carousel-title .prev')[0];
         const nextButton = document.querySelectorAll('.carousel-title .next')[0];
-        const subtopicPrevButton = document.querySelectorAll('.subtopic-carousel .prev')[0];
-        const subtopicNextButton = document.querySelectorAll('.subtopic-carousel .next')[0];
         const items = Array.from(carouselTrack.children);
         const subtopicCarousel = document.getElementById('subtopic-carousel');
         const subtopicTrack = document.getElementById('subtopic-track');
@@ -371,3 +399,4 @@
     </script>
 </body>
 </html>
+
