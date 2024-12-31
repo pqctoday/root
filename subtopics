@@ -1,9 +1,0 @@
-            "Threats": ["Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
-            "Standardization Bodies": ["NIST", "IETF", "NSA"],
-            "Certificates Format": ["Pure", "Hybrid", "Composite"],
-            "Protocols": ["SSH", "TLS", "IPSEC"],
-            "Countries": ["US", "Europe", "Canada", "Australia", "Singapore", "Germany"],
-            "Industries": ["Telecom", "Automotive", "Banking", "Government", "Enterprises"],
-            "Post Quantum Resistant Algorithms": ["ML-KEM", "ML-DSA", "SLH-DSA"],
-            "Quantum Cryptography": ["QRNG", "QKD"]
-            
