@@ -1,5 +1,7 @@
 question,answer1,answer2,answer3,answer4,correct_answers,dummy
-"What is the capital of France?"",London,Berlin,Paris,Madrid,3,dummy
-"Select all fruits:"",Apple,Carrot,Banana,Broccoli,1;3,dummy
-"Which of these are mammals?",Dog,Cat,Fish,Snake,1;2,dummy
-"What colors make purple?",Red,Blue,Yellow,Orange,1;2,dummy
+How is SSH affected by quantum computing threats?,SSH is fully secure against quantum threats,SSH's key exchange is vulnerable to Shor's algorithm,SSH's encryption is vulnerable to Grover's algorithm,SSH is not affected by quantum computing,2,dummy
+What are the primary components of SSH that would be impacted by a quantum computer?,Symmetric encryption like AES,Key exchange algorithms like RSA and ECDH,Digital signatures used for authentication,Key exchange and digital signatures,4,dummy
+Can symmetric encryption in SSH be broken by quantum computers?,Yes, but with halved security due to Grover's algorithm,No, symmetric encryption is quantum-proof,Only if the key size is small,Only if combined with weak public-key cryptography,1,dummy
+What quantum-safe solutions exist for securing SSH?,Continue using RSA and DSA,Use lattice-based algorithms like Kyber for key exchange,Adopt post-quantum digital signatures like Dilithium,Use both Kyber and Dilithium as quantum-safe replacements,4,dummy
+What steps should organizations take now to mitigate quantum threats to SSH?,Perform a cryptographic inventory,Transition to hybrid key exchange mechanisms,Adopt post-quantum algorithms as they become standardized,All of the above,4,dummy
+

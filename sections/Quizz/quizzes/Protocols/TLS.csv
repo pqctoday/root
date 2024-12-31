@@ -1,2 +1,6 @@
 question,answer1,answer2,answer3,answer4,correct_answers,dummy
-Which programming language is this quiz written in?,HTML,CSS,JavaScript,Python,3,dummy
+How does quantum computing pose a threat to TLS?,Quantum computers can decrypt AES-encrypted data,Quantum computers can break RSA and ECDH used in key exchanges,Quantum computers can spoof IP addresses,Quantum computers can bypass TLS entirely,2,dummy
+What part of the TLS handshake is most vulnerable to quantum attacks?,Symmetric key encryption,Asymmetric key exchange like RSA and ECDH,Data compression methods,Server-side certificates,2,dummy
+What quantum-resistant algorithms are suitable replacements for securing TLS?,Kyber for key exchange and Dilithium for signatures,Continue using RSA and ECDH,Quantum Key Distribution (QKD) for all TLS layers,Only use hybrid classical-quantum algorithms,1,dummy
+Can Grover's algorithm break symmetric encryption in TLS?, "Yes, but with halved security strength requiring larger keys","No, Grover's algorithm does not affect TLS",Only for specific symmetric algorithms like AES,Only if used with RSA key exchange,1,dummy
+What steps should organizations take to make TLS quantum-safe?,Adopt hybrid key exchange mechanisms,Implement post-quantum cryptography in libraries,Test and validate quantum-resistant TLS configurations,All of the above,4,dummy
