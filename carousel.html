@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topic Carousel</title>
+    <title>Topic and Subtopic Carousel</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,7 +21,7 @@
             margin: 20px auto;
             text-align: center;
             position: relative;
-            padding: 0 40px; /* Increase padding to prevent items from being cut off */
+            padding: 0 40px;
         }
 
         .carousel-title {
@@ -39,25 +39,38 @@
             background-color: #333;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 15px;
             cursor: pointer;
             border-radius: 5px;
             z-index: 10;
         }
 
         .carousel-title .prev {
-            left: -60px;
+            left: 10px;
         }
 
         .carousel-title .next {
-            right: -60px;
+            right: 10px;
         }
 
         .carousel {
+            overflow-x: auto;
             display: flex;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
+            justify-content: flex-start;
+            scroll-behavior: smooth;
+        }
+
+        .carousel::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .carousel::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 3px;
+        }
+
+        .carousel::-webkit-scrollbar-track {
+            background: #f4f4f9;
         }
 
         .carousel-track {
@@ -105,20 +118,61 @@
             align-items: center;
             justify-content: center;
             margin-top: 20px;
+            position: relative;
         }
 
         .subtopic-carousel .carousel-title .carousel-button {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 10;
         }
 
         .subtopic-carousel .carousel-title .prev {
-            left: -60px;
+            left: 10px;
         }
 
         .subtopic-carousel .carousel-title .next {
-            right: -60px;
+            right: 10px;
+        }
+
+        .subtopic-carousel .carousel {
+            overflow-x: auto;
+            display: flex;
+            justify-content: flex-start;
+            scroll-behavior: smooth;
+        }
+
+        #subtopic-track {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next row */
+            justify-content: center; /* Center align the items in both rows */
+            gap: 10px; /* Add spacing between items */
+        }
+
+        .subtopic-carousel .carousel-item {
+            flex: 0 1 calc(50% - 20px); /* Adjust width for two items per row */
+            margin: 10px; /* Maintain spacing */
+            box-sizing: border-box; /* Ensure padding and border are included in the width */
+        }
+
+        .subtopic-carousel .carousel::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .subtopic-carousel .carousel::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 3px;
+        }
+
+        .subtopic-carousel .carousel::-webkit-scrollbar-track {
+            background: #f4f4f9;
         }
 
         .link-button {
@@ -136,14 +190,62 @@
             background-color: #0056b3;
         }
 
+        @media (max-width: 768px) {
+            .carousel-container {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .carousel-item {
+                min-width: 150px;
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .carousel-item img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .carousel-title .carousel-button {
+                padding: 5px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-title h1, .carousel-title h2 {
+                font-size: 16px;
+            }
+
+            .carousel-item {
+                min-width: 120px;
+                margin: 3px;
+                padding: 5px;
+            }
+
+            .carousel-item img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .carousel-title .prev,
+            .carousel-title .next {
+                top: auto;
+                bottom: 10px;
+            }
+
+            .carousel-title .carousel-button {
+                padding: 5px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="carousel-container">
         <div class="carousel-title">
-            <button class="carousel-button prev">&#10094;</button>
+            <button class="carousel-button prev" style="left: 10px;">&#10094;</button>
             <h1>Choose a Topic</h1>
-            <button class="carousel-button next">&#10095;</button>
+            <button class="carousel-button next" style="right: 10px;">&#10095;</button>
         </div>
         <div class="carousel">
             <div class="carousel-track">
@@ -185,9 +287,7 @@
 
     <div class="subtopic-carousel" id="subtopic-carousel">
         <div class="carousel-title">
-            <button class="carousel-button prev">&#10094;</button>
             <h2>Subtopics</h2>
-            <button class="carousel-button next">&#10095;</button>
         </div>
         <div class="carousel">
             <div class="carousel-track" id="subtopic-track">
@@ -212,14 +312,14 @@
 
         const subtopics = {
             "Threats": ["Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
-            "Standardization Bodies": ["NIST", "IETF", "NSA","CISA","BSI","ANSSI","GSMA"],
+            "Standardization Bodies": ["NIST", "IETF", "NSA", "CISA", "BSI", "ANSSI", "GSMA"],
             "Certificates Format": ["Pure", "Hybrid", "Composite"],
             "Protocols": ["SSH", "TLS", "IPSEC"],
             "Countries": ["US", "Europe", "Canada", "Australia", "Singapore", "Germany"],
             "Industries": ["Telecom", "Automotive", "Banking", "Government", "Enterprises"],
             "Post Quantum Resistant Algorithms": ["ML-KEM", "ML-DSA", "SLH-DSA"],
             "Quantum Cryptography": ["QRNG", "QKD"],
-            "PQC Lab": ["OQS,EJBCA,OpenSSL,OpenSSH,OpenVPN,OpenSwan,StrongSwan"]
+            "PQC Lab": ["OQS", "EJBCA", "OpenSSL", "OpenSSH", "OpenVPN", "OpenSwan", "StrongSwan"]
         };
 
         let selectedTopic = "";
@@ -272,7 +372,10 @@
         let subtopicIndex = 0;
         function updateSubtopicCarousel() {
             const width = subtopicTrack.children[0]?.offsetWidth || 0;
-            subtopicTrack.style.transform = `translateX(-${subtopicIndex * width}px)`;
+            subtopicTrack.parentElement.scrollTo({
+                left: subtopicIndex * width,
+                behavior: 'smooth',
+            });
         }
 
         subtopicPrevButton.addEventListener('click', () => {
@@ -298,55 +401,4 @@
     </script>
 </body>
 </html>
-<style>
-    @media (max-width: 768px) {
-        .carousel-container {
-            width: 100%;
-        }
 
-        .carousel-title .carousel-button {
-            padding: 5px 10px;
-        }
-
-        .carousel-item {
-            min-width: 150px;
-            margin: 5px;
-            padding: 10px;
-        }
-
-        .carousel-item img {
-            width: 60px;
-            height: 60px;
-        }
-
-        .link-button {
-            width: 100%;
-            padding: 10px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .carousel-title h1, .carousel-title h2 {
-            font-size: 18px;
-        }
-
-        .carousel-title .carousel-button {
-            padding: 5px;
-        }
-
-        .carousel-item {
-            min-width: 120px;
-            margin: 5px;
-            padding: 5px;
-        }
-
-        .carousel-item img {
-            width: 50px;
-            height: 50px;
-        }
-
-        .link-button {
-            padding: 8px;
-        }
-    }
-</style>

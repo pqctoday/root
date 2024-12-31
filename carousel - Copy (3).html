@@ -118,6 +118,30 @@
             align-items: center;
             justify-content: center;
             margin-top: 20px;
+            position: relative;
+        }
+
+
+.subtopic-carousel .carousel-title .carousel-button {
+    position: absolute;
+    top: 33%; /* Align arrows to match the main topic's visual alignment */
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+
+        .subtopic-carousel .carousel-title .prev {
+            left: 10px; /* Align with Choose Topic */
+        }
+
+        .subtopic-carousel .carousel-title .next {
+            right: 10px; /* Align with Choose Topic */
         }
 
         .subtopic-carousel .carousel {
@@ -367,5 +391,4 @@
         });
     </script>
 </body>
-</html>
 </html>

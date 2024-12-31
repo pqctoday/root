@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topic and Subtopic Carousel</title>
+    <title>Topic Carousel</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,7 +21,7 @@
             margin: 20px auto;
             text-align: center;
             position: relative;
-            padding: 0 40px;
+            padding: 0 40px; /* Increase padding to prevent items from being cut off */
         }
 
         .carousel-title {
@@ -33,45 +33,47 @@
         }
 
         .carousel-title .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            z-index: 10;
-        }
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
 
-        .carousel-title .prev {
-            left: 10px;
-        }
+.carousel-title .prev {
+    left: 10px; /* Move closer to the center */
+}
 
-        .carousel-title .next {
-            right: 10px;
-        }
+.carousel-title .next {
+    right: 10px; /* Move closer to the center */
+}
 
-        .carousel {
-            overflow-x: auto;
-            display: flex;
-            justify-content: flex-start;
-            scroll-behavior: smooth;
-        }
 
-        .carousel::-webkit-scrollbar {
-            height: 6px;
-        }
+.carousel {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    display: flex;
+    justify-content: flex-start;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
 
-        .carousel::-webkit-scrollbar-thumb {
-            background-color: #ccc;
-            border-radius: 3px;
-        }
+.carousel::-webkit-scrollbar {
+    height: 6px;
+}
 
-        .carousel::-webkit-scrollbar-track {
-            background: #f4f4f9;
-        }
+.carousel::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #f4f4f9;
+}
+
 
         .carousel-track {
             display: flex;
@@ -107,6 +109,7 @@
             display: none;
         }
 
+        
         .subtopic-carousel.active {
             display: flex;
             flex-direction: column;
@@ -120,24 +123,18 @@
             margin-top: 20px;
         }
 
-        .subtopic-carousel .carousel {
-            overflow-x: auto;
-            display: flex;
-            justify-content: flex-start;
-            scroll-behavior: smooth;
+        .subtopic-carousel .carousel-title .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
-        .subtopic-carousel .carousel::-webkit-scrollbar {
-            height: 6px;
+        .subtopic-carousel .carousel-title .prev {
+            left: -60px;
         }
 
-        .subtopic-carousel .carousel::-webkit-scrollbar-thumb {
-            background-color: #ccc;
-            border-radius: 3px;
-        }
-
-        .subtopic-carousel .carousel::-webkit-scrollbar-track {
-            background: #f4f4f9;
+        .subtopic-carousel .carousel-title .next {
+            right: -60px;
         }
 
         .link-button {
@@ -155,54 +152,6 @@
             background-color: #0056b3;
         }
 
-        @media (max-width: 768px) {
-            .carousel-container {
-                width: 100%;
-                padding: 0 20px;
-            }
-
-            .carousel-item {
-                min-width: 150px;
-                margin: 5px;
-                padding: 10px;
-            }
-
-            .carousel-item img {
-                width: 60px;
-                height: 60px;
-            }
-
-            .carousel-title .carousel-button {
-                padding: 5px 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .carousel-title h1, .carousel-title h2 {
-                font-size: 16px;
-            }
-
-            .carousel-item {
-                min-width: 120px;
-                margin: 3px;
-                padding: 5px;
-            }
-
-            .carousel-item img {
-                width: 50px;
-                height: 50px;
-            }
-
-            .carousel-title .prev,
-            .carousel-title .next {
-                top: auto;
-                bottom: 10px;
-            }
-
-            .carousel-title .carousel-button {
-                padding: 5px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -279,14 +228,14 @@
 
         const subtopics = {
             "Threats": ["Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
-            "Standardization Bodies": ["NIST", "IETF", "NSA", "CISA", "BSI", "ANSSI", "GSMA"],
+            "Standardization Bodies": ["NIST", "IETF", "NSA","CISA","BSI","ANSSI","GSMA"],
             "Certificates Format": ["Pure", "Hybrid", "Composite"],
             "Protocols": ["SSH", "TLS", "IPSEC"],
             "Countries": ["US", "Europe", "Canada", "Australia", "Singapore", "Germany"],
             "Industries": ["Telecom", "Automotive", "Banking", "Government", "Enterprises"],
             "Post Quantum Resistant Algorithms": ["ML-KEM", "ML-DSA", "SLH-DSA"],
             "Quantum Cryptography": ["QRNG", "QKD"],
-            "PQC Lab": ["OQS", "EJBCA", "OpenSSL", "OpenSSH", "OpenVPN", "OpenSwan", "StrongSwan"]
+            "PQC Lab": ["OQS,EJBCA,OpenSSL,OpenSSH,OpenVPN,OpenSwan,StrongSwan"]
         };
 
         let selectedTopic = "";
@@ -339,10 +288,7 @@
         let subtopicIndex = 0;
         function updateSubtopicCarousel() {
             const width = subtopicTrack.children[0]?.offsetWidth || 0;
-            subtopicTrack.parentElement.scrollTo({
-                left: subtopicIndex * width,
-                behavior: 'smooth',
-            });
+            subtopicTrack.style.transform = `translateX(-${subtopicIndex * width}px)`;
         }
 
         subtopicPrevButton.addEventListener('click', () => {
@@ -368,4 +314,55 @@
     </script>
 </body>
 </html>
-</html>
+<style>
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+        padding: 0 20px; /* Reduce padding */
+    }
+
+    .carousel-item {
+        min-width: 150px;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .carousel-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .carousel-title .carousel-button {
+        padding: 5px 10px; /* Adjust button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-title h1, .carousel-title h2 {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .carousel-item {
+        min-width: 120px;
+        margin: 3px;
+        padding: 5px;
+    }
+
+    .carousel-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .carousel-title .prev,
+    .carousel-title .next {
+        top: auto; /* Adjust position */
+        bottom: 10px; /* Move below the carousel */
+    }
+
+    .carousel-title .carousel-button {
+        padding: 5px; /* Further reduce button size */
+    }
+
+
+    }
+</style>
