@@ -175,10 +175,8 @@
       height: 200px;
           border: none;
       display: block;
-      margin: 0 auto;
-
-
-      /* Optional: Styling for the iframe container */
+        margin: 0 auto;
+      }
 
     @media (max-width: 768px) {
       .carousel-container {
