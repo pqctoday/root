@@ -91,6 +91,6 @@ function sortTable(column) {
 // Automatically load and process the CSV file on page load
 document.addEventListener('DOMContentLoaded', () => {
     const filePath = '../../references.csv'; // Correct relative path
-    const category = 'QRNG'; // Hardcoded category to filter by
+    const category = 'QRA'; // Hardcoded category to filter by
     filterCSVByCategory(filePath, category);
 });

@@ -1,4 +1,4 @@
-title,date,url,author,country,category,reference,type
+title,date,url,author,country,category,reference,type,topic,subtopic
 Information Security Manual Guidelines for Cryptography,september 2024,https://www.cyber.gov.au/sites/default/files/2024-09/22.%20ISM%20-%20Guidelines%20for%20Cryptography%20%28September%202024%29.pdf,ACSC,australia,QRA,,PDF
 Securing Tomorrow Today: Transitioning to Post-Quantum Cryptography,november 2024,https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Crypto/PQC-joint-statement.pdf?__blob=publicationFile&v=5,BSI,EU,Transition,,PDF
 preparing your organization for the quantum threat to cryptography,february 2021,https://www.cyber.gc.ca/sites/default/files/cyber/publications/itsap00017-e.pdf,CCCS,canada,Transition,ITSAP.00.017,PDF

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #f4f4f9;
+        }
+
+        .carousel-container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+            position: relative;
+            padding: 0 40px; /* Increase padding to prevent items from being cut off */
+        }
+
+        .carousel-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .carousel-title .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .carousel-title .prev {
+            left: -60px;
+        }
+
+        .carousel-title .next {
+            right: -60px;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 200px;
+            margin: 10px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carousel-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .carousel-item:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        .subtopic-carousel {
+            display: none;
+        }
+
+        .subtopic-carousel.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .subtopic-carousel .carousel-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .subtopic-carousel .carousel-title .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .subtopic-carousel .carousel-title .prev {
+            left: -60px;
+        }
+
+        .subtopic-carousel .carousel-title .next {
+            right: -60px;
+        }
+
+        .link-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .link-button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-title">
+            <button class="carousel-button prev">&#10094;</button>
+            <h1>Choose a Topic</h1>
+            <button class="carousel-button next">&#10095;</button>
+        </div>
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-item" data-topic="Threats">
+                    <img src="assets/threats-logo.png" alt="Threats">
+                    <span>Threats</span>
+                </div>
+                <div class="carousel-item" data-topic="Protocols">
+                    <img src="assets/protocols-logo.png" alt="Protocols">
+                    <span>Protocols</span>
+                </div>
+                <div class="carousel-item" data-topic="Standardization Bodies">
+                    <img src="assets/standards-logo.png" alt="Standardization Bodies">
+                    <span>Standardization Bodies</span>
+                </div>
+                <div class="carousel-item" data-topic="Countries">
+                    <img src="assets/countries-logo.png" alt="Countries">
+                    <span>Countries</span>
+                </div>
+                <div class="carousel-item" data-topic="Industries">
+                    <img src="assets/industries-logo.png" alt="Industries">
+                    <span>Industries</span>
+                </div>
+                <div class="carousel-item" data-topic="Post Quantum Resistant Algorithms">
+                    <img src="assets/pqra-logo.png" alt="Post Quantum Resistant Algorithms">
+                    <span>Post Quantum Resistant Algorithms</span>
+                </div>
+                <div class="carousel-item" data-topic="Quantum Cryptography">
+                    <img src="assets/quantum-crypto-logo.png" alt="Quantum Cryptography">
+                    <span>Quantum Cryptography</span>
+                </div>
+                <div class="carousel-item" data-topic="Certificates Formats">
+                    <img src="assets/certificates-logo.png" alt="Certificates Formats">
+                    <span>Certificates Formats</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subtopic-carousel" id="subtopic-carousel">
+        <div class="carousel-title">
+            <button class="carousel-button prev">&#10094;</button>
+            <h2>Subtopics</h2>
+            <button class="carousel-button next">&#10095;</button>
+        </div>
+        <div class="carousel">
+            <div class="carousel-track" id="subtopic-track">
+                <!-- Subtopics will be dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <button class="link-button" id="navigate-button" style="display: none;">Go to Page</button>
+
+    <script>
+        const carouselTrack = document.querySelector('.carousel-track');
+        const prevButton = document.querySelectorAll('.carousel-title .prev')[0];
+        const nextButton = document.querySelectorAll('.carousel-title .next')[0];
+        const subtopicPrevButton = document.querySelectorAll('.subtopic-carousel .prev')[0];
+        const subtopicNextButton = document.querySelectorAll('.subtopic-carousel .next')[0];
+        const items = Array.from(carouselTrack.children);
+        const subtopicCarousel = document.getElementById('subtopic-carousel');
+        const subtopicTrack = document.getElementById('subtopic-track');
+        const navigateButton = document.getElementById('navigate-button');
+        let currentIndex = 0;
+
+        const subtopics = {
+            "Threats": ["Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
+            "Standardization Bodies": ["NIST", "IETF", "NSA","CISA","BSI","ANSSI","GSMA"],
+            "Certificates Format": ["Pure", "Hybrid", "Composite"],
+            "Protocols": ["SSH", "TLS", "IPSEC"],
+            "Countries": ["US", "Europe", "Canada", "Australia", "Singapore", "Germany"],
+            "Industries": ["Telecom", "Automotive", "Banking", "Government", "Enterprises"],
+            "Post Quantum Resistant Algorithms": ["ML-KEM", "ML-DSA", "SLH-DSA"],
+            "Quantum Cryptography": ["QRNG", "QKD"]
+            "PQC Lab": ["OQS,EJBCA,OpenSSL,OpenSSH,OpenVPN,OpenSwan,StrongSwan"]
+        };
+
+        let selectedTopic = "";
+        let selectedSubtopic = "";
+
+        function updateCarousel() {
+            const width = items[0].offsetWidth;
+            carouselTrack.style.transform = `translateX(-${currentIndex * width}px)`;
+        }
+
+        function updateSubtopics(topic) {
+            subtopicTrack.innerHTML = "";
+            if (subtopics[topic]) {
+                subtopics[topic].forEach(subtopic => {
+                    const subtopicItem = document.createElement('div');
+                    subtopicItem.className = 'carousel-item';
+                    subtopicItem.textContent = subtopic;
+                    subtopicItem.addEventListener('click', () => {
+                        selectedSubtopic = subtopic;
+                        navigateButton.textContent = `Go to ${selectedTopic} / ${selectedSubtopic}`;
+                        navigateButton.style.display = 'block';
+                    });
+                    subtopicTrack.appendChild(subtopicItem);
+                });
+            }
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < items.length - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                selectedTopic = item.getAttribute('data-topic');
+                subtopicCarousel.classList.add('active');
+                updateSubtopics(selectedTopic);
+            });
+        });
+
+        let subtopicIndex = 0;
+        function updateSubtopicCarousel() {
+            const width = subtopicTrack.children[0]?.offsetWidth || 0;
+            subtopicTrack.style.transform = `translateX(-${subtopicIndex * width}px)`;
+        }
+
+        subtopicPrevButton.addEventListener('click', () => {
+            if (subtopicIndex > 0) {
+                subtopicIndex--;
+                updateSubtopicCarousel();
+            }
+        });
+
+        subtopicNextButton.addEventListener('click', () => {
+            if (subtopicIndex < subtopicTrack.children.length - 1) {
+                subtopicIndex++;
+                updateSubtopicCarousel();
+            }
+        });
+
+        navigateButton.addEventListener('click', () => {
+            if (selectedTopic && selectedSubtopic) {
+                const path = `/sections/${selectedTopic}/${selectedSubtopic}/index.html`;
+                window.location.href = path;
+            }
+        });
+    </script>
+</body>
+</html>
+<style>
+    @media (max-width: 768px) {
+        .carousel-container {
+            width: 100%;
+        }
+
+        .carousel-title .carousel-button {
+            padding: 5px 10px;
+        }
+
+        .carousel-item {
+            min-width: 150px;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .carousel-item img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .link-button {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .carousel-title h1, .carousel-title h2 {
+            font-size: 18px;
+        }
+
+        .carousel-title .carousel-button {
+            padding: 5px;
+        }
+
+        .carousel-item {
+            min-width: 120px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .carousel-item img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .link-button {
+            padding: 8px;
+        }
+    }
+</style>
