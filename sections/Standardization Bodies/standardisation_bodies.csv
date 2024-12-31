@@ -4,7 +4,6 @@ NSA,National Security Agency,https://www.nsa.gov/,US,Security (develops and main
 IETF,Internet Engineering Task Force,https://www.ietf.org/,WW,"Protocols (develops internet standards, including many with cryptographic aspects)"
 CISA,Cybersecurity and Infrastructure Security Agency,https://www.cisa.gov/,US,"Security (provides guidance and best practices related to cybersecurity, including cryptography)"
 ENISA,European Union Agency for Cybersecurity,https://www.enisa.europa.eu/,EU,Security (works on cybersecurity issues within the European Union)
-BSI,British Standards Institution,https://www.bsigroup.com/,UK,"Standards (develops and publishes standards, including those related to cryptography)"
 ANSSI,National Cybersecurity Agency of France,https://www.ssi.gouv.fr/,FR,Security (French cybersecurity agency)
 GSMA,GSM Association,https://www.gsma.com/,WW,"Telecom (focuses on mobile communications standards, often with cryptographic elements)"
 Cryptographic Module Validation Program (CMVP),NIST program that validates the cryptographic modules against FIPS 140 standards,TBD, WW, Security (validates cryptographic modules for conformance to FIPS 140 standards)
