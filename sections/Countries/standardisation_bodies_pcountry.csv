@@ -1,0 +1,7 @@
+Country, Body,Description,URL,Scope
+US,NIST,National Institute of Standards and Technology,https://www.nist.gov/,Standards
+US,NSA,National Security Agency,https://www.nsa.gov/,Security
+US,CISA,Cybersecurity and Infrastructure Security Agency,https://www.cisa.gov/,Security
+EU,ENISA,European Union Agency for Cybersecurity,https://www.enisa.europa.eu/,Security
+France,ANSSI,National Cybersecurity Agency of France,https://www.ssi.gouv.fr/,Security
+

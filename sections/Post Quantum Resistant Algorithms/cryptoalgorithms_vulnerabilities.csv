@@ -5,3 +5,7 @@ ECC-256,2^128,2^64,256,512,"Encryption, Key Exchange","Vulnerable to Shor's algo
 RSA-2048,2^112,2^56,2048,4096,"Encryption, Signature","Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."
 DSA-1024,2^64,2^32,1024,2048,Signature,"Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."
 DH-1024,2^64,2^32,1024,2048,Key Exchange,"Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."
+ML-DSA,2^256,2^256,256,512,Signature,"Currently no known vulnerabilities to quantum computing."
+ML-KEM,2^256,2^256,256,512,Key Exchange,"Currently no known vulnerabilities to quantum computing."
+SLH-DSA,2^256,2^256,256,512,Signature,"Currently no known vulnerabilities to quantum computing."
+HSS,2^256,2^256,256,512,Signature,"Currently no known vulnerabilities to quantum computing."
