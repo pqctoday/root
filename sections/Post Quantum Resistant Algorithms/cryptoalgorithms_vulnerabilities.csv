@@ -1,0 +1,7 @@
+Crypto Algorithm,Effort to break with classical computing,Effort to break with quantum computing,Current size (bits),Max size (bits),Usages,Vulnerabilities
+AES-128,2^128,2^64,128,256,Encryption,"Vulnerable to Grover's algorithm on quantum computers, reducing security by half."
+SHA-256,2^256,2^128,256,512,Hashing,"Vulnerable to Grover's algorithm on quantum computers, reducing security by half."
+ECC-256,2^128,2^64,256,512,"Encryption, Key Exchange","Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."
+RSA-2048,2^112,2^56,2048,4096,"Encryption, Signature","Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."
+DSA-1024,2^64,2^32,1024,2048,Signature,"Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."
+DH-1024,2^64,2^32,1024,2048,Key Exchange,"Vulnerable to Shor's algorithm on quantum computers, significantly reducing security."

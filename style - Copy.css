@@ -170,10 +170,10 @@
     }
 
     #main-topic-iframe {
-      width: 1200px; /* Add a margin of 20px on each side */
+      width: calc(100% - 40px); /* Add a margin of 20px on each side */
       max-width: 1200px; /* Optional: Limit maximum width */
-      height: 200px;
-          border: none;
+      height: 80vh; /* Height based on viewport height */
+      border: none;
       display: block;
       margin: 0 auto;
 
@@ -183,7 +183,6 @@
     @media (max-width: 768px) {
       .carousel-container {
         width: 100%;
-        height: fit-content;
         padding: 0 20px;
       }
 
@@ -230,3 +229,4 @@
         padding: 5px;
       }
     }
+    

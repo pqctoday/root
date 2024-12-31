@@ -1,0 +1,11 @@
+title,date,url,author,country,category,reference,type
+"The PQC Migration Handbook",December 2024,https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf,AIVDCWITNO,NL,Guidelines,,PDF
+"COMMISSION RECOMMENDATION on a Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography",April 2024,https://ec.europa.eu/newsroom/dae/redirection/document/104249,European Commission,EU,QRA,C_2024_2393_EN,PDF
+"Securing Tomorrow, Today: Transitioning to Post-Quantum Cryptography",November 2024,https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Crypto/PQC-joint-statement.pdf?__blob=publicationFile&v=5,BSI,EU,Transition,,PDF
+"NIST IR 8547 - Transition to Post-Quantum Cryptography Standards",November 2024,https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf,NIST,US,QRA,NIST IR 8547 ipd,PDF
+"Post-Quantum Considerations for Operational Technology",October 2024,https://www.cisa.gov/sites/default/files/2024-10/Post-Quantum%20Considerations%20for%20Operational%20Technology%20%28508%29.pdf,CISA,US,Transition,,PDF
+"Cryptographic Security: Critical to Europe’s Digital Sovereignty",November 2024,https://www.europarl.europa.eu/RegData/etudes/BRIE/2024/766237/EPRS_BRI(2024)766237_EN.pdf,European Parliament,EU,Transition,,PDF
+"GSMA PQ.03 – Post Quantum Cryptography – Guidelines for Telecom Use Cases",February 2024,https://www.gsma.com/newsroom/wp-content/uploads//PQ.03-Post-Quantum-Cryptography-Guidelines-for-Telecom-Use-Cases-v2.0-2.pdf,GSMA,NA,Telecom,,PDF
+
+
+

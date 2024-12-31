@@ -1,0 +1,15 @@
+Technology,Hardware/Software,Vendors,Description,References
+Superconducting Qubits,Hardware,IBM; Google; Rigetti,Superconducting circuits that can represent quantum bits,https://en.wikipedia.org/wiki/Superconducting_qubit
+Trapped Ions,Hardware,IONQ; Honeywell,Using ions trapped in electromagnetic fields to represent qubits,https://en.wikipedia.org/wiki/Trapped_ion_quantum_computer
+Photonic Quantum Computing,Hardware,Xanadu; PsiQuantum,Using photons to represent qubits,https://en.wikipedia.org/wiki/Quantum_optics
+Topological Qubits,Hardware,Microsoft,Using anyons in topological states to represent qubits,https://en.wikipedia.org/wiki/Topological_quantum_computer
+Spin Qubits,Hardware,Intel; University of New South Wales,Using the spin of electrons in quantum dots to represent qubits,https://en.wikipedia.org/wiki/Spin_qubit
+Quantum Programming Languages,Software,Microsoft; IBM; Google; NVIDIA,Languages designed for programming quantum computers,https://en.wikipedia.org/wiki/Quantum_programming
+Quantum Error Correction,Software,IBM; Google; NVIDIA,Techniques to protect quantum information from errors due to decoherence and other quantum noise,https://en.wikipedia.org/wiki/Quantum_error_correction
+Quantum Algorithms,Software,Microsoft; IBM; Google; NVIDIA,Algorithms specifically designed to run on quantum computers,https://en.wikipedia.org/wiki/Quantum_algorithm
+Quantum Simulation,Software,Microsoft; Google; NVIDIA,Simulating quantum systems on classical computers,https://en.wikipedia.org/wiki/Quantum_simulation
+Quantum Cryptography,Software,ID Quantique; QuintessenceLabs,Using quantum mechanics to perform cryptographic tasks,https://en.wikipedia.org/wiki/Quantum_cryptography
+Cirq,Software,Google,"A software library for writing, manipulating, and optimizing quantum circuits.",https://quantumai.google/cirq
+OpenFermion,Software,Google,An open-source library for compiling and analyzing quantum algorithms for chemistry problems.,https://github.com/quantumlib/OpenFermion
+TensorFlow Quantum,Software,Google,A library for hybrid quantum-classical machine learning.,https://www.tensorflow.org/quantum
+

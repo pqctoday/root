@@ -1,0 +1,7 @@
+Protocol Suite,Vulnerability on Encryption,Vulnerability on Signature,Vulnerability on Key Exchange,Tools Using This Protocol
+TLS (Transport Layer Security),Vulnerable to quantum attacks on RSA, ECC,RSA/ECDSA-based signatures are at risk,"ECDH/DH key exchanges can be broken by Shor's algorithm,HTTPS, SMTP, IMAP, VoIP, FTP"
+IPsec (Internet Protocol Security),ESP using RSA/ECC is quantum-vulnerable,Digital signatures (RSA/ECDSA) are vulnerable,IKEv2 using RSA/ECDH is susceptible to quantum attacks,"VPNs, secure network tunnels"
+SSH (Secure Shell),RSA-encrypted communication can be compromised,RSA/ECDSA key authentication is quantum-vulnerable,ECDH/DH-based exchanges are at risk,"Secure remote login, SCP, SFTP"
+S/MIME (Secure/Multipurpose Internet Mail Extensions),RSA/ECC encryption for email is at risk,RSA/ECDSA signatures can be broken,Dependent on quantum-vulnerable algorithms for key exchange,"Secure email clients like Outlook, Thunderbird"
+OpenPGP (Pretty Good Privacy),RSA encryption for files/emails is at risk,RSA/DSA-based signatures are quantum-vulnerable,Vulnerabilities in RSA/DH key exchanges,"Email and file encryption tools (e.g., GPG)"
+DNSSEC (Domain Name System Security Extensions),No direct encryption,Vulnerable RSA/ECDSA DNS record signatures,Vulnerabilities depend on RSA/ECDH mechanisms,"DNS resolvers, authoritative servers"

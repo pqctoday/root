@@ -1,0 +1,9 @@
+title,date,url,author,country,category,reference,type
+The PQC Migration Handbook,December 2024,https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf,AIVDCWITNO,NL,Guidelines,,PDF
+Securing Tomorrow Today: Transitioning to Post-Quantum Cryptography,November 2024,https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Crypto/PQC-joint-statement.pdf?__blob=publicationFile&v=5,BSI,EU,Transition,,PDF
+Post-Quantum Considerations for Operational Technology,October 2024,https://www.cisa.gov/sites/default/files/2024-10/Post-Quantum%20Considerations%20for%20Operational%20Technology%20%28508%29.pdf,CISA,US,Transition,,PDF
+Cryptographic Security: Critical to Europe's Digital Sovereignty,November 2024,https://www.europarl.europa.eu/RegData/etudes/BRIE/2024/766237/EPRS_BRI(2024)766237_EN.pdf,European Parliament,EU,Transition,,PDF
+Becoming Cryptographically Agile,May 2022,https://www.cyber.gc.ca/sites/default/files/ITSAP40018-guidance-on-becoming-cryptographically-agile.pdf,CCCS,Canada,Agile,ITSAP.40.018,PDF
+Planning for Post-Quantum Cryptography,August 2023,https://www.cyber.gov.au/sites/default/files/2023-08/PROTECT%20-%20Planning%20for%20Post-Quantum%20Cryptography%20%28August%202023%29.pdf,ACSC,Australia,Transition,,PDF
+Strategy for Migrating to Automated Post-Quantum Cryptography Discovery and Inventory Tools,August 2024,https://www.cisa.gov/sites/default/files/2024-09/Strategy-for-Migrating-to-Automated-PQC-Discovery-and-Inventory-Tools.pdf,CCCS,Canada,Discovery,,PDF
+GSMA PQ.03 – Post Quantum Cryptography – Guidelines for Telecom Use Cases,October 2024,https://www.gsma.com/newsroom/wp-content/uploads//PQ.03-Post-Quantum-Cryptography-Guidelines-for-Telecom-Use-Cases-v2.0-2.pdf,GSMA,NA,Telecom,,PDF

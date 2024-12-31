@@ -1,8 +1,8 @@
-let tableData = []; // To hold the parsed and filtered data for reuse
+let tableData = []; // To hold the parsed data for reuse
 let currentSortColumn = ''; // To track the currently sorted column
 let ascending = true; // To toggle ascending/descending order
 
-function filterCSVByCategory(filePath, category) {
+function loadCSV(filePath) {
     Papa.parse(filePath, {
         download: true, // Fetch file from server
         header: true,
@@ -15,9 +15,9 @@ function filterCSVByCategory(filePath, category) {
                     normalizedRow[key.trim().toLowerCase()] = row[key];
                 });
                 return normalizedRow;
-            }).filter(row => row.category && row.category.toLowerCase() === category.toLowerCase());
+            });
 
-            renderTable(); // Render the table with initial data
+            renderTable(); // Render the table with all data
         },
         error: function(err) {
             console.error("Error loading CSV:", err);
@@ -33,7 +33,7 @@ function renderTable() {
         const tr = document.createElement('tr');
         const td = document.createElement('td');
         td.colSpan = 8;
-        td.textContent = "No records found for the selected category.";
+        td.textContent = "No records found.";
         td.style.textAlign = "center";
         tr.appendChild(td);
         tbody.appendChild(tr);
@@ -90,7 +90,6 @@ function sortTable(column) {
 
 // Automatically load and process the CSV file on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const filePath = '../../references.csv'; // Correct relative path
-    const category = 'QRA'; // Hardcoded category to filter by
-    filterCSVByCategory(filePath, category);
+    const filePath = 'references.csv'; // Correct relative path
+    loadCSV(filePath);
 });
