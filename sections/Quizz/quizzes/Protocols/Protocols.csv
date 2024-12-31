@@ -1,2 +1,4 @@
 question,answer1,answer2,answer3,answer4,correct_answers,dummy
-Which programming language is this quiz written in?,HTML,CSS,JavaScript,Python,3,dummy
+Which protocol is used to protect communication between a browser and a remote application?,TLS,SSH,FTP,IPSEC,1;2;3,dummy
+When a quantum computer will be able to decrypt the traffic between a browser and a remote server?,Today,In 5 years,In 10 years,Never,4,dummy
+Which of the following tools use TLS?,HTTPS,SSH,IPSEC,SMTP,1,dummy

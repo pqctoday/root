@@ -1,5 +1,6 @@
 /* ==========================
-   QUIZ SCRIPT WITH LOGGING
+   QUIZ SCRIPT WITH
+   "SHOW CORRECT ANSWERS"
 ========================== */
 
 /* ------------------------------
@@ -18,9 +19,17 @@ const resultsArea = document.getElementById("results-area");
 const scoreDisplay = document.getElementById("score");
 const restartButton = document.getElementById("restart-button");
 
+// New references for correct answers
+const showAnswersButton = document.getElementById("show-answers-button");
+const correctAnswersSection = document.getElementById("correct-answers-section");
+const correctAnswersList = document.getElementById("correct-answers-list");
+
 let currentQuizData = [];
 let currentQuestionIndex = 0;
 let score = 0;
+
+// Array to store user’s selected answers for each question.
+let userAnswers = [];
 
 /* ------------------------------
    On Page Load: Load Topics
@@ -50,6 +59,7 @@ function loadTopics() {
 
       topics.forEach(topic => {
         const option = document.createElement("option");
+        // 'topic_name' must match your CSV header exactly (after trimming)
         option.value = topic.topic_name;
         option.text = `${topic.topic_name} - ${topic.short_description}`;
         topicDropdown.add(option);
@@ -69,7 +79,7 @@ topicDropdown.addEventListener("change", () => {
   console.log(`[topicDropdown.change] Selected topic: ${selectedTopic}`);
 
   // Reset subtopic dropdown
-  subtopicDropdown.innerHTML = '<option value="">Select Subtopic or Start Quiz</option>';
+  subtopicDropdown.innerHTML = '<option value="">Select Subtopic</option>';
   subtopicDropdown.disabled = true;
   startQuizButton.disabled = true;
 
@@ -105,7 +115,8 @@ topicDropdown.addEventListener("change", () => {
             if (response.ok) {
               console.log("[topicDropdown.change] Found a topic-level quiz file.");
               const option = document.createElement("option");
-              option.value = ""; // indicates topic-level quiz
+              // Empty value indicates topic-level quiz
+              option.value = "";
               option.text = "Start Quiz (Topic Level)";
               subtopicDropdown.add(option);
             } else {
@@ -157,6 +168,8 @@ startQuizButton.addEventListener("click", () => {
   currentQuizData = [];
   currentQuestionIndex = 0;
   score = 0;
+  // Reset the userAnswers array
+  userAnswers = [];
 
   loadQuizData(csvFilePath);
 });
@@ -189,6 +202,7 @@ function loadQuizData(csvFilePath) {
       quizSelection.style.display = "none";
       quizArea.style.display = "block";
       resultsArea.style.display = "none";
+      correctAnswersSection.style.display = "none"; // hide the correct answers section if it was open
 
       displayQuestion();
     })
@@ -199,30 +213,32 @@ function loadQuizData(csvFilePath) {
 }
 
 /* ------------------------------
-   Parse CSV
+   Parse CSV (Trimming Headers and Values)
 ------------------------------ */
 function parseCSV(csvString) {
-  try {
-    const rows = csvString.trim().split('\n');
-    const header = rows.shift().split(',');
+  // Split into lines
+  const rows = csvString.trim().split('\n');
+  // Separate the header line and split
+  // Trim each header element to remove trailing spaces
+  const header = rows.shift().split(',').map(h => h.trim());
 
-    console.log(`[parseCSV] CSV header: ${header.join(", ")}`);
-    console.log(`[parseCSV] Number of data rows: ${rows.length}`);
+  console.log("[parseCSV] Header columns:", header.join(", "));
+  console.log("[parseCSV] Number of data rows:", rows.length);
 
-    return rows.map((row, index) => {
-      const values = row.split(',');
-      const obj = {};
-      header.forEach((key, i) => {
-        obj[key] = values[i] ? values[i] : "";
-      });
-      console.log(`[parseCSV] Row #${index + 1}:`, obj);
-      return obj;
+  return rows.map((line, rowIndex) => {
+    // Remove trailing \r if present
+    line = line.replace(/\r$/, '');
+    const values = line.split(',').map(v => v.trim());
+
+    const obj = {};
+    header.forEach((key, i) => {
+      // Assign each trimmed value to the matching key
+      obj[key] = values[i] || "";
     });
-  } catch (e) {
-    console.error("[parseCSV] Error:", e);
-    alert("Error parsing CSV data. Ensure the file is formatted correctly.");
-    return [];
-  }
+
+    console.log(`[parseCSV] Row #${rowIndex + 1}`, obj);
+    return obj;
+  });
 }
 
 /* ------------------------------
@@ -282,6 +298,9 @@ nextQuestionButton.addEventListener("click", () => {
 
   console.log("[nextQuestionButton.click] Selected answers:", selectedAnswers);
 
+  // Store user answers for this question
+  userAnswers[currentQuestionIndex] = selectedAnswers;
+
   // Check if this question is not answered yet
   if (!currentQuizData[currentQuestionIndex].answered) {
     checkAnswer(selectedAnswers);
@@ -309,8 +328,11 @@ submitQuizButton.addEventListener("click", () => {
   resultsArea.style.display = "block";
 
   const finalScore = Math.round(score * 100) / 100;
-  scoreDisplay.textContent = `You got ${finalScore} out of ${currentQuizData.length} questions (partial credit possible).`;
+  scoreDisplay.textContent = `You got ${finalScore} out of ${currentQuizData.length} questions (based on partial credit).`;
   console.log(`[submitQuizButton.click] Final score: ${finalScore}`);
+
+  // Make the "Show Answers" button visible
+  showAnswersButton.style.display = "inline-block";
 });
 
 /* ------------------------------
@@ -319,26 +341,18 @@ submitQuizButton.addEventListener("click", () => {
 function checkAnswer(selectedAnswers) {
   const questionData = currentQuizData[currentQuestionIndex];
   console.log("[checkAnswer] Checking answers for question index:", currentQuestionIndex);
-  console.log("[checkAnswer] Checking question data:", questionData);
+  console.log("[checkAnswer] Checking correct answers:", questionData.correct_answers);
 
-  // "correct_answers" could be something like "1;3"
-// First, remove any surrounding quotes and trim whitespace:
+  // Clean up the 'correct_answers' string if needed
+  const cleanCorrectAnswers = questionData.correct_answers
+    .replace(/"/g, "")
+    .replace(/\r$/, "")
+    .trim();
 
-console.log("[checkAnswer] correctAnswers before cleaning:", questionData.correct_answers);
-
-const cleanCorrectAnswers = questionData.correct_answers
-  .replace(/"/g, "")   // remove all double quotes
-  .replace(/\r$/, "")  // remove a trailing carriage return if present
-  .trim();             // remove leading/trailing spaces
-  
-// Then split on ';' and parse:
-const correctAnswers = cleanCorrectAnswers
-  .split(';')
-  .filter(v => v !== "")
-  .map(v => parseInt(v, 10));
-
-console.log("[checkAnswer] correctAnswers after cleaning:", correctAnswers);
-
+  const correctAnswers = cleanCorrectAnswers
+    .split(';')
+    .filter(v => v !== "")
+    .map(v => parseInt(v, 10));
 
   console.log("[checkAnswer] correctAnswers:", correctAnswers);
 
@@ -362,6 +376,81 @@ console.log("[checkAnswer] correctAnswers after cleaning:", correctAnswers);
 }
 
 /* ------------------------------
+   Show Correct Answers
+------------------------------ */
+showAnswersButton.addEventListener("click", () => {
+  // Show the correct answers section
+  correctAnswersSection.style.display = "block";
+
+  // Build out the correct answers list
+  displayCorrectAnswers();
+});
+
+/* ------------------------------
+   Function to Display Correct Answers
+------------------------------ */
+function displayCorrectAnswers() {
+  correctAnswersList.innerHTML = ""; // Clear old data if any
+
+  currentQuizData.forEach((questionData, index) => {
+    // Question Title
+    const questionTitle = document.createElement("h3");
+    questionTitle.textContent = `Question ${index + 1}: ${questionData.question}`;
+    correctAnswersList.appendChild(questionTitle);
+
+    // Clean up correct answers
+    const cleanCorrectAnswers = (questionData.correct_answers || "")
+      .replace(/"/g, "")
+      .replace(/\r$/, "")
+      .trim();
+
+    const correctAnswersArr = cleanCorrectAnswers
+      .split(';')
+      .filter(v => v !== "")
+      .map(v => parseInt(v, 10));
+
+    // User's selected answers
+    const userSelected = userAnswers[index] || [];
+
+    // Loop through possible 4 answers
+    for (let i = 1; i <= 4; i++) {
+      if (!questionData[`answer${i}`]) continue; // skip empty answers
+
+      const answerText = questionData[`answer${i}`];
+      const isCorrect = correctAnswersArr.includes(i);
+      const isSelected = userSelected.includes(i);
+
+      // Create a <p> element to show each option
+      const answerLine = document.createElement("p");
+
+      // Mark correct answers in green, wrong user picks in red, etc.
+      if (isCorrect && isSelected) {
+        // Correct and selected → highlight green
+        answerLine.style.color = "green";
+        answerLine.textContent = `✓ (Option ${i}) ${answerText}  [You chose this correctly]`;
+      } else if (isCorrect) {
+        // Correct answer, but user did not select it
+        answerLine.style.color = "blue";
+        answerLine.textContent = `Correct (Option ${i}) ${answerText} [You missed this one]`;
+      } else if (isSelected) {
+        // User selected, but it's not correct
+        answerLine.style.color = "red";
+        answerLine.textContent = `✗ (Option ${i}) ${answerText} [Incorrect pick]`;
+      } else {
+        // Not correct, not selected
+        answerLine.style.color = "black";
+        answerLine.textContent = `(Option ${i}) ${answerText}`;
+      }
+
+      correctAnswersList.appendChild(answerLine);
+    }
+
+    // Optional: a horizontal rule between questions
+    correctAnswersList.appendChild(document.createElement("hr"));
+  });
+}
+
+/* ------------------------------
    Restart Quiz
 ------------------------------ */
 restartButton.addEventListener("click", () => {
@@ -370,6 +459,7 @@ restartButton.addEventListener("click", () => {
   quizSelection.style.display = "block";
   quizArea.style.display = "none";
   resultsArea.style.display = "none";
+  correctAnswersSection.style.display = "none";
 
   // Reset selection controls
   topicDropdown.value = "";
@@ -381,4 +471,8 @@ restartButton.addEventListener("click", () => {
   currentQuizData = [];
   currentQuestionIndex = 0;
   score = 0;
+  userAnswers = [];
+
+  // Hide "Show Answers" button just in case
+  showAnswersButton.style.display = "none";
 });
