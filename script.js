@@ -42,7 +42,7 @@ const subtopics = {
   "Countries": ["General", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France"],
   "Industries": ["General", "Telecom", "Automotive", "Banking", "Government", "Enterprises"],
   "Post Quantum Resistant Algorithms": ["General", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
-  "Quantum Technology": ["General", "QRNG", "QKD", "Hardware", "Software"],
+  "Quantum Technology": ["General", "QRNG", "QKD"],
 };
 
 function updateSubtopics(topic) {
