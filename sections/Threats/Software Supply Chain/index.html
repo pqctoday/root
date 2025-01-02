@@ -14,14 +14,23 @@
 <section>
     <h2>Summary</h2>
     <p>The software supply chain is a critical aspect of modern software development, involving the sourcing, building, and delivering of software products. With the advent of quantum computing, there are emerging threats that could compromise the integrity and security of the software supply chain, particularly in relation to code signing keys.</p>
-</section>
-<section>
-    <h2>Detailed Explanation</h2>
     <p>Quantum computing poses a significant threat to the software supply chain due to its potential to break traditional cryptographic algorithms. Code signing keys, which are used to verify the authenticity and integrity of software, are particularly vulnerable. If these keys are compromised, malicious actors could sign and distribute malicious software, leading to widespread security breaches.</p>
     <p>Current cryptographic algorithms, such as RSA and ECC, rely on the difficulty of factoring large numbers or solving discrete logarithm problems. Quantum computers, with their ability to perform complex calculations at unprecedented speeds, could solve these problems efficiently using algorithms like Shor's algorithm. This would render traditional code signing methods obsolete and necessitate the adoption of quantum-resistant cryptographic techniques.</p>
     <p>To mitigate these risks, it is essential for organizations to stay informed about advancements in quantum computing and to begin transitioning to quantum-resistant cryptographic algorithms. This proactive approach will help ensure the continued security and integrity of the software supply chain in the face of emerging quantum threats.</p>
 </section>
+    <section>
+        <h2>The Threat of Quantum Computing to the Software Supply Chain</h2>
+        <p>The threat of quantum computing to the software supply chain is multifaceted and poses significant risks to organizations that rely on software from third-party vendors. Here are some insights into the threats:</p>
+        <ul>
+            <li><strong>Compromised Software Updates:</strong> One major concern is the potential for threat actors to exploit quantum computing capabilities to deliver fake software updates. These malicious updates could be designed to install backdoors or malware, allowing attackers to gain control of critical systems. Since quantum computers could break traditional cryptographic signatures used to verify the authenticity of software updates, this attack vector becomes much more potent.</li>
+            <li><strong>Exploitation of Vulnerable Cryptography:</strong> Software supply chains often involve multiple vendors and complex dependencies. If any component within this chain relies on quantum-vulnerable cryptography, it becomes a potential entry point for attackers. Quantum computers could exploit these vulnerabilities to compromise the integrity of software components or intercept sensitive data during transit.</li>
+            <li><strong>Lack of Visibility and Control:</strong> Organizations often have limited visibility into the security practices of their software vendors, especially those further down the supply chain. This lack of transparency makes it difficult to assess the quantum readiness of the entire software ecosystem and increases the risk of hidden vulnerabilities.</li>
+            <li><strong>Slow Adoption of PQC:</strong> The transition to post-quantum cryptography (PQC) is a complex undertaking that requires significant time and resources. If software vendors are slow to adopt PQC, their products will remain vulnerable to quantum attacks, putting their customers at risk. This necessitates clear communication and collaboration between organizations and their software vendors to ensure a timely and secure migration.</li>
+        </ul>
+    </section>
+
     <h2>References</h2>
+
     <table id="outputTable">
         <thead>
             <tr>

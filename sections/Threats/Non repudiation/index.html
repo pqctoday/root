@@ -14,14 +14,29 @@
     <section>
         <h2>Summary</h2>
         <p>With the advent of quantum computing, traditional digital signatures are at risk. Quantum computers have the potential to break the cryptographic algorithms that underpin digital signatures, leading to significant security concerns.</p>
-    </section>
-    <section>
-        <h2>Detailed Analysis</h2>
         <p>Quantum computing leverages the principles of quantum mechanics to perform computations at speeds unattainable by classical computers. This poses a threat to current cryptographic systems, including those used for digital signatures.</p>
         <p>Digital signatures rely on the difficulty of certain mathematical problems, such as factoring large integers or computing discrete logarithms. Quantum algorithms, like Shor's algorithm, can solve these problems efficiently, rendering traditional digital signatures vulnerable.</p>
         <p>The potential threat to non-repudiation is significant. Non-repudiation ensures that a party in a digital communication cannot deny the authenticity of their signature on a document. If quantum computers can forge digital signatures, the integrity and authenticity of digital communications could be compromised, leading to a breakdown in trust and security.</p>
     </section>
-    <h2>Non Repudiation</h2>
+    <section></section>
+        <h2>The Potential Impact of Quantum Computers on Legal Digital Signatures</h2>
+        <p>The potential impact of quantum computers on legal digital signatures is a significant concern. These signatures rely on public key cryptography, which is vulnerable to attacks from sufficiently powerful quantum computers. This vulnerability could undermine the legal validity and enforceability of digital signatures, creating uncertainty and risk in legal proceedings and transactions.</p>
+        <p>Here's why quantum computers threaten legal digital signatures:</p>
+        <ul>
+            <li><strong>Breaking Asymmetric Cryptography:</strong> The security of most current digital signature schemes rests on the difficulty of solving specific mathematical problems using classical computers. Quantum computers, leveraging algorithms like Shor's algorithm, could solve these problems efficiently, breaking the underlying cryptography.</li>
+            <li><strong>Invalidating Non-Repudiation:</strong> Digital signatures offer non-repudiation, meaning the signer cannot deny having created the signature. Quantum computers, by breaking the underlying cryptography, could enable the forging of signatures, invalidating this principle and creating legal disputes.</li>
+            <li><strong>Compromising Long-Term Validity:</strong> Documents signed digitally often require long-term validity, sometimes spanning decades. Threat actors could employ a "harvest now, decrypt later" strategy, capturing digitally signed documents today and decrypting them later using quantum computers, potentially challenging the validity of past agreements.</li>
+        </ul>
+        <p>The emergence of quantum-resistant cryptographic algorithms, collectively known as Post-Quantum Cryptography (PQC), offers a solution to this threat. PQC algorithms are designed to resist attacks from both classical and quantum computers, ensuring the long-term security of digital signatures. The National Institute of Standards and Technology (NIST) has been actively involved in standardizing PQC algorithms, with the first set of standards released in August 2024.</p>
+        <p>To maintain the integrity and legal validity of digital signatures in the post-quantum era, a timely transition to PQC is crucial. This transition requires collaboration between various stakeholders, including:</p>
+        <ul>
+            <li><strong>Standardization Bodies:</strong> Organizations like NIST and ETSI play a crucial role in developing and promoting the adoption of PQC standards.</li>
+            <li><strong>Legal and Regulatory Authorities:</strong> Updating legal frameworks to recognize and accommodate PQC-based digital signatures is necessary to ensure their legal enforceability.</li>
+            <li><strong>Technology Providers:</strong> Developing and implementing PQC solutions that seamlessly integrate with existing systems and workflows is essential for a smooth transition.</li>
+        </ul>
+        <p>Addressing the quantum threat to legal digital signatures is not a future concern but a present imperative. By proactively adopting PQC, legal systems can maintain trust, security, and the integrity of digital transactions in the quantum era.</p>
+    </section>
+    <h2>References</h2>
     <table id="outputTable">
         <thead>
             <tr>

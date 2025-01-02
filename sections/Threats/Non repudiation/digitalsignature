@@ -1,0 +1,15 @@
+The potential impact of quantum computers on legal digital signatures is a significant concern. These signatures rely on public key cryptography, which is vulnerable to attacks from sufficiently powerful quantum computers [1-3]. This vulnerability could undermine the legal validity and enforceability of digital signatures, creating uncertainty and risk in legal proceedings and transactions [4].
+
+Here's why quantum computers threaten legal digital signatures:
+
+Breaking Asymmetric Cryptography: The security of most current digital signature schemes rests on the difficulty of solving specific mathematical problems using classical computers [2]. Quantum computers, leveraging algorithms like Shor's algorithm, could solve these problems efficiently, breaking the underlying cryptography [1, 2, 5, 6].
+Invalidating Non-Repudiation: Digital signatures offer non-repudiation, meaning the signer cannot deny having created the signature [7]. Quantum computers, by breaking the underlying cryptography, could enable the forging of signatures, invalidating this principle and creating legal disputes [8].
+Compromising Long-Term Validity: Documents signed digitally often require long-term validity, sometimes spanning decades [9, 10]. Threat actors could employ a "harvest now, decrypt later" strategy, capturing digitally signed documents today and decrypting them later using quantum computers, potentially challenging the validity of past agreements [4, 11-15].
+The emergence of quantum-resistant cryptographic algorithms, collectively known as Post-Quantum Cryptography (PQC), offers a solution to this threat [3, 9, 11, 16-29]. PQC algorithms are designed to resist attacks from both classical and quantum computers, ensuring the long-term security of digital signatures. The National Institute of Standards and Technology (NIST) has been actively involved in standardizing PQC algorithms, with the first set of standards released in August 2024 [9, 27, 30-32].
+
+To maintain the integrity and legal validity of digital signatures in the post-quantum era, a timely transition to PQC is crucial. This transition requires collaboration between various stakeholders, including:
+
+Standardization Bodies: Organizations like NIST and ETSI play a crucial role in developing and promoting the adoption of PQC standards [3, 9, 13, 23, 24, 26, 27, 31-35].
+Legal and Regulatory Authorities: Updating legal frameworks to recognize and accommodate PQC-based digital signatures is necessary to ensure their legal enforceability [36].
+Technology Providers: Developing and implementing PQC solutions that seamlessly integrate with existing systems and workflows is essential for a smooth transition [9, 22, 37].
+Addressing the quantum threat to legal digital signatures is not a future concern but a present imperative. By proactively adopting PQC, legal systems can maintain trust, security, and the integrity of digital transactions in the quantum era.
