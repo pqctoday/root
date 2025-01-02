@@ -2,33 +2,41 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-43RB2WJC2H');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-43RB2WJC2H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Topic and Subtopic Carousel</title>
   <link rel="stylesheet" href="style.css">
-</head>
+  </head>
 <body>
   <br>
   <h1 style="font-size: 1.5em;">Post Quantum Cryptography Today</h1>
   <br>
-  <p style="font-size: 0.9em;">Educate yourself to post quantum cryptography today to be ready for tomorrow.</p>
-  <p style="font-size: 0.9em;">The information and data provided in this repository are for informational purposes only and are presented "as is." While efforts are made to ensure accuracy, no guarantees are made regarding its correctness or suitability.</p>
+  <p style="font-size: 0.9em;">Educate yourself to post quantum cryptography today to be ready for tomorrow</p>
+  <p style="font-size: 0.9em;">The information and data provided in this repository are for informational purposes only and are presented "as is." While efforts are made to ensure the accuracy, completeness, and reliability of the data, no guarantees are made regarding its correctness or suitability for any specific purpose.</p>
+  <p style="font-size: 0.9em;">Users are advised to independently verify the accuracy of the data before using it for critical applications. The repository maintainers assume no responsibility or liability for any errors, omissions, or inaccuracies in the data or any decisions made based on it.</p>
+  <p style="font-size: 0.9em;">If you identify any discrepancies or inaccuracies, please feel free to open an issue or contact us so that corrections can be made.</p>
   <br>
   <div class="warning">
     <img src="assets/warning-icon-pixabay.webp" alt="Warning Icon" style="width: 7%; height: auto; display: block; margin: 0 auto;" />
   </div>
-  <p>This site is currently under construction. Some features may not be available.</p>
-  <p>Last build: <span id="last-build">2025-01-01 19:00 CST</span></p>
+    <p>This site is currently under construction. Some features may not be available .</p>
+    <p>Last build: <span id="last-build">2025-01-01 19:00 CST</span></p>
+<!-- no JavaScript needed -->
+  </div>
   <p style="text-align: center; font-size: 0.8em;">Images and logos created with OpenAI's DALL-E technology.</p>
+  <p style="text-align: center; font-size: 0.8em;">OpenAI ChatGPT , Google Gemini and Notebook LLM used to check references and sources.</p>
+  
 
   <!-- MAIN TOPIC CAROUSEL -->
+
   <div class="carousel-container">
     <div class="carousel-title">
       <button class="carousel-button prev">&#10094;</button>
@@ -38,15 +46,15 @@
     <div class="carousel">
       <div class="carousel-track">
         <div class="carousel-item" data-topic="Quizz">
-          <img src="assets/quizz-dalle.webp" alt="Quizz" />
+          <img src="assets\quizz-dalle.webp" alt="Quizz" />
           <span>Quizz</span>
         </div>
         <div class="carousel-item" data-topic="Threats">
-          <img src="assets/threats-dalle.webp" alt="Threats" />
+          <img src="assets\threats-dalle.webp" alt="Threats" />
           <span>Threats</span>
         </div>
         <div class="carousel-item" data-topic="Protocols">
-          <img src="assets/protocols-dalle.webp" alt="Protocols" />
+          <img src="assets\protocols-dalle.webp" alt="Protocols" />
           <span>Protocols</span>
         </div>
         <div class="carousel-item" data-topic="Standardization Bodies">
@@ -65,13 +73,15 @@
           <img src="assets/quantumresistantalgorithm-dalle.webp" alt="Post Quantum Resistant Algorithms" />
           <span>Post Quantum Resistant Algorithms</span>
         </div>
-        <div class="carousel-item" data-topic="Quantum Technology">
+         <div class="carousel-item" data-topic="Quantum Technology">
           <img src="assets/quantumtechnology-dalle.webp" alt="Quantum Technology" />
           <span>Quantum Technology</span>
         </div>
       </div>
     </div>
   </div>
+
+ 
 
   <!-- MAIN TOPIC SUMMARY SECTION -->
   <div id="main-topic-summary" style="display: none; text-align: center; margin: 20px;">
@@ -82,6 +92,7 @@
   <!-- SUBTOPIC CAROUSEL -->
   <div class="subtopic-carousel" id="subtopic-carousel">
     <div class="carousel-title">
+      <!-- Different classes for subtopic prev/next -->
       <button class="carousel-button subtopic-prev">&#10094;</button>
       <h2>Subtopics</h2>
       <button class="carousel-button subtopic-next">&#10095;</button>
@@ -93,6 +104,11 @@
     </div>
   </div>
 
+  <!-- NAVIGATE BUTTON -->
+  <button class="link-button" id="navigate-button">Go to Page</button>
+
+
   <script src="script.js"></script>
-</body>
+
+  </body>
 </html>

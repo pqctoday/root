@@ -32,6 +32,7 @@ const subtopicPrevButton = document.querySelector('.subtopic-carousel .subtopic-
 const subtopicNextButton = document.querySelector('.subtopic-carousel .subtopic-next');
 
 let subtopicIndex = 0;
+let selectedTopic = "";
 
 // Subtopics dictionary
 const subtopics = {
@@ -55,7 +56,7 @@ function updateSubtopics(topic) {
 
       // Navigate directly when a subtopic is clicked
       subtopicItem.addEventListener('click', () => {
-        window.location.href = `/sections/${topic}/${subtopic}/index.html`;
+        window.location.href = `/sections/${selectedTopic}/${subtopic}/index.html`;
       });
 
       subtopicTrack.appendChild(subtopicItem);
@@ -64,46 +65,33 @@ function updateSubtopics(topic) {
 }
 
 function updateSubtopicCarousel() {
-  const itemWidth = subtopicTrack.children[0]?.offsetWidth || 0; // Get the width of a single subtopic item
-  const visibleWidth = subtopicTrack.parentElement.offsetWidth; // Visible width of the carousel container
-  const totalWidth = subtopicTrack.scrollWidth; // Total width of all subtopic items combined
-  const maxIndex = Math.floor((totalWidth - visibleWidth) / itemWidth); // Calculate max scrollable index
-
-  // Clamp the subtopic index between 0 and maxIndex
-  subtopicIndex = Math.max(0, Math.min(subtopicIndex, maxIndex));
-
-  // Scroll the track
-  const scrollAmount = subtopicIndex * itemWidth;
+  const width = subtopicTrack.children[0]?.offsetWidth || 0;
   subtopicTrack.parentElement.scrollTo({
-    left: scrollAmount,
+    left: subtopicIndex * width,
     behavior: 'smooth',
   });
-
-  // Enable or disable buttons based on the scroll position
-  subtopicPrevButton.disabled = subtopicIndex === 0;
-  subtopicNextButton.disabled = subtopicIndex === maxIndex;
 }
 
-// Handle previous button click
+// Subtopic Prev Button
 subtopicPrevButton.addEventListener('click', () => {
-  subtopicIndex--;
-  updateSubtopicCarousel();
+  if (subtopicIndex > 0) {
+    subtopicIndex--;
+    updateSubtopicCarousel();
+  }
 });
 
-// Handle next button click
+// Subtopic Next Button
 subtopicNextButton.addEventListener('click', () => {
-  subtopicIndex++;
-  updateSubtopicCarousel();
+  if (subtopicIndex < subtopicTrack.children.length - 1) {
+    subtopicIndex++;
+    updateSubtopicCarousel();
+  }
 });
-
-// Initialize subtopic buttons' state
-updateSubtopicCarousel();
 
 // When clicking a main carousel item
 items.forEach(item => {
   item.addEventListener('click', () => {
-    const selectedTopic = item.getAttribute('data-topic');
-
+    selectedTopic = item.getAttribute('data-topic');
     // If topic is "Quizz", navigate directly
     if (selectedTopic === 'Quizz') {
       window.location.href = '/sections/Quizz/index.html';

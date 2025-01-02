@@ -53,7 +53,6 @@ body {
   display: flex;
   justify-content: flex-start;
   scroll-behavior: smooth;
-  border-bottom: 2px solid #ddd; /* Visual cue for scrolling */
 }
 
 .carousel::-webkit-scrollbar {
@@ -102,15 +101,12 @@ body {
 /* ======== SUBTOPIC CAROUSEL ======== */
 .subtopic-carousel {
   display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .subtopic-carousel.active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 1;
 }
 
 .subtopic-carousel .carousel-title {
@@ -140,7 +136,6 @@ body {
   display: flex;
   justify-content: flex-start;
   scroll-behavior: smooth;
-  border-bottom: 2px solid #ddd; /* Visual cue for scrolling */
 }
 
 .subtopic-carousel .carousel::-webkit-scrollbar {
@@ -156,33 +151,7 @@ body {
   background: #f4f4f9;
 }
 
-/* Loading state for subtopic carousel */
-.subtopic-carousel.loading .carousel-track {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
 /* ======== BUTTONS ======== */
-button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-button:focus {
-  outline: 2px solid #007bff;
-  outline-offset: 2px;
-}
-
 .link-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -192,11 +161,22 @@ button:focus {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  display: none; /* Hidden by default */
+  display: none; /* Hidden by default, shown upon subtopic selection */
 }
 
 .link-button:hover {
   background-color: #0056b3;
+}
+
+/* ======== IFRAME ======== */
+#main-topic-iframe {
+  width: 100%; /* Changed from fixed width to responsive */
+  max-width: 1200px; /* Optional: Limit maximum width */
+  height: 200px;
+  border: none;
+  display: block;
+  margin: 20px auto; /* Added margin for better spacing */
+  box-sizing: border-box; /* Ensures padding and border are included in width */
 }
 
 /* ======== RESPONSIVE MEDIA QUERIES ======== */
@@ -204,7 +184,7 @@ button:focus {
 /* Tablet Devices */
 @media (max-width: 768px) {
   .carousel-container {
-    width: 95%;
+    width: 95%; /* Increased width for smaller screens */
     padding: 0 20px;
   }
 
@@ -221,6 +201,11 @@ button:focus {
 
   .carousel-title .carousel-button {
     padding: 5px 10px;
+  }
+
+  /* Adjust iframe height for tablet */
+  #main-topic-iframe {
+    height: 150px;
   }
 }
 
@@ -252,6 +237,11 @@ button:focus {
     padding: 5px;
   }
 
+  /* Adjust iframe height for mobile */
+  #main-topic-iframe {
+    height: 120px;
+  }
+
   /* Make buttons full width */
   .carousel-title .carousel-button,
   .subtopic-carousel .carousel-button.subtopic-prev,
@@ -259,5 +249,94 @@ button:focus {
   .link-button {
     width: 100%;
     margin: 5px 0;
+  }
+}
+
+/* ======== ADDITIONAL RESPONSIVE STYLES FOR QUIZ COMPONENTS ======== */
+
+/* Quiz Container */
+#quiz-container {
+  width: 100%;
+  max-width: 800px; /* Prevents it from stretching too wide */
+  margin: 20px auto; /* Added top margin for spacing */
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Ensures padding and border are included in width */
+  background-color: #fff; /* Added background for better visibility */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+}
+
+/* Quiz Sections */
+#quiz-selection,
+#quiz-area,
+#results-area,
+#correct-answers-section {
+  margin-bottom: 20px;
+}
+
+/* Answers List */
+#answer-area label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer; /* Indicates clickable labels */
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Consistent font size */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
+
+/* Responsive Adjustments for Quiz Components */
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+  #quiz-container {
+    padding: 15px;
+  }
+
+  button {
+    width: auto; /* Maintain button size */
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  #quiz-container {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%; /* Full width buttons on mobile */
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  #question-area h2 {
+    font-size: 18px;
+  }
+
+  #answer-area label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  /* Adjust iframe for mobile */
+  #main-topic-iframe {
+    width: 100%;
+    height: 120px;
   }
 }

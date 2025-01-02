@@ -28,21 +28,22 @@ nextButton.addEventListener('click', () => {
 // SUBTOPIC CAROUSEL
 const subtopicCarousel = document.getElementById('subtopic-carousel');
 const subtopicTrack = document.getElementById('subtopic-track');
-const subtopicPrevButton = document.querySelector('.subtopic-carousel .subtopic-prev');
-const subtopicNextButton = document.querySelector('.subtopic-carousel .subtopic-next');
+const subtopicPrevButton = document.querySelectorAll('.subtopic-carousel .subtopic-prev')[0];
+const subtopicNextButton = document.querySelectorAll('.subtopic-carousel .subtopic-next')[0];
 
 let subtopicIndex = 0;
+let selectedTopic = "";
 
 // Subtopics dictionary
 const subtopics = {
-  "Quizz": ["General", "Threats", "Protocols", "Standardization Bodies", "Countries", "Industries"],
-  "Threats": ["General", "Discovery", "Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
-  "Protocols": ["General", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
-  "Standardization Bodies": ["General", "CC", "CISA", "ETSI", "Global Platform", "GSMA", "OASIS", "TCG"],
-  "Countries": ["General", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France"],
-  "Industries": ["General", "Telecom", "Automotive", "Banking", "Government", "Enterprises"],
-  "Post Quantum Resistant Algorithms": ["General", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
-  "Quantum Technology": ["General", "QRNG", "QKD", "Hardware", "Software"],
+  "Quizz": ["General","Threats", "Protocols", "Standardization Bodies", "Countries", "Industries"],
+  "Threats": ["General","Discovery","Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
+  "Protocols": ["General","SSH", "TLS", "IPSEC","SMIME","PKI"],
+  "Standardization Bodies": ["General","CC","CISA","ETSI","Global Platform","GSMA","OASIS","TCG" ],
+  "Countries": ["General","US", "Europe", "Canada", "Australia", "Singapore", "Germany","France"],
+  "Industries": ["General","Telecom", "Automotive", "Banking", "Government", "Enterprises"],
+  "Post Quantum Resistant Algorithms": ["General","Certificates","ML-KEM", "ML-DSA", "SLH-DSA"],
+  "Quantum Technology": ["General","QRNG", "QKD","Hardware","Software"],
 };
 
 function updateSubtopics(topic) {
@@ -52,10 +53,10 @@ function updateSubtopics(topic) {
       const subtopicItem = document.createElement('div');
       subtopicItem.className = 'carousel-item';
       subtopicItem.textContent = subtopic;
-
+      
       // Navigate directly when a subtopic is clicked
       subtopicItem.addEventListener('click', () => {
-        window.location.href = `/sections/${topic}/${subtopic}/index.html`;
+        window.location.href = `/sections/${selectedTopic}/${subtopic}/index.html`;
       });
 
       subtopicTrack.appendChild(subtopicItem);
@@ -64,52 +65,37 @@ function updateSubtopics(topic) {
 }
 
 function updateSubtopicCarousel() {
-  const itemWidth = subtopicTrack.children[0]?.offsetWidth || 0; // Get the width of a single subtopic item
-  const visibleWidth = subtopicTrack.parentElement.offsetWidth; // Visible width of the carousel container
-  const totalWidth = subtopicTrack.scrollWidth; // Total width of all subtopic items combined
-  const maxIndex = Math.floor((totalWidth - visibleWidth) / itemWidth); // Calculate max scrollable index
-
-  // Clamp the subtopic index between 0 and maxIndex
-  subtopicIndex = Math.max(0, Math.min(subtopicIndex, maxIndex));
-
-  // Scroll the track
-  const scrollAmount = subtopicIndex * itemWidth;
+  const width = subtopicTrack.children[0]?.offsetWidth || 0;
   subtopicTrack.parentElement.scrollTo({
-    left: scrollAmount,
+    left: subtopicIndex * width,
     behavior: 'smooth',
   });
-
-  // Enable or disable buttons based on the scroll position
-  subtopicPrevButton.disabled = subtopicIndex === 0;
-  subtopicNextButton.disabled = subtopicIndex === maxIndex;
 }
 
-// Handle previous button click
 subtopicPrevButton.addEventListener('click', () => {
-  subtopicIndex--;
-  updateSubtopicCarousel();
+  if (subtopicIndex > 0) {
+    subtopicIndex--;
+    updateSubtopicCarousel();
+  }
 });
 
-// Handle next button click
 subtopicNextButton.addEventListener('click', () => {
-  subtopicIndex++;
-  updateSubtopicCarousel();
+  if (subtopicIndex < subtopicTrack.children.length - 1) {
+    subtopicIndex++;
+    updateSubtopicCarousel();
+  }
 });
-
-// Initialize subtopic buttons' state
-updateSubtopicCarousel();
 
 // When clicking a main carousel item
 items.forEach(item => {
   item.addEventListener('click', () => {
-    const selectedTopic = item.getAttribute('data-topic');
-
+    selectedTopic = item.getAttribute('data-topic');
     // If topic is "Quizz", navigate directly
     if (selectedTopic === 'Quizz') {
       window.location.href = '/sections/Quizz/index.html';
       return;
     }
-
+    
     // Otherwise, show subtopic carousel
     subtopicCarousel.classList.add('active');
     subtopicIndex = 0;
@@ -142,3 +128,4 @@ document.querySelectorAll('.carousel-item').forEach(item => {
     }
   });
 });
+
