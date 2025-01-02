@@ -1,230 +1,342 @@
+/* ======== BASE STYLES ======== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f4f4f9;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      background-color: #f4f4f9;
-    }
+/* ======== CAROUSEL STYLES ======== */
+.carousel-container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+  padding: 0 40px;
+}
 
-    .carousel-container {
-      width: 80%;
-      margin: 20px auto;
-      text-align: center;
-      position: relative;
-      padding: 0 40px;
-    }
+.carousel-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10px;
+}
 
-    .carousel-title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      margin-bottom: 10px;
-    }
+.carousel-title .carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+}
 
-    .carousel-title .carousel-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 5px;
-      z-index: 10;
-    }
+.carousel-title .prev {
+  left: 10px;
+}
 
-    .carousel-title .prev {
-      left: 10px;
-    }
+.carousel-title .next {
+  right: 10px;
+}
 
-    .carousel-title .next {
-      right: 10px;
-    }
+.carousel {
+  overflow-x: auto;
+  display: flex;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+}
 
-    .carousel {
-      overflow-x: auto;
-      display: flex;
-      justify-content: flex-start;
-      scroll-behavior: smooth;
-    }
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
 
-    .carousel::-webkit-scrollbar {
-      height: 6px;
-    }
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
 
-    .carousel::-webkit-scrollbar-thumb {
-      background-color: #ccc;
-      border-radius: 3px;
-    }
+.carousel::-webkit-scrollbar-track {
+  background: #f4f4f9;
+}
 
-    .carousel::-webkit-scrollbar-track {
-      background: #f4f4f9;
-    }
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
+.carousel-item {
+  min-width: 200px;
+  margin: 10px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .carousel-item {
-      min-width: 200px;
-      margin: 10px;
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      text-align: center;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.carousel-item img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
 
-    .carousel-item img {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 10px;
-    }
+.carousel-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
 
-    .carousel-item:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s;
-    }
+/* ======== SUBTOPIC CAROUSEL ======== */
+.subtopic-carousel {
+  display: none;
+}
 
-    /* SUBTOPIC CAROUSEL */
-    .subtopic-carousel {
-      display: none;
-    }
+.subtopic-carousel.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .subtopic-carousel.active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.subtopic-carousel .carousel-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 20px;
+  position: relative;
+}
 
-    /* Subtopic carousel title uses space-between
-       so the subtopic arrows can be on each side */
-    .subtopic-carousel .carousel-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 20px;
-      padding: 0 20px;
-      position: relative; /* If you want absolute-positioned arrows */
-    }
+.subtopic-carousel .carousel-button.subtopic-prev,
+.subtopic-carousel .carousel-button.subtopic-next {
+  position: static;
+  transform: none;
+  margin: 0 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
 
-    /* Different classes for subtopic arrows so they don't overlap text */
-    .subtopic-carousel .carousel-button.subtopic-prev,
-    .subtopic-carousel .carousel-button.subtopic-next {
-      position: static; /* No absolute positioning */
-      transform: none;
-      margin: 0 10px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 15px;
-      cursor: pointer;
-    }
+.subtopic-carousel .carousel {
+  overflow-x: auto;
+  display: flex;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+}
 
-    .subtopic-carousel .carousel {
-      overflow-x: auto;
-      display: flex;
-      justify-content: flex-start;
-      scroll-behavior: smooth;
-    }
+.subtopic-carousel .carousel::-webkit-scrollbar {
+  height: 6px;
+}
 
-    .subtopic-carousel .carousel::-webkit-scrollbar {
-      height: 6px;
-    }
+.subtopic-carousel .carousel::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
 
-    .subtopic-carousel .carousel::-webkit-scrollbar-thumb {
-      background-color: #ccc;
-      border-radius: 3px;
-    }
+.subtopic-carousel .carousel::-webkit-scrollbar-track {
+  background: #f4f4f9;
+}
 
-    .subtopic-carousel .carousel::-webkit-scrollbar-track {
-      background: #f4f4f9;
-    }
+/* ======== BUTTONS ======== */
+.link-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: none; /* Hidden by default, shown upon subtopic selection */
+}
 
-    .link-button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      display: none; /* Hidden by default, shown upon subtopic selection */
-    }
+.link-button:hover {
+  background-color: #0056b3;
+}
 
-    .link-button:hover {
-      background-color: #0056b3;
-    }
+/* ======== IFRAME ======== */
+#main-topic-iframe {
+  width: 100%; /* Changed from fixed width to responsive */
+  max-width: 1200px; /* Optional: Limit maximum width */
+  height: 200px;
+  border: none;
+  display: block;
+  margin: 20px auto; /* Added margin for better spacing */
+  box-sizing: border-box; /* Ensures padding and border are included in width */
+}
 
-    #main-topic-iframe {
-      width: 1200px; /* Add a margin of 20px on each side */
-      max-width: 1200px; /* Optional: Limit maximum width */
-      height: 200px;
-          border: none;
-      display: block;
-        margin: 0 auto;
-      }
+/* ======== RESPONSIVE MEDIA QUERIES ======== */
 
-    @media (max-width: 768px) {
-      .carousel-container {
-        width: 100%;
-        height: fit-content;
-        padding: 0 20px;
-      }
+/* Tablet Devices */
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 95%; /* Increased width for smaller screens */
+    padding: 0 20px;
+  }
 
-      .carousel-item {
-        min-width: 150px;
-        margin: 5px;
-        padding: 10px;
-      }
+  .carousel-item {
+    min-width: 150px;
+    margin: 5px;
+    padding: 10px;
+  }
 
-      .carousel-item img {
-        width: 60px;
-        height: 60px;
-      }
+  .carousel-item img {
+    width: 60px;
+    height: 60px;
+  }
 
-      .carousel-title .carousel-button {
-        padding: 5px 10px;
-      }
-    }
+  .carousel-title .carousel-button {
+    padding: 5px 10px;
+  }
 
-    @media (max-width: 480px) {
-      .carousel-title h1,
-      .carousel-title h2 {
-        font-size: 16px;
-      }
+  /* Adjust iframe height for tablet */
+  #main-topic-iframe {
+    height: 150px;
+  }
+}
 
-      .carousel-item {
-        min-width: 120px;
-        margin: 3px;
-        padding: 5px;
-      }
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .carousel-title h1,
+  .carousel-title h2 {
+    font-size: 16px;
+  }
 
-      .carousel-item img {
-        width: 50px;
-        height: 50px;
-      }
+  .carousel-item {
+    min-width: 120px;
+    margin: 3px;
+    padding: 5px;
+  }
 
-      .carousel-title .prev,
-      .carousel-title .next {
-        top: auto;
-        bottom: 10px;
-      }
+  .carousel-item img {
+    width: 50px;
+    height: 50px;
+  }
 
-      .carousel-title .carousel-button {
-        padding: 5px;
-      }
-    }
+  .carousel-title .prev,
+  .carousel-title .next {
+    top: auto;
+    bottom: 10px;
+  }
+
+  .carousel-title .carousel-button {
+    padding: 5px;
+  }
+
+  /* Adjust iframe height for mobile */
+  #main-topic-iframe {
+    height: 120px;
+  }
+
+  /* Make buttons full width */
+  .carousel-title .carousel-button,
+  .subtopic-carousel .carousel-button.subtopic-prev,
+  .subtopic-carousel .carousel-button.subtopic-next,
+  .link-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* ======== ADDITIONAL RESPONSIVE STYLES FOR QUIZ COMPONENTS ======== */
+
+/* Quiz Container */
+#quiz-container {
+  width: 100%;
+  max-width: 800px; /* Prevents it from stretching too wide */
+  margin: 20px auto; /* Added top margin for spacing */
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Ensures padding and border are included in width */
+  background-color: #fff; /* Added background for better visibility */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+}
+
+/* Quiz Sections */
+#quiz-selection,
+#quiz-area,
+#results-area,
+#correct-answers-section {
+  margin-bottom: 20px;
+}
+
+/* Answers List */
+#answer-area label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer; /* Indicates clickable labels */
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Consistent font size */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
+
+/* Responsive Adjustments for Quiz Components */
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+  #quiz-container {
+    padding: 15px;
+  }
+
+  button {
+    width: auto; /* Maintain button size */
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  #quiz-container {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%; /* Full width buttons on mobile */
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  #question-area h2 {
+    font-size: 18px;
+  }
+
+  #answer-area label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  /* Adjust iframe for mobile */
+  #main-topic-iframe {
+    width: 100%;
+    height: 120px;
+  }
+}

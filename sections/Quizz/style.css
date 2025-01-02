@@ -1,40 +1,77 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-th {
-    background-color: #f4f4f4;
-}
-body {
+/* Ensures mobile-friendly scaling */
+html, body {
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
-}
-
-#quiz-container {
-    width: 80%;
+  }
+  
+  body {
+    /* If you like, give the body a base font size that is comfortable on all devices */
+    font-size: 16px; 
+  }
+  
+  /* Quiz Container */
+  #quiz-container {
+    width: 100%;
+    max-width: 800px;    /* keeps layout from being too wide on large screens */
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-}
-
-#quiz-selection, #quiz-area, #results-area {
+  }
+  
+  /* Table (responsive) */
+  table {
+    width: 100%;
+    max-width: 100%;     /* ensure table stays within container */
+    border-collapse: collapse;
+    margin: 20px 0;
+    display: block;      /* allows overflow-x to work */
+    overflow-x: auto;    /* scrollbar on smaller devices if needed */
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  /* Quiz Sections */
+  #quiz-selection,
+  #quiz-area,
+  #results-area {
     margin-bottom: 20px;
-}
-
-#answer-area label {
+  }
+  
+  /* Answers list */
+  #answer-area label {
     display: block;
     margin-bottom: 10px;
-}
-
-button {
+  }
+  
+  /* Buttons */
+  button {
     padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
-}
+  }
+  
+  /* MEDIA QUERIES for small devices */
+  @media (max-width: 768px) {
+    #quiz-container {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
