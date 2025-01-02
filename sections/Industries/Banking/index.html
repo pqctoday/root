@@ -21,8 +21,36 @@
     </style>
 </head>
 <body>
-    <div id="csvTable"></div>
+<h1>Quantum Threats to the Banking Industry</h1>
+<p>The banking industry is particularly vulnerable to the threat of quantum computers because it relies heavily on public-key cryptography to secure financial transactions and protect sensitive customer data. The potential consequences of a successful quantum attack on the banking sector could be catastrophic, leading to significant financial losses, erosion of trust, and widespread disruption of financial services.</p>
 
+<h2>Store-Now, Decrypt-Later Attacks</h2>
+<p>The most pressing threat to the banking industry stems from the potential for "store-now, decrypt-later" (SNDL) attacks, also known as "harvest attacks". In this scenario, malicious actors could intercept and store encrypted financial data today, with the intention of decrypting it later when sufficiently powerful quantum computers become available. Sensitive information with long-term value, such as encryption keys, customer financial records, and proprietary trading algorithms, could be at immediate risk.</p>
+
+<h2>Cryptographically Relevant Quantum Computers</h2>
+<p>The emergence of cryptographically relevant quantum computers (CRQCs) would further amplify these threats by enabling the rapid decryption of data currently protected by widely used algorithms like RSA and ECC. This would put at risk a vast range of banking operations, including:</p>
+<ul>
+    <li><strong>Online and mobile banking:</strong> The confidentiality and integrity of customer login credentials, account balances, and transaction details could be compromised, leading to unauthorized access, fraudulent transactions, and theft of funds.</li>
+    <li><strong>Payment systems:</strong> Quantum attacks could disrupt interbank payment systems like SWIFT, potentially causing delays, errors, and a loss of confidence in the global financial system.</li>
+    <li><strong>Trading and investment platforms:</strong> The security of high-frequency trading algorithms, market data feeds, and customer investment portfolios could be compromised, leading to financial losses, market manipulation, and erosion of trust in financial institutions.</li>
+    <li><strong>Digital signatures and certificates:</strong> Quantum computers could forge digital signatures used to authenticate transactions and verify identities, potentially leading to a breakdown of trust and the validity of financial agreements.</li>
+</ul>
+
+<h2>Mitigating Quantum Threats</h2>
+<p>To mitigate these quantum threats, the banking industry must take proactive steps to transition to a quantum-safe infrastructure. These efforts require careful planning, significant investment, and collaboration across the industry. The following are some key changes expected to happen:</p>
+<ul>
+    <li><strong>Adoption of post-quantum cryptography (PQC):</strong> Banks will need to migrate from currently deployed vulnerable algorithms to PQC algorithms that are resistant to quantum attacks. This transition will require updating systems, software, and hardware to support the new algorithms. The National Institute of Standards and Technology (NIST) has spearheaded the standardization of PQC algorithms, and its first set of standards was released in August 2024.</li>
+    <li><strong>Enhancing cryptographic agility:</strong> Banks must build flexibility into their systems to enable the rapid adoption of new cryptographic algorithms as they become available. This will require implementing cryptographic frameworks that allow for easy updates and transitions without disrupting core banking operations. Cryptographic agility is seen as essential for long-term security and resilience in a rapidly evolving technological landscape.</li>
+    <li><strong>Inventory and risk assessment:</strong> Banks need to conduct a comprehensive inventory of all systems and applications that rely on cryptography and assess their vulnerability to quantum attacks. A thorough risk assessment will help prioritize migration efforts and allocate resources effectively.</li>
+    <li><strong>Hybrid cryptography:</strong> Banks can implement hybrid solutions that combine classical cryptography with PQC algorithms during the transition period. This approach ensures a baseline level of security while providing a pathway to full PQC adoption.</li>
+    <li><strong>Collaboration and knowledge sharing:</strong> The banking industry must foster collaboration among financial institutions, technology providers, and regulators to share best practices, address common challenges, and accelerate the transition to a quantum-safe ecosystem. This collective effort is vital to ensuring the stability and resilience of the global financial system in the face of the quantum threat.</li>
+    <li><strong>Workforce training and awareness:</strong> Banks must invest in training programs to equip their workforce with the necessary knowledge and skills to understand the quantum threat and implement PQC solutions effectively. Raising awareness about the quantum threat across all levels of the organization is crucial to driving cultural change and fostering a security-conscious mindset.</li>
+</ul>
+
+<p>The timeline for migrating to a quantum-safe banking infrastructure remains uncertain. Estimates suggest that a full transition could take several years, possibly between 5 and 15 years. Given the potential severity of the quantum threat and the complexity of the transition, banks must begin taking concrete steps now. Delaying action will only increase the risk of falling behind in the cybersecurity arms race and becoming vulnerable to attacks.</p>
+
+<p>It's worth noting that information regarding a potential date for a CRQC is not concretely indicated in the provided sources. However, experts suggest a timeframe ranging from a few years to over ten years, with the possibility of a cryptographically relevant quantum computer being available as early as five years. Some experts believe a CRQC will never be developed.</p>
+    <div id="csvTable"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script>
         function loadCSV(filePath) {

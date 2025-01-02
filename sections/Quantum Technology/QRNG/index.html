@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Random Number Generation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+
+        th:hover {
+            background-color: #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quantum Random Number Generation</h1>
+    <section>
+        <h2>Quantum Random Number Generators (QRNGs)</h2>
+        <p>Quantum random number generators (QRNGs) exploit the inherent randomness of quantum mechanics to produce truly random numbers. They are considered superior to classical random number generators (RNGs) because the unpredictability stems from fundamental physical laws, unlike classical RNGs which rely on deterministic algorithms or complex physical processes that might still be predictable.</p>
+        <p>Here's how QRNGs use quantum technology for high-quality random number generation:</p>
+        <ul>
+            <li><strong>Quantum Phenomena as Entropy Sources:</strong> QRNGs leverage various quantum phenomena that exhibit inherent randomness. These include:
+                <ul>
+                    <li><strong>Quantum Fluctuations:</strong> Fluctuations in the intensity of an optical source can be measured to generate random numbers. The Los Alamos QRNG uses this method, achieving a high output rate due to the high bandwidth of these fluctuations.</li>
+                    <li><strong>Measurement of Qubits:</strong> Qubits, the building blocks of quantum computers, can exist in a superposition of states. When measured, they collapse into a definite state, 0 or 1, with a probability determined by their superposition. This unpredictable collapse forms the basis of many QRNGs.</li>
+                    <li><strong>Vacuum Noise:</strong> Even in the absence of photons, the electromagnetic field exhibits random fluctuations known as vacuum noise. Measuring these fluctuations provides a source of randomness.</li>
+                    <li><strong>Other Sources:</strong> Other quantum phenomena like amplified spontaneous emission, where the phase of light is randomized, also serve as entropy sources for QRNGs.</li>
+                </ul>
+            </li>
+            <li><strong>Post-processing and Randomness Extraction:</strong> The raw output from quantum measurements might not be perfectly uniform or unbiased. To address this, QRNGs employ post-processing techniques like randomness extractors. These extractors take the raw quantum output and additional input from a local random source to generate a final output with near-perfect randomness.</li>
+            <li><strong>Provable Randomness:</strong> One of the key advantages of QRNGs is the ability to prove the quality of randomness. Quantum Origin, a commercial QRNG, uses a device-independent protocol based on the Bell Test. This protocol allows verification of randomness without relying on assumptions about the device's construction or operation, providing mathematically proven near-perfect randomness.</li>
+            <li><strong>Overcoming Limitations of Classical RNGs:</strong> QRNGs address the shortcomings of classical RNGs by:
+                <ul>
+                    <li><strong>Eliminating Determinism:</strong> Classical RNGs are fundamentally deterministic, meaning their output is predictable if the initial conditions and algorithm are known. QRNGs, based on quantum mechanics' probabilistic nature, offer true unpredictability.</li>
+                    <li><strong>Providing Higher Quality Randomness:</strong> QRNGs generally produce higher quality randomness than classical RNGs. Classical RNGs often require significant post-processing to improve their randomness, while well-designed QRNGs offer high-quality randomness from the source.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>QRNGs represent a significant advancement in random number generation, providing high-quality, provable randomness that is crucial for various applications, especially in the era of quantum computers that can potentially break classical cryptographic systems.</p>
+    </section>
+    <h2>References</h2>
+    <table border="1" id="outputTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('title')">Title</th>
+                <th onclick="sortTable('date')">Date</th>
+                <th>URL</th>
+                <th onclick="sortTable('author')">Author</th>
+                <th onclick="sortTable('country')">Country</th>
+                <th>Category</th>
+                <th onclick="sortTable('reference')">Reference</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>

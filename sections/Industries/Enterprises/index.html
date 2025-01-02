@@ -21,8 +21,51 @@
     </style>
 </head>
 <body>
-    <div id="csvTable"></div>
+<h1>Enterprises and Quantum Computing Risks</h1>
+<p>Enterprises face significant risks from quantum computers, particularly those handling sensitive data that requires long-term confidentiality. A key threat is the "store-now, decrypt-later" (SNDL) scenario, where malicious actors harvest encrypted data today, aiming to decrypt it when sufficiently powerful quantum computers, known as cryptographically relevant quantum computers (CRQCs), become available. The potential consequences of a quantum attack are substantial, including data breaches, unauthorized access, theft of intellectual property, and disruption of critical services.</p>
 
+<p>The uncertainty surrounding the timeline for the emergence of CRQCs adds to the challenge. While estimates range from a few years to over a decade, experts caution that a CRQC could be developed sooner than anticipated. Some experts even argue that a CRQC may never be developed. This unpredictability emphasizes the need for proactive measures, as delaying the transition to quantum-safe technologies amplifies the risks and potential costs.</p>
+
+<h2>Key Changes Expected as Enterprises Address the Quantum Threat</h2>
+
+<h3>Migration to Post-Quantum Cryptography (PQC)</h3>
+<p>The most crucial step is transitioning from quantum-vulnerable algorithms to PQC algorithms that are resistant to quantum attacks. This will involve:</p>
+<ul>
+    <li><strong>Adopting PQC standards:</strong> Enterprises should actively follow and implement PQC standards being developed by organizations like NIST.</li>
+    <li><strong>Updating systems and infrastructure:</strong> Existing systems and infrastructure will likely require updates or complete overhauls to support PQC algorithms. This may involve substantial investments in new hardware, software, and security solutions.</li>
+</ul>
+
+<h3>Enhancing Cryptographic Agility</h3>
+<p>Enterprises must build in the capability to seamlessly switch between cryptographic algorithms without disrupting operations. This flexibility allows for adaptation to new threats and the adoption of newer, potentially better-fitting PQC standards. Cryptographic agility is crucial throughout the PQC migration, as it enables a more resilient and secure transition.</p>
+
+<h3>Quantum-Vulnerability Diagnosis</h3>
+<p>Enterprises need to undertake a comprehensive assessment of their cryptographic assets. This involves:</p>
+<ul>
+    <li><strong>Creating a cryptographic inventory:</strong> Identify all cryptographic primitives and protocols in use, as well as the data and communication channels they protect.</li>
+    <li><strong>Conducting a quantum risk assessment:</strong> Analyze the impact of a potential quantum attack on different systems, data types, and business processes. This will help prioritize migration efforts based on the level of risk and the urgency of protection.</li>
+</ul>
+
+<h3>Developing a Migration Strategy</h3>
+<p>A well-defined roadmap for the PQC migration is essential. This should include:</p>
+<ul>
+    <li><strong>Prioritizing high-impact systems:</strong> Focus on systems handling the most sensitive data, those requiring long-term confidentiality, and those critical to business operations.</li>
+    <li><strong>Defining a timeline:</strong> Establish realistic timelines for different stages of the migration, considering resource availability, system complexity, and the evolving threat landscape.</li>
+    <li><strong>Implementing hybrid solutions:</strong> Consider using hybrid solutions that combine classical cryptography with PQC during the transition phase. This approach can enhance security while providing time for a more thorough migration to PQC.</li>
+</ul>
+
+<h3>Collaboration and Partnerships</h3>
+<p>Engaging with various stakeholders is essential for a successful PQC transition. This includes:</p>
+<ul>
+    <li><strong>Collaborating with industry peers:</strong> Share experiences, best practices, and lessons learned to foster a more effective and efficient migration process.</li>
+    <li><strong>Working with vendors:</strong> Demand PQC readiness from vendors and engage in discussions regarding their PQC roadmaps.</li>
+    <li><strong>Following regulatory guidance:</strong> Stay informed about evolving regulatory requirements and ensure compliance with relevant legislation and guidelines.</li>
+</ul>
+
+<h3>Workforce Training and Awareness</h3>
+<p>Investing in education and training programs is crucial to equip employees with the knowledge and skills to understand the quantum threat and implement PQC solutions effectively.</p>
+
+<p>The transition to a quantum-safe enterprise will be a complex and multifaceted undertaking, requiring significant effort, time, and resources. However, the potential consequences of inaction are too severe to ignore. By proactively addressing the quantum threat, enterprises can protect their sensitive data, ensure business continuity, and maintain the trust of their customers and stakeholders in a future where quantum computing is a reality.</p>
+    <div id="csvTable"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script>
         function loadCSV(filePath) {

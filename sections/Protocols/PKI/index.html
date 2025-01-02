@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvest Now Decrypt Later</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<section></section>
+    <h1>Public Key Infrastructure (PKI)</h1>
+    <p>Public Key Infrastructure (PKI) is a system of digital certificates, certificate authorities, and other registration authorities that verifies and authenticates the identities of entities in electronic communication. PKI relies heavily on public-key cryptography, specifically for the generation and verification of digital signatures and the secure exchange of encryption keys.</p>
+    <p>The quantum threat to PKI is significant, as quantum computers could compromise the underlying cryptographic algorithms used in certificate issuance, validation, and key management. This could potentially undermine trust in digital identities and lead to widespread security breaches.</p>
+    <h2>Impact of Quantum Threat on PKI and Tools</h2>
+    <p>Here's how the quantum threat could impact PKI and tools using it:</p>
+    <ul>
+        <li><strong>Digital Certificates:</strong> Quantum computers could forge digital certificates, enabling attackers to impersonate legitimate websites, organizations, or individuals, leading to phishing attacks, malware distribution, and data breaches.</li>
+        <li><strong>Key Management:</strong> Quantum computers could compromise the private keys used by certificate authorities (CAs) to sign digital certificates. This would allow attackers to issue fraudulent certificates that appear to be from trusted CAs.</li>
+        <li><strong>Trust and Authentication:</strong> The ability of quantum computers to break public-key cryptography undermines the foundation of trust and authentication in PKI. This could lead to widespread distrust in digital identities and make it difficult to establish secure communication channels.</li>
+    </ul>
+    <h2>Tools and Applications Impacted by Quantum Threat</h2>
+    <p>Numerous tools and applications rely on PKI for security and would be impacted by the quantum threat:</p>
+    <ul>
+        <li><strong>Web Browsers:</strong> Web browsers use PKI to verify the authenticity of websites and establish secure HTTPS connections.</li>
+        <li><strong>Email Clients:</strong> Email clients rely on PKI for digital signatures to verify the sender's identity and ensure the integrity of emails.</li>
+        <li><strong>VPNs:</strong> VPNs often use PKI for authentication and key exchange, securing the VPN tunnel between the user's device and the VPN server.</li>
+        <li><strong>Digital Signatures:</strong> Digital signatures, widely used for document signing, software verification, and financial transactions, are based on public-key cryptography and are vulnerable to quantum attacks.</li>
+        <li><strong>Code Signing:</strong> Code signing utilizes PKI to verify the authenticity and integrity of software, ensuring that it comes from a trusted source and hasn't been tampered with.</li>
+    </ul>
+    <h2>Mitigating the Quantum Threat to PKI</h2>
+    <p>Mitigating the quantum threat to PKI requires a multifaceted approach:</p>
+    <ul>
+        <li><strong>Transition to quantum-resistant algorithms:</strong> As post-quantum cryptography (PQC) algorithms become standardized, PKI systems must transition to using quantum-resistant algorithms for digital signatures, key exchange, and certificate issuance.</li>
+        <li><strong>Develop quantum-resistant PKI solutions:</strong> Research and development of new PKI implementations based on quantum-resistant algorithms are crucial for long-term security.</li>
+        <li><strong>Hybrid solutions:</strong> Combining traditional and post-quantum cryptography can provide enhanced security until PQC is widely adopted.</li>
+        <li><strong>Cryptographic agility:</strong> PKI systems must be designed with flexibility to adapt to evolving cryptographic standards and seamlessly transition to new algorithms as needed.</li>
+        <li><strong>Awareness and Education:</strong> It's essential to raise awareness about the quantum threat to PKI among stakeholders, including developers, system administrators, and users.</li>
+        <li><strong>Collaboration:</strong> Organizations need to collaborate with industry partners, standards bodies, and government agencies to develop and implement quantum-safe PKI solutions.</li>
+    </ul>
+    <p>Source [15] points out that elliptical curve cryptography, frequently used in PKI implementations, faces a substantial risk of impersonation attacks due to the quantum threat. This could lead to a collapse of the trust model essential for secure communication in intelligent transportation systems (ITS) and connected and automated driving solutions.</p>
+    <p>The U.S. National Institute of Standards and Technology (NIST) is leading the effort to standardize quantum-resistant algorithms, with the first set of standards published in 2024. These standards will play a critical role in facilitating the transition to quantum-safe PKI.</p>
+    <p>Several sources recommend conducting a cryptographic inventory to identify systems and applications that rely on PKI, assess their vulnerability to quantum attacks, and prioritize migration efforts.</p>
+    <p>Source [32] notes that the German Federal Office for Information Security (BSI) operates under the assumption that cryptographically relevant quantum computers will be available in the early 2030s and recommends hybrid solutions and cryptographic agility as key strategies for PQC migration.</p>
+    <p>The transition to quantum-safe PKI is a complex and long-term process that requires proactive planning, investment, and collaboration. However, it's crucial for maintaining the security and trustworthiness of digital communication in the quantum era.</p>
+</section>
+    <h2>References </h2>
+    <table id="outputTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('title')">Title</th>
+                <th onclick="sortTable('date')">Date</th>
+                <th onclick="sortTable('url')">URL</th>
+                <th onclick="sortTable('author')">Author</th>
+                <th onclick="sortTable('country')">Country</th>
+                <th onclick="sortTable('category')">Category</th>
+                <th onclick="sortTable('reference')">Reference</th>
+                <th onclick="sortTable('type')">Type</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <footer>
+        <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
+    </footer>
+</body>
+</html>

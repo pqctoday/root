@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvest Now Decrypt Later</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<section>
+    <h2>Email Security and the Quantum Threat</h2>
+    <p>Email security, specifically using S/MIME and PGP, faces significant challenges from the quantum threat due to their reliance on public-key cryptography, which quantum computers could potentially break.</p>
+    <p>S/MIME (Secure/Multipurpose Internet Mail Extensions) provides confidentiality and authentication to MIME data, including audio and pictures, and is commonly used in secure email communication. PGP (Pretty Good Privacy) also offers confidentiality and authentication to data and services for key and certificate management, and is frequently used in secure email communication.</p>
+    <p>However, both protocols rely on public-key cryptography for encryption and digital signatures, making them vulnerable to quantum attacks. Quantum computers could:</p>
+    <ul>
+        <li>Decrypt past emails: By breaking the encryption used in S/MIME and PGP, attackers could access emails that were intercepted and stored previously, potentially exposing sensitive information shared in the past. This is known as the "store-now-decrypt-later" attack.</li>
+        <li>Forge digital signatures: Quantum computers could forge digital signatures used to verify the sender's identity in emails, enabling attackers to impersonate legitimate senders and spread misinformation or malicious content.</li>
+    </ul>
+    <p>Tools using S/MIME and PGP for email security, including various email clients, are at risk. A compromise in these security protocols could lead to:</p>
+    <ul>
+        <li>Data breaches: Attackers could gain access to sensitive information shared via email, including personal data, financial details, and confidential business information.</li>
+        <li>Phishing attacks: Forged digital signatures could enable more sophisticated phishing attacks, tricking users into revealing sensitive information or installing malware.</li>
+        <li>Reputational damage: Compromised email accounts could be used to spread misinformation or malicious content, potentially harming an individual's or organization's reputation.</li>
+    </ul>
+    <p>Mitigating the quantum threat to email security requires a proactive approach:</p>
+    <ul>
+        <li>Transition to quantum-safe algorithms: As quantum-resistant algorithms for encryption and digital signatures become standardized and available, email clients and services need to adopt them for S/MIME and PGP implementations.</li>
+        <li>Explore alternative security solutions: Organizations might consider exploring alternative email security solutions that are not reliant on public-key cryptography, such as those utilizing symmetric encryption with pre-shared keys.</li>
+        <li>Implement hybrid solutions: In the interim, combining classical and post-quantum cryptography can provide enhanced security until PQC is widely adopted.</li>
+        <li>Define and implement security policies: Organizations need clear policies on handling sensitive information via email and how to manage the transition to quantum-safe email security. This includes policies on flagging emails containing information that needs to be kept confidential for extended periods as potential security incidents.</li>
+        <li>Cryptographic agility: Organizations and email service providers need to design systems that can adapt to evolving cryptographic standards and transition to new algorithms as needed.</li>
+    </ul>
+    <p>OpenQuantumSafe offers an experimental quantum-safe S/MIME library, which utilizes either a hybrid approach or only post-quantum primitives. However, it is not currently recommended for production environments.</p>
+    <p>While the sources do not explicitly detail tools using PGP that might be impacted, they emphasize the importance of monitoring RFC drafts and scientific literature for developments in quantum-safe PGP implementations.</p>
+    <p>Addressing the quantum threat to email security is paramount for protecting the confidentiality, integrity, and authenticity of email communications in the quantum era.</p>
+</section>
+    <h2>References </h2>
+    <table id="outputTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('title')">Title</th>
+                <th onclick="sortTable('date')">Date</th>
+                <th onclick="sortTable('url')">URL</th>
+                <th onclick="sortTable('author')">Author</th>
+                <th onclick="sortTable('country')">Country</th>
+                <th onclick="sortTable('category')">Category</th>
+                <th onclick="sortTable('reference')">Reference</th>
+                <th onclick="sortTable('type')">Type</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <footer>
+        <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
+    </footer>
+</body>
+</html>

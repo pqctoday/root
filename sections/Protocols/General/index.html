@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-43RB2WJC2H');
+</script>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Table Display</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Security Protocols</h1>
+    <p>Security protocols are essential for establishing secure communication channels and protecting sensitive data exchanged between different entities. These protocols define a set of rules and procedures that govern how cryptographic algorithms and keys are used to ensure confidentiality, integrity, and authenticity of communications. Here's a discussion of security protocols:</p>
+
+    <h2>Purpose of Security Protocols</h2>
+    <p>Security protocols address various security objectives, including:</p>
+    <ul>
+        <li><strong>Confidentiality:</strong> Ensuring data is only accessible to authorized parties.</li>
+        <li><strong>Integrity:</strong> Guaranteeing data has not been altered or tampered with during transmission.</li>
+        <li><strong>Authentication:</strong> Verifying the identity of communicating parties.</li>
+        <li><strong>Non-repudiation:</strong> Preventing parties from denying their actions or involvement in communication.</li>
+    </ul>
+
+    <h2>Examples of Security Protocols</h2>
+    <p>The sources highlight several widely used security protocols, with a particular focus on protocols employing cryptographic algorithms:</p>
+
+    <h3>1. Transport Layer Security (TLS)</h3>
+    <p>TLS is a widely deployed protocol for securing internet communications, ensuring confidentiality and integrity of data exchanged between web browsers and servers. It uses a combination of cryptographic algorithms, including asymmetric encryption for key exchange and symmetric encryption for data encryption. TLS also provides mechanisms for server and client authentication using digital certificates. TLS 1.3 is the latest version and is considered secure, while TLS 1.2 and earlier versions are deprecated due to known vulnerabilities.</p>
+
+    <h3>2. Secure Shell (SSH)</h3>
+    <p>SSH is a protocol for secure remote access to computer systems, enabling secure login and command execution. It uses public-key cryptography for authentication and symmetric encryption for data confidentiality. SSH version 2 is recommended, while version 1 is deprecated due to vulnerabilities.</p>
+
+    <h3>3. Internet Protocol Security (IPsec)</h3>
+    <p>IPsec is a suite of protocols for securing communications at the network layer, providing confidentiality, integrity, and authentication for IP packets. It can operate in tunnel mode or transport mode, with tunnel mode being preferred for full packet encapsulation. IPsec uses various cryptographic algorithms, including AES for encryption, HMAC for authentication, and IKE for key exchange.</p>
+
+    <h3>4. Other Protocols Mentioned in Sources:</h3>
+    <ul>
+        <li><strong>Secure/Multipurpose Internet Mail Extensions (S/MIME):</strong> Used for email security, providing encryption and digital signatures for email messages.</li>
+        <li><strong>OpenPGP Message Format:</strong> Another protocol for email security, offering similar functionalities as S/MIME.</li>
+        <li><strong>Wi-Fi Protected Access 2 (WPA2) and Wi-Fi Protected Access 3 (WPA3):</strong> Security protocols for wireless networks.</li>
+    </ul>
+
+    <h2>Importance of Security Protocols</h2>
+    <p>Security protocols are crucial for:</p>
+    <ul>
+        <li><strong>Protecting Sensitive Data:</strong> They ensure confidentiality, integrity, and authenticity of communications, safeguarding data from unauthorized access and tampering.</li>
+        <li><strong>Establishing Trust:</strong> By verifying identities and ensuring secure communication channels, they build trust between communicating parties.</li>
+        <li><strong>Compliance with Regulations:</strong> Many industries have regulations requiring the use of specific security protocols to protect sensitive information.</li>
+    </ul>
+
+    <h2>Transition to Post-Quantum Cryptography (PQC)</h2>
+    <p>The transition to PQC algorithms also necessitates the update of security protocols to incorporate these new algorithms. Standardization efforts are underway to define how PQC algorithms will be integrated into protocols like TLS and SSH. This transition will require coordination among various stakeholders, including protocol developers, software vendors, and organizations implementing these protocols.</p>
+
+    <p>In summary, security protocols are essential building blocks for secure communication and data protection. They define how cryptographic algorithms and keys are used to ensure confidentiality, integrity, and authenticity. The ongoing transition to post-quantum cryptography requires adapting these protocols to incorporate new algorithms, emphasizing the continuous evolution of security measures in the digital landscape.</p>
+    <div id="csvTable"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script>
+        function loadCSV(filePath) {
+            Papa.parse(filePath, {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    renderTable(results.data);
+                }
+            });
+        }
+
+        function renderTable(data) {
+            const tableDiv = document.getElementById('csvTable');
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            // Create header row
+            const headerRow = document.createElement('tr');
+            Object.keys(data[0]).forEach(key => {
+                const th = document.createElement('th');
+                th.textContent = key;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+
+            // Create data rows
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                Object.values(row).forEach(value => {
+                    const td = document.createElement('td');
+                    td.textContent = value;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            tableDiv.appendChild(table);
+        }
+
+        // Load the CSV file
+        document.addEventListener('DOMContentLoaded', () => {
+            const csvFilePath = 'protocols_vulnerabilities.csv'; // Update with the actual path to your CSV file
+            loadCSV(csvFilePath);
+        });
+    </script>
+</body>
+</html>

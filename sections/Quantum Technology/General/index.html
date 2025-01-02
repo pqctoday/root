@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-43RB2WJC2H');
+</script>  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Table Display</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Summary of Quantum Hardware Technologies</h1>
+        <p>Here is a summary of the main types of quantum hardware, their benefits and challenges, the current state of each technology, key vendors, and potential and proven applications:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Qubit Type</th>
+                    <th>Benefits</th>
+                    <th>Challenges</th>
+                    <th>State (as of late 2024)</th>
+                    <th>Key Vendors</th>
+                    <th>Potential Applications</th>
+                    <th>Proven Applications (as of late 2024)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Superconducting</td>
+                    <td>Most mature technology; large number of enabling technologies available; well-known error mitigation and correction techniques; highest number of qubits.</td>
+                    <td>Noisy; do not scale well; difficult to achieve 99.9% fidelity needed for quantum error correction; qubit crosstalk can limit the number of usable qubits.</td>
+                    <td>The record is 156 physical qubits with 99.7% two-qubit gate fidelities (IBM Heron r2). The first break-even logical qubit was achieved in 2023 (Google). IBM produced 433 and 1,121 qubit chips but they were retired due to poor qubit fidelities.</td>
+                    <td>IBM, Google, Rigetti, IQM, Origin Quantum</td>
+                    <td>Gate-based quantum computing for a wide range of applications, including optimization, simulation, and machine learning.</td>
+                    <td>Still primarily in the research and development phase; no widespread practical applications yet demonstrated.</td>
+                </tr>
+                <tr>
+                    <td>Trapped Ion</td>
+                    <td>Best fidelity; well-suited for NISQ algorithms; recent progress shows scaling potential.</td>
+                    <td>Scaling beyond 50 qubits has been difficult; slow gate speeds.</td>
+                    <td>Companies like IonQ and Quantinuum are working with trapped ion qubits, with the most advanced systems currently utilizing fewer than 25 qubits. Quantinuum is projected to achieve 99.9% two-qubit gate fidelities with 56 or more qubits soon.</td>
+                    <td>IonQ, Quantinuum, AQT, Alpine Quantum Technologies</td>
+                    <td>Promising for NISQ algorithms, including optimization, simulation, and machine learning. Potential for use in a variety of applications.</td>
+                    <td>Limited practical applications demonstrated so far, mostly at a small scale. Quantinuum is exploring potential applications in text summarization using a hybrid quantum-classical approach.</td>
+                </tr>
+                <tr>
+                    <td>Neutral Atom</td>
+                    <td>Can scale to thousands of qubits in analog mode; potential for use in gate-based computing; recent demonstrations show promise for scaling and error correction.</td>
+                    <td>Gate-based implementations still in development.</td>
+                    <td>Pasqal, QuEra, Atoms Computing, and PlanQC are key vendors in this field.</td>
+                    <td>Currently used for quantum simulation. Future potential for gate-based computing and a wider range of applications, including optimization and machine learning.</td>
+                    <td>Primarily used for quantum simulation in research settings. No significant commercial applications yet demonstrated.</td>
+                </tr>
+                <tr>
+                    <td>Photon</td>
+                    <td>Flying qubits (move at the speed of light); can operate at room temperature; measurement-based quantum computing (MBQC) allows for higher computing capacity.</td>
+                    <td>Photon sources and detectors need to be cooled; scalability limited by the probabilistic nature of quantum gates and photon source efficiency; practical quantum advantage for Boson Sampling not yet proven.</td>
+                    <td>PsiQuantum, Xanadu, and ORCA Computing are key players in this field.</td>
+                    <td>Gate-based computing, quantum simulation, and MBQC. Potential applications in telecommunications and cryptography.</td>
+                    <td>Primarily in the research and development phase. Some early applications in quantum communication and cryptography are being explored.</td>
+                </tr>
+                <tr>
+                    <td>Quantum Dots Spin</td>
+                    <td>Potential for miniaturization and scalability; could leverage existing CMOS manufacturing processes.</td>
+                    <td>Research started later than superconducting qubits; challenges with materials design.</td>
+                    <td>Intel is a major player in the development of quantum dots spin qubits.</td>
+                    <td>Gate-based quantum computing for a wide range of applications, potentially benefiting from the existing semiconductor infrastructure.</td>
+                    <td>Still primarily in the research and development phase; no widespread practical applications yet demonstrated.</td>
+                </tr>
+                <tr>
+                    <td>NV Centers</td>
+                    <td>Stable; potential for room temperature operation.</td>
+                    <td>Two-qubit gate fidelity is not high; scaling and interconnecting clusters is challenging; qubit control is complex; applications more focused on sensing than computing; manufacturing circuits at scale is complicated.</td>
+                    <td>Quantum Brilliance is a key startup developing NV center-based quantum computers that operate at room temperature.</td>
+                    <td>Potential applications in quantum sensing, particularly magnetometry. Limited potential for quantum computing due to challenges with qubit fidelity and scalability.</td>
+                    <td>Primarily used in research settings for quantum sensing applications. No significant commercial applications in computing yet demonstrated.</td>
+                </tr>
+                <tr>
+                    <td>Topological</td>
+                    <td>Could be more resilient to quantum errors and scale better than other solid-state qubits.</td>
+                    <td>Topological qubits, particularly Majorana fermions, are theoretical and do not yet exist.</td>
+                    <td>Microsoft is a key player in the research of topological qubits, specifically Majorana fermions.</td>
+                    <td>If realized, topological qubits could be used for fault-tolerant quantum computing and a variety of applications. They hold promise for more robust and scalable quantum computing systems.</td>
+                    <td>Still in the early theoretical research phase. No practical implementations or applications exist.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>It's important to note that the field of quantum computing is rapidly evolving. The state of each technology, as well as the potential and proven applications, are likely to change significantly in the coming years.</p>
+    </section>
+    <div id="csvTable"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script>
+        function loadCSV(filePath) {
+            Papa.parse(filePath, {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    renderTable(results.data);
+                }
+            });
+        }
+
+        function renderTable(data) {
+            const tableDiv = document.getElementById('csvTable');
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            // Create header row
+            const headerRow = document.createElement('tr');
+            Object.keys(data[0]).forEach(key => {
+                const th = document.createElement('th');
+                th.textContent = key;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+
+            // Create data rows
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                Object.values(row).forEach(value => {
+                    const td = document.createElement('td');
+                    td.textContent = value;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            tableDiv.appendChild(table);
+        }
+
+        // Load the CSV file
+        document.addEventListener('DOMContentLoaded', () => {
+            const csvFilePath = 'hardware_technologies.csv'; // Update with the actual path to your CSV file
+            loadCSV(csvFilePath);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-43RB2WJC2H');
+</script>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Discovery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+
+        th:hover {
+            background-color: #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crypto Discovery</h1>
+    
+    <p>To ensure a successful migration to post-quantum cryptography (PQC), organizations must first understand where and how cryptography is used within their systems. This crucial step is known as cryptographic discovery, and it forms the foundation of any quantum readiness roadmap.</p>
+
+    <h2>Cryptographic Asset Management</h2>
+    <p>The process of cryptographic discovery, which results in a comprehensive cryptographic inventory, is a critical starting point for mitigating the quantum threat. Creating and maintaining this inventory is recognized as a fundamental step by European, American, and international organizations. A good inventory of all cryptography in use will ease the mitigation of both quantum and non-quantum threats.</p>
+
+    <p>This inventory should include:</p>
+    <ul>
+        <li>All services that rely on the principles of confidentiality, integrity, authenticity, and non-repudiation</li>
+        <li>Information on how and when each cryptographic asset is used</li>
+    </ul>
+    <p>Because of the continuously changing nature of cryptographic landscapes, this inventory should be continuously updated as well.</p>
+
+    <p>It is important to note that such an overview is very sensitive as it contains vulnerabilities of an organization. It is hence of utmost importance that it is properly secured and cannot be accessed by unauthorized parties.</p>
+
+    <h2>Establishing a Strategy</h2>
+    <p>Once cryptographic policies are identified, the next step is to define a strategy for cryptographic discovery. This strategy serves as a structured approach to identifying, evaluating, and documenting cryptographic assets within an organization.</p>
+
+    <p>Defining such strategy can be done in several steps, however it might be necessary to adapt them to specific organizations:</p>
+    <ol>
+        <li>Defining Objective: Establish the purpose of performing the discovery of cryptographic assets. This might include goals such as ensuring compliance, performing maintenance, updating cryptographic measures.</li>
+        <li>Scope Definition: Identify the target environment, systems, and applications within the scope of the discovery process.</li>
+        <li>Methodology Selection: Determine the appropriate methods and tools for conducting the cryptographic discovery, considering factors like automation, manual inspection, and the use of specialized software.</li>
+    </ol>
+
+    <h2>Executing the Discovery</h2>
+    <p>To ensure comprehensive cryptographic asset discovery, it is crucial to locate all services that rely on the principles of confidentiality, integrity, authenticity, and non-repudiation. These services include instant messaging, cloud storage, virtual conferences, secure file transfer, digital seals, digital signatures on legally binding contracts, bank transactions, access control through smart cards (physical) or tokens in VPN (digital), authentication mechanisms like password login and two-factor authentication, email communication, electronic voting, IoT management, OS booting, software updates and digital right management.</p>
+
+    <h2>Challenges and Solutions</h2>
+    <p>The National Cybersecurity Center of Excellence (NCCoE) is undertaking a prominent initiative related to the study of discovering cryptographic assets and creating and managing a cryptographic inventory. Their report identifies three main scenarios where cryptographic assets are used and should be detected to obtain a complete inventory:</p>
+    <ul>
+        <li>Cryptography Used within Applications: This involves analyzing the application's source code, configuration files, and runtime behavior to identify cryptographic functions and libraries used.</li>
+        <li>Cryptography Used in Data at Rest: Discovering cryptographic assets used to protect data stored in databases, file systems, and cloud storage services.</li>
+        <li>Cryptography Used in Data in Transit: Identifying and analyzing cryptographic assets used to secure communication protocols and protect data transmitted over networks.</li>
+    </ul>
+
+    <h2>Quantum Risk Assessment</h2>
+    <p>After an organization has a solid understanding of the cryptography that they are using in their (most important) systems, an essential next step is to assess the risk of quantum computers towards these systems. Performing a quantum risk assessment helps in quantifying the risks of different systems and prioritizing which systems need to have migrated first.</p>
+
+    <p>The quantum risk consists of three components:</p>
+    <ul>
+        <li>Quantum weakness: The vulnerability of the cryptography used in a system to known quantum attacks.</li>
+        <li>Impact analysis: Determining the consequences if the cryptography were to be broken, considering the purpose of the cryptography.</li>
+        <li>Migration effort: Estimating the time and resources needed to migrate to PQC, based on known migration challenges and past experiences with similar transitions.</li>
+    </ul>
+
+    <h2>No-Regret Moves</h2>
+    <p>While the timeline for the development of a cryptographically-relevant quantum computer (CRQC) remains uncertain, the potential impact of a quantum breach in cryptographic defenses is significant. Organizations should initiate the steps towards PQC migration as soon as possible.</p>
+
+    <p>Fortunately, the initial steps in PQC migration, including cryptographic discovery, can be considered no-regret moves. These actions will enhance an organization’s cyber resilience regardless of the developments in quantum computing and post-quantum cryptography. They are valuable regardless of the threat posed by quantum computers.</p>
+
+    <table border="1" id="outputTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('title')">Title</th>
+                <th onclick="sortTable('date')">Date</th>
+                <th>URL</th>
+                <th onclick="sortTable('author')">Author</th>
+                <th onclick="sortTable('country')">Country</th>
+                <th>Category</th>
+                <th onclick="sortTable('reference')">Reference</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>

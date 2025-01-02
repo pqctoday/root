@@ -36,15 +36,14 @@ let selectedTopic = "";
 
 // Subtopics dictionary
 const subtopics = {
-  "Quizz": ["Threats", "Protocols", "Post Quantum Resistant Algorithms", "Quantum Cryptography", "Certificates Formats"],
-  "Threats": ["Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
-  "Protocols": ["SSH", "TLS", "IPSEC"],
-  "Standardization Bodies": ["NIST", "IETF", "NSA", "CISA", "BSI", "ANSSI", "GSMA"],
-  "Countries": ["US", "Europe", "Canada", "Australia", "Singapore", "Germany"],
-  "Industries": ["Telecom", "Automotive", "Banking", "Government", "Enterprises"],
-  "Post Quantum Resistant Algorithms": ["ML-KEM", "ML-DSA", "SLH-DSA"],
-  "Quantum Cryptography": ["QRNG", "QKD"],
-  "Certificates Formats": ["Pure", "Hybrid", "Composite"]
+  "Quizz": ["General","Threats", "Protocols", "Standardization Bodies", "Countries", "Industries"],
+  "Threats": ["General","Discovery","Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
+  "Protocols": ["General","SSH", "TLS", "IPSEC","SMIME","PKI"],
+  "Standardization Bodies": ["General","CC","CISA","ETSI","Global Platform","GSMA","OASIS","TCG" ],
+  "Countries": ["General","US", "Europe", "Canada", "Australia", "Singapore", "Germany","France"],
+  "Industries": ["General","Telecom", "Automotive", "Banking", "Government", "Enterprises"],
+  "Post Quantum Resistant Algorithms": ["General","Certificates","ML-KEM", "ML-DSA", "SLH-DSA"],
+  "Quantum Technology": ["General","QRNG", "QKD","Hardware","Software"],
 };
 
 function updateSubtopics(topic) {

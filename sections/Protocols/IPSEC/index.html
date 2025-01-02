@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvest Now Decrypt Later</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<section></section>
+    <h1>Internet Protocol Security (IPSec)</h1>
+    <p>Internet Protocol Security (IPSec) is a suite of protocols that provide authentication and encryption for IP packets, commonly employed in VPNs to secure network traffic [1, 2]. Like TLS and SSH, IPSec's reliance on public-key cryptography for key exchange and digital signatures makes it susceptible to quantum attacks [2].</p>
+    <p>Here are some specific ways quantum computers could compromise IPSec:</p>
+    <ul>
+        <li><strong>Breaking key exchange algorithms:</strong> Quantum computers could enable attackers to break the Diffie-Hellman key exchange commonly used in IPSec, allowing them to intercept and decrypt VPN traffic.</li>
+        <li><strong>Forging digital signatures:</strong> Quantum attacks could allow adversaries to forge digital signatures used in IPSec for authentication, enabling them to impersonate legitimate users or devices and gain unauthorized access to networks.</li>
+    </ul>
+    <p>The potential impact of these attacks on tools using IPSec is significant:</p>
+    <ul>
+        <li><strong>VPNs:</strong> Quantum attacks could compromise the security of VPN connections, exposing users' internet traffic to surveillance and potentially allowing attackers to intercept sensitive data.</li>
+        <li><strong>Any application or service relying on IPSec for secure communication:</strong> This could include sensitive government and military communications, financial transactions, and critical infrastructure control systems [3].</li>
+    </ul>
+    <p>Source [2] specifically mentions IPSec as a protocol needing migration to quantum-safe standards and provides two options for achieving this:</p>
+    <ul>
+        <li><strong>Using pre-shared keys:</strong> This option avoids the use of public-key cryptography altogether, mitigating the quantum threat. However, managing pre-shared keys can be challenging, particularly in large and complex networks.</li>
+        <li><strong>Hybrid approach:</strong> This combines classical and post-quantum cryptography, offering enhanced security until PQC is widely adopted. Source [2] recommends the technical resource ETSI TR 103 617 for achieving quantum-safety in IPSec using the hybrid approach [4].</li>
+    </ul>
+    <p>Migrating IPSec to a quantum-safe state requires careful planning and execution. Organizations need to define clear policies regarding the allowed cipher suites to ensure quantum-safety and establish procedures for shifting from the hybrid approach to fully post-quantum IPSec when feasible [4].</p>
+    <p>As with TLS and SSH, addressing the quantum threat to IPSec is crucial for maintaining the security and privacy of internet communications in the future. Organizations must proactively prepare for the post-quantum world by:</p>
+    <ul>
+        <li>Evaluating their IPSec implementations and identifying potential vulnerabilities.</li>
+        <li>Developing a migration plan that includes selecting appropriate quantum-safe algorithms and implementing them securely.</li>
+        <li>Ensuring crypto-agility to adapt to evolving cryptographic standards and technologies.</li>
+        <li>Monitoring advancements in PQC and updating their systems accordingly as new standards emerge.</li>
+    </ul>
+    <p>By taking these steps, organizations can mitigate the quantum threat to IPSec and maintain the confidentiality, integrity, and authenticity of their network communications in the quantum era.</p>
+</section>
+
+    <h2>References </h2>
+    <table id="outputTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('title')">Title</th>
+                <th onclick="sortTable('date')">Date</th>
+                <th onclick="sortTable('url')">URL</th>
+                <th onclick="sortTable('author')">Author</th>
+                <th onclick="sortTable('country')">Country</th>
+                <th onclick="sortTable('category')">Category</th>
+                <th onclick="sortTable('reference')">Reference</th>
+                <th onclick="sortTable('type')">Type</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <footer>
+        <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
+    </footer>
+</body>
+</html>

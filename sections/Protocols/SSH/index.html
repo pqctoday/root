@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvest Now Decrypt Later</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <section>
+        <h2>Secure Shell (SSH) and Quantum Threats</h2>
+        <p>Secure Shell (SSH) is a protocol that allows for secure remote access to servers and devices. Like TLS, SSH relies on public-key cryptography for key exchange and authentication, making it vulnerable to attacks from quantum computers. Quantum computers could enable attackers to impersonate legitimate users and gain unauthorized access to systems by breaking the public-key cryptography used in SSH.</p>
+        <p>The sources provide some examples of tools that use SSH and would therefore be impacted by the quantum threat:</p>
+        <ul>
+            <li><strong>Remote login tools:</strong> These tools, which allow users to log in to remote servers and devices, are commonly used by system administrators and developers.</li>
+            <li><strong>File transfer programs:</strong> SSH is frequently used for secure file transfer between systems, including tools like SFTP, which uses SSH for its security.</li>
+            <li><strong>System administration tools:</strong> Many system administration tools utilize SSH to manage and configure remote systems securely.</li>
+        </ul>
+        <p>The potential impact of quantum attacks on SSH is significant, as it could lead to:</p>
+        <ul>
+            <li><strong>Unauthorized access to sensitive systems:</strong> Quantum computers could allow attackers to gain access to systems containing confidential data, intellectual property, or critical infrastructure control systems.</li>
+            <li><strong>Data breaches:</strong> Attackers could exfiltrate sensitive data from compromised systems, leading to financial losses, reputational damage, and privacy violations.</li>
+            <li><strong>System manipulation:</strong> Unauthorized access could enable attackers to modify system configurations, install malware, or disrupt critical services.</li>
+            <li><strong>Service disruption:</strong> Attackers could disrupt access to essential services by compromising servers or network devices managed via SSH.</li>
+        </ul>
+        <p>Mitigating the quantum threat to SSH requires a multi-faceted approach:</p>
+        <ul>
+            <li><strong>Deploying post-quantum cryptography for SSH key exchange and authentication:</strong> Organizations need to transition to quantum-resistant algorithms for SSH as they become standardized and available. For example, OpenSSH has supported Streamlined NTRU Prime since version 8.0 in 2019 and has enabled it on servers by default since version 9.02, which appeared in 2022.</li>
+            <li><strong>Exploring quantum-resistant alternatives:</strong> Research and development of new quantum-resistant SSH implementations are crucial for long-term security.</li>
+            <li><strong>Cryptographic agility:</strong> Organizations should adopt flexible systems that can easily adapt to new cryptographic algorithms and protocols as they emerge.</li>
+        </ul>
+        <p>Proactive measures are essential for organizations to prepare for the quantum era and protect their systems from the evolving threat landscape.</p>
+    </section>
+    <table id="outputTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('title')">Title</th>
+                <th onclick="sortTable('date')">Date</th>
+                <th onclick="sortTable('url')">URL</th>
+                <th onclick="sortTable('author')">Author</th>
+                <th onclick="sortTable('country')">Country</th>
+                <th onclick="sortTable('category')">Category</th>
+                <th onclick="sortTable('reference')">Reference</th>
+                <th onclick="sortTable('type')">Type</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <footer>
+        <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
+    </footer>
+</body>
+</html>
