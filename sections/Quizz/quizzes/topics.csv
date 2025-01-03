@@ -1,5 +1,11 @@
 topic_name,short_description,data_file
 Protocols,Questions about protocols,quizzes/Protocols_quizz.csv
 Threats,Questions about quantum threats,quizzes/Threats_quizz.csv
+Standardization bodies,Questions about standardization bodies,quizzes/Standardization_bodies_quizz.csv
+Countries,Questions about countries,quizzes/Countries_quizz.csv
+Industries,Questions about industries,quizzes/Industries_quizz.csv
+Post Quantum Resistant Algorithms,Questions about post quantum resistant algorithms,quizzes/Post_Quantum_Resistant_Algorithms_quizz.csv
+Quantum technologies,Questions about quantum technologies,quizzes/Quantum_technologies_quizz.csv
+
 
 
