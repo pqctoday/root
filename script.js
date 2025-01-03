@@ -5,7 +5,9 @@ const subtopicTitle = document.getElementById('subtopic-title');
 
 // Subtopics dictionary
 const subtopics = {
-  "Quizz": ["Quizz", "Threats", "Protocols", "Standardization Bodies", "Countries", "Industries"],
+  "Quizz": ["Quizz"],
+  "References": ["References"],
+  "Experts": ["Experts"],
   "Threats": ["Threats", "Discovery", "Harvest now decrypt later", "Software Supply Chain Threat", "Digital Signature Threat"],
   "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
   "Standardization Bodies": ["Standardization Bodies"],
@@ -36,6 +38,14 @@ function populateMainTopics() {
     topicItem.addEventListener('click', () => {
       if (topic === 'Quizz') {
         window.location.href = '/sections/Quizz/index.html';
+        return;
+      }
+      if (topic === 'References') {
+        window.location.href = '/sections/References/index.html';
+        return;
+      }
+      if (topic === 'Experts') {
+        window.location.href = '/sections/Experts/index.html';
         return;
       }
       populateSubtopics(topic);
