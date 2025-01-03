@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Supply Chain</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>The Quantum Threat to Crypto Assets</h1>
+    <p>The potential for quantum computers to break current cryptographic systems poses a significant threat to the crypto-assets industry, including central bank digital currencies (CBDCs). Here's a breakdown of the impact:</p>
+
+    <section>
+        <h2>Quantum Computers Could Undermine Security</h2>
+        <ul>
+            <li>
+                <h3>Breaking Digital Signatures:</h3>
+                <ul>
+                    <li>Most cryptocurrencies, including Bitcoin, use digital signatures to verify transactions and prevent double-spending. [1, 2]</li>
+                    <li>These signatures rely on algorithms like ECDSA, which are vulnerable to attacks by quantum computers using Shor's algorithm. [3, 4]</li>
+                    <li>If an attacker with a quantum computer could break these signatures, they could potentially steal crypto assets or manipulate transactions on the blockchain. [5]</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Weakening Hashing Algorithms:</h3>
+                <ul>
+                    <li>Quantum computers could also weaken the hashing algorithms used to secure blockchains and crypto wallets. [3]</li>
+                    <li>While not as immediately threatened as digital signatures, the weakening of hashing algorithms could still impact the security of these systems. [4]</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Harvesting Encrypted Data:</h3>
+                <ul>
+                    <li>Threat actors could use a "harvest now, decrypt later" strategy, collecting encrypted data today and decrypting it later using a powerful quantum computer. [6-9]</li>
+                    <li>This strategy poses a significant risk to the long-term security of crypto assets, as it means that data encrypted today could be compromised in the future. [6, 7, 9]</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Impact on CBDCs</h2>
+        <ul>
+            <li>CBDCs, like other crypto assets, are vulnerable to the same quantum threats. [10, 11]</li>
+            <li>Given that CBDCs are likely to be issued and managed by central banks, the quantum threat could have serious implications for financial stability and national security. [12]</li>
+            <li>A successful quantum attack on a CBDC could undermine trust in the currency and disrupt the financial system. [13]</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Mitigating the Quantum Threat</h2>
+        <ul>
+            <li>
+                <h3>Transitioning to Post-Quantum Cryptography (PQC):</h3>
+                <ul>
+                    <li>PQC uses algorithms that are resistant to both classical and quantum computers. [14, 17]</li>
+                    <li>Organizations involved with crypto assets, including central banks developing CBDCs, need to begin planning and implementing a transition to PQC. [14-24]</li>
+                    <li>This transition will likely be complex and time-consuming, requiring careful planning and execution. [14, 15, 20, 25, 26]</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Hybrid Approaches:</h3>
+                <ul>
+                    <li>Combining PQC with existing cryptographic algorithms can provide enhanced security during the transition. [27]</li>
+                    <li>This approach can help to mitigate the risk of unforeseen vulnerabilities in PQC algorithms while allowing organizations to gradually migrate to fully quantum-resistant systems. [27, 28]</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Quantum-Resistant Blockchain Architectures:</h3>
+                <ul>
+                    <li>Research is exploring the development of blockchain designs that are inherently resistant to quantum attacks. [24, 29]</li>
+                    <li>This includes exploring concepts like "quantum blockchains," which leverage quantum phenomena for enhanced security. [29]</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Urgency of Action</h2>
+        <p>While the exact timeline for the development of cryptographically relevant quantum computers is uncertain, experts predict that they could be available within the next decade. [1, 5, 30-36]</p>
+        <p>Given the potential for data harvesting attacks, the quantum threat is not just a future problem but a present concern. [7, 9, 20]</p>
+        <p>The crypto asset industry, including those developing CBDCs, needs to act now to prepare for the quantum threat and protect the integrity and security of their systems. [7, 9, 11, 13, 14, 20, 22, 23]</p>
+    </section>
+
+    <p>The quantum threat is a serious challenge for the crypto asset industry. By taking proactive steps to mitigate the threat, the industry can ensure its long-term security and stability.</p>
+</main>
+    <h2>References</h2>
+
+    <table id="outputTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('title')">Title</th>
+                <th onclick="sortTable('date')">Date</th>
+                <th onclick="sortTable('url')">URL</th>
+                <th onclick="sortTable('author')">Author</th>
+                <th onclick="sortTable('country')">Country</th>
+                <th onclick="sortTable('category')">Category</th>
+                <th onclick="sortTable('reference')">Reference</th>
+                <th onclick="sortTable('type')">Type</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <footer>
+        <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
+    </footer>
+</body>
+</html>

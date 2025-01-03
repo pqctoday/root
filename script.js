@@ -6,7 +6,7 @@ const subtopicTitle = document.getElementById('subtopic-title');
 // Subtopics dictionary
 const subtopics = {
   "Quantum": ["Quantum", "QRNG", "QKD"],
-  "Threats": ["Threats", "Discovery", "Harvest now decrypt later", "Software Supply Chain Threat", "Digital Signature Threat"],
+  "Threats": ["Threats", "Discovery", "Blockchain", "Harvest now decrypt later", "Software Supply Chain", "Digital Signature"],
   "QRA": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
   "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
   "Standards": ["Standards"],
