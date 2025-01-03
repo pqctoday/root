@@ -5,17 +5,17 @@ const subtopicTitle = document.getElementById('subtopic-title');
 
 // Subtopics dictionary
 const subtopics = {
+  "Quantum": ["Quantum", "QRNG", "QKD"],
+  "Threats": ["Threats", "Discovery", "Harvest now decrypt later", "Software Supply Chain Threat", "Digital Signature Threat"],
+  "QRA": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
+  "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
+  "Standards": ["Standards"],
+  "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France","UK","Netherlands"],
+  "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises","Healthcare"],
   "Quizz": ["Quizz"],
   "References": ["References"],
   "Experts": ["Experts"],
-  "Threats": ["Threats", "Discovery", "Harvest now decrypt later", "Software Supply Chain Threat", "Digital Signature Threat"],
-  "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
-  "Standardization": ["Standardization"],
-  "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France","UK","Netherlands"],
-  "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises","Healthcare"],
-  "QRA": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
-  "Quantum Technology": ["Quantum", "QRNG", "QKD"],
-};
+ };
 
 // Populate main topics
 function populateMainTopics() {
