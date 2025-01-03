@@ -10,6 +10,7 @@ Industries,Banking,Questions about the banking industry,quizzes/Industries/Banki
 Industries,Enterprises,Questions about enterprises,quizzes/Industries/Enterprises_quizz.csv
 Industries,Government,Questions about the government industry,quizzes/Industries/Government_quizz.csv
 Industries,Telecom,Questions about the telecom industry,quizzes/Industries/Telecom_quizz.csv
+Industries,Healthcare,Questions about the healthcare industry,quizzes/Industries/Healthcare_quizz.csv
 Post Quantum Resistant Algorithms,ML-DSA,Questions about ML-DSA,quizzes/Post Quantum_Resistant Algorithms/ML-DSA_quizz.csv
 Post Quantum Resistant Algorithms,ML-KEM,Questions about ML-DSA,quizzes/Post Quantum_Resistant Algorithms/ML-DSA_quizz.csv
 Quantum technologies,QKD,Questions about QKD,quizzes/Quantum technologies/QKD_quizz.csv

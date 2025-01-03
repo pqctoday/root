@@ -10,10 +10,10 @@ const subtopics = {
   "Experts": ["Experts"],
   "Threats": ["Threats", "Discovery", "Harvest now decrypt later", "Software Supply Chain Threat", "Digital Signature Threat"],
   "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
-  "Standardization Bodies": ["Standardization Bodies"],
-  "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France"],
+  "Standardization": ["Standardization"],
+  "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France","UK","Netherlands"],
   "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises","Healthcare"],
-  "Post Quantum Resistant Algorithms": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
+  "QRA": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
   "Quantum Technology": ["Quantum", "QRNG", "QKD"],
 };
 
@@ -46,6 +46,10 @@ function populateMainTopics() {
       }
       if (topic === 'Experts') {
         window.location.href = '/sections/Experts/index.html';
+        return;
+      }
+      if (topic === 'Standardization') {
+        window.location.href = '/sections/Standardization/index.html';
         return;
       }
       populateSubtopics(topic);

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Guidelines for Singapore</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+
+        th:hover {
+            background-color: #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>The UK's Role in Post-Quantum Cryptography</h1>
+    <p>
+        The UK, primarily through its National Cyber Security Centre (NCSC), is actively promoting the transition to post-quantum cryptography (PQC). Here are some key aspects of its role:
+    </p>
+
+    <h2>Key Aspects of the UK's Role</h2>
+
+    <h3>Prioritizing a Timely Migration</h3>
+    <ul>
+        <li>The UK government recognizes the urgency of transitioning to quantum-safe systems.</li>
+        <li>It underscores the importance of beginning this transition as soon as possible to mitigate the threat of "harvest now, decrypt later" attacks.</li>
+        <li>UK-NCSC encourages a swift migration to quantum-safe algorithms but advises against using algorithms that have not yet been standardized.</li>
+        <li>It forecasts that some experts believe the quantum threat could emerge within the next decade.</li>
+    </ul>
+
+    <h3>Supporting the Development and Adoption of PQC Standards</h3>
+    <ul>
+        <li>The UK is actively participating in international PQC standardization processes, particularly the one led by the US National Institute of Standards and Technology (NIST).</li>
+        <li>UK researchers have played a significant role in NIST’s process.</li>
+        <li>The UK generally recommends waiting for the finalization of PQC standards by NIST before deploying production systems.</li>
+    </ul>
+
+    <h3>Issuing Guidance and Recommendations</h3>
+    <ul>
+        <li>The NCSC provides guidance and recommendations to organizations to assist them in their PQC migration. This includes:</li>
+        <ul>
+            <li><strong>White papers and reports:</strong> Materials outlining the quantum threat, the principles of PQC, and practical steps for organizations to prepare for the transition.</li>
+            <li><strong>Advice on Algorithm Selection:</strong> Recommending specific algorithms such as ML-KEM-768 and ML-DSA-65 for most use cases, emphasizing the need to wait for implementations based on final NIST standards.</li>
+        </ul>
+    </ul>
+
+    <h3>Highlighting Migration Challenges</h3>
+    <ul>
+        <li>Identifying key challenges, particularly those related to legacy systems that are difficult to upgrade.</li>
+        <li>Challenges in sector-specific protocols and protocols operating on resource-constrained devices.</li>
+    </ul>
+
+    <h3>Advocating for Cryptographic Agility</h3>
+    <ul>
+        <li>UK-NCSC acknowledges the evolving nature of PQC and stresses the importance of cryptographic agility.</li>
+        <li>This involves designing systems that can be easily adapted to accommodate new cryptographic algorithms and standards as they become available.</li>
+    </ul>
+
+    <h3>Collaborating with International Partners</h3>
+    <ul>
+        <li>The UK actively collaborates with other countries and organizations to ensure a globally coordinated approach to PQC migration.</li>
+        <li>It collaborates with organizations such as NIST, BSI (Germany), CCCS (Canada), and NL NCSC (Netherlands) to exchange insights and best practices.</li>
+        <li>The UK is also a part of the DGX cybersecurity working group, which aims to facilitate the exchange of information and experiences regarding PQC transition.</li>
+    </ul>
+
+    <h3>Supporting PQC Research and Development</h3>
+    <ul>
+        <li>The UK continues to invest in PQC research and development.</li>
+        <li>This includes supporting academic research projects and encouraging industry innovation in the field of quantum-safe cryptography.</li>
+    </ul>
+
+    <p>
+        Overall, the UK is taking a proactive and collaborative approach to the transition to post-quantum cryptography. The government, through the NCSC, is actively engaging with national and international partners, promoting the adoption of standards, providing guidance, and supporting research efforts to ensure a smooth and secure migration to a quantum-resistant future.
+    </p>
+    <h2>References</h2>
+    <table border="1" id="outputTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('title')">Title</th>
+                <th onclick="sortTable('date')">Date</th>
+                <th>URL</th>
+                <th onclick="sortTable('author')">Author</th>
+                <th onclick="sortTable('country')">Country</th>
+                <th>Category</th>
+                <th onclick="sortTable('reference')">Reference</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>

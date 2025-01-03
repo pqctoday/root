@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -9,62 +9,131 @@
   gtag('js', new Date());
 
   gtag('config', 'G-43RB2WJC2H');
-</script> <meta charset="UTF-8">
+</script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Resistant Algorithms</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script src="script.js" defer></script>
+    <title>CSV Table Display</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
         table {
-            border-collapse: collapse;
             width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
-
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
+            text-align: left;
         }
-
         th {
             background-color: #f4f4f4;
-            cursor: pointer;
-        }
-
-        th:hover {
-            background-color: #ddd;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #f1f1f1;
         }
     </style>
 </head>
 <body>
-    <h1>Quantum Resistant Algorithms</h1>
-    <table border="1" id="outputTable">
-        <thead>
-            <tr>
-                <th onclick="sortTable('title')">Title</th>
-                <th onclick="sortTable('date')">Date</th>
-                <th>URL</th>
-                <th onclick="sortTable('author')">Author</th>
-                <th onclick="sortTable('country')">Country</th>
-                <th>Category</th>
-                <th onclick="sortTable('reference')">Reference</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <h1>Post Quantum Resistant Algorithms</h1>
+    <p>The recognition that quantum computers pose a threat to currently used cryptographic systems has led to numerous efforts to mitigate this threat. These efforts are primarily consolidated through standardization processes, which aim to specify algorithms capable of resisting quantum attacks, test their security and efficiency, and guide their implementation and integration into larger IT systems.</p>
+
+    <p>Post-quantum cryptography (PQC), also known as quantum-resistant cryptography, focuses on developing cryptosystems that are secure against both quantum and classical computers. PQC can be broadly categorized into five main families, each relying on different mathematical problems that are believed to be hard for both classical and quantum computers to solve:</p>
+
+    <h2>Lattice-based Cryptography</h2>
+    <p>Lattice-based cryptography is based on the difficulty of solving problems related to lattices, which are mathematical structures consisting of regularly spaced points in space. Lattice-based cryptography provides very competitive schemes with good performance regarding bandwidth and efficiency.</p>
+    <p>Examples: CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON.</p>
+
+    <h2>Code-based Cryptography</h2>
+    <p>Code-based cryptography relies on the difficulty of decoding random linear codes. It is considered one of the most mature and well-understood approaches to PQC.</p>
+    <p>Example: Classic McEliece</p>
+
+    <h2>Multivariate Cryptography</h2>
+    <p>Multivariate cryptography is based on the difficulty of solving systems of multivariate polynomial equations.</p>
+
+    <h2>Hash-based Cryptography</h2>
+    <p>Hash-based cryptography relies on the security of cryptographic hash functions. It is considered a conservative choice for post-quantum security, and it has been standardized for specific applications with long lifespans, those that cannot wait for the main standardization process, and those that are impractical to update.</p>
+    <p>Examples: SPHINCS+, XMSS, LMS.</p>
+
+    <h2>Isogeny-based Cryptography</h2>
+    <p>Isogeny-based cryptography is a relatively new approach based on the difficulty of computing special maps between elliptic curves, known as isogenies. It typically suffers from expensive operations resulting in slower cryptographic schemes.</p>
+
+    <h2>Standardized PQC Algorithms</h2>
+    <p>The National Institute of Standards and Technology (NIST) has been at the forefront of standardizing PQC algorithms. As of November 2024, NIST has released three post-quantum cryptography standards:</p>
+    <ul>
+        <li>Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM): Based on the CRYSTALS-Kyber algorithm, ML-KEM provides a mechanism for securely exchanging cryptographic keys, which is fundamental for establishing secure communications.</li>
+        <li>Module-Lattice-Based Digital Signature Algorithm (ML-DSA): Derived from CRYSTALS-Dilithium, ML-DSA provides a way to create digital signatures, ensuring the authenticity and integrity of digital documents and transactions.</li>
+        <li>Stateless Hash-Based Signature Algorithm (SLH-DSA): This algorithm, based on the SPHINCS+ scheme, provides an alternative approach to digital signatures that doesn’t require maintaining state information, simplifying implementation and management.</li>
+    </ul>
+    <p>In addition, two existing post-quantum signature schemes, LMS and XMSS(MT), which are stateful hash-based signature schemes, were standardized by NIST in 2020 in NIST SP 800-208. These are designed for specific applications that are long-lived, can't wait for the main standardization process, and are impractical to update in the field.</p>
+
+    <h2>PQC Algorithms in Progress</h2>
+    <p>NIST also has several algorithms still under consideration as part of its ongoing PQC standardization efforts:</p>
+    <ul>
+        <li>Fourth Round KEMs: NIST is evaluating additional KEMs to diversify the hardness assumptions at the core of post-quantum cryptographic schemes and provide more options for secure key exchange. Three algorithms, Classic McEliece, BIKE, and HQC, all based on error-correcting codes, are in this final round.</li>
+        <li>Additional Digital Signature Schemes: To further diversify the underlying assumptions of digital signatures, NIST has opened an additional call for signature schemes.</li>
+    </ul>
+
+    <h2>Benefits of PQC</h2>
+    <ul>
+        <li>Security in the Quantum Era: PQC algorithms offer protection against both classical and quantum computers, ensuring the long-term security of sensitive data.</li>
+        <li>Maintaining Confidentiality and Integrity: PQC preserves the core functions of cryptography, enabling secure communication, data protection, and digital authentication.</li>
+        <li>Standardization and Interoperability: Standardization efforts by organizations like NIST promote the development of interoperable PQC solutions, facilitating widespread adoption and seamless communication across different systems.</li>
+    </ul>
+
+    <h2>Challenges of PQC</h2>
+    <ul>
+        <li>Performance Overhead: Some PQC algorithms can be computationally more intensive than classical algorithms, leading to performance overheads in certain applications.</li>
+        <li>Implementation Complexity: Integrating PQC into existing systems can be complex, requiring significant effort in adapting protocols, updating software libraries, and potentially upgrading hardware.</li>
+        <li>Key and Ciphertext Size: PQC algorithms often involve larger key and ciphertext sizes compared to classical algorithms, impacting storage and communication bandwidth requirements.</li>
+        <li>Lack of Maturity: Some PQC algorithms are relatively new and haven't undergone the same extensive scrutiny as classical algorithms. This raises concerns about potential undiscovered vulnerabilities.</li>
+    </ul>
+    <p>To address these challenges, the transition to PQC should prioritize cryptographic agility, enabling the seamless integration of new algorithms and standards, and the adoption of hybrid approaches that combine classical and post-quantum cryptography during the transition phase.</p>
+    <div id="csvTable"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script>
+        function loadCSV(filePath) {
+            Papa.parse(filePath, {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    renderTable(results.data);
+                }
+            });
+        }
+
+        function renderTable(data) {
+            const tableDiv = document.getElementById('csvTable');
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            // Create header row
+            const headerRow = document.createElement('tr');
+            Object.keys(data[0]).forEach(key => {
+                const th = document.createElement('th');
+                th.textContent = key;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+
+            // Create data rows
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                Object.values(row).forEach(value => {
+                    const td = document.createElement('td');
+                    td.textContent = value;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            tableDiv.appendChild(table);
+        }
+
+        // Load the CSV file
+        document.addEventListener('DOMContentLoaded', () => {
+            const csvFilePath = 'cryptoalgorithms_vulnerabilities.csv'; // Update with the actual path to your CSV file
+            loadCSV(csvFilePath);
+        });
+    </script>
 </body>
 </html>

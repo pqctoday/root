@@ -13,18 +13,12 @@ body {
 /* Grid Layout */
 .grid-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Default responsive behavior */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
   justify-items: center;
   margin: 20px auto;
   padding: 0 10px;
   max-width: 1200px; /* Maximum width for the grid layout */
-}
-
-@media (min-width: 768px) {
-  .grid-layout {
-    grid-template-columns: repeat(4, 1fr); /* Ensure no more than 4 items per row */
-  }
 }
 
 .grid-layout .grid-item {
@@ -39,7 +33,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 
 .grid-layout .grid-item img {
   width: 80px;

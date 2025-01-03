@@ -41,7 +41,62 @@
     </style>
 </head>
 <body>
-    <h1>Quantum Guidelines for Germany</h1>
+   
+        <h1>Germany's Approach to Post-Quantum Cryptography</h1>
+        <p>
+            Germany, primarily through its Federal Office for Information Security (BSI), is taking a proactive and multifaceted approach to promote the transition to post-quantum cryptography (PQC). The country recognizes the urgency of addressing the threat posed by cryptographically relevant quantum computers (CRQCs).
+        </p>
+    
+        <h2>Key Aspects of Germany's Strategy</h2>
+    
+        <h3>Promoting Awareness and Understanding</h3>
+        <ul>
+            <li>BSI published the guideline "<strong>Quantum-safe cryptography – fundamentals, current developments, and recommendations</strong>" in 2021:
+                <ul>
+                    <li>Background information on quantum computers, PQC, and QKD.</li>
+                    <li>Insights into developments in politics, research, and industry related to quantum-safe cryptography.</li>
+                    <li>Recommendations for actions, including preparation/inventory, cryptographic agility, and the use of hybrid solutions.</li>
+                </ul>
+            </li>
+            <li>BSI emphasizes the need to address "store now, decrypt later" attacks and the importance of starting PQC migration immediately due to expected long migration times.</li>
+            <li>BSI operates under the hypothesis that cryptographically relevant quantum computers will be available in the early 2030s.</li>
+            <li>Advocates for cryptographic agility as a fundamental design criterion for systems.</li>
+        </ul>
+    
+        <h3>Supporting International Standardization Efforts and Defining National Guidelines</h3>
+        <ul>
+            <li>Germany actively participates in the NIST PQC standardization process and the EU's NIS Cooperation Group's PQC workstream, co-chaired with France and the Netherlands, to harmonize PQC transition across the EU.</li>
+            <li>Supports evaluating and certifying systems not chosen by NIST but that demonstrate strong security.</li>
+            <li>Provides guidance on specific PQC mechanisms:
+                <ul>
+                    <li>Recommends FrodoKEM and Classic McEliece for KEMs.</li>
+                    <li>Plans to include ML-KEM, ML-DSA, and SLH-DSA in the 2025 update to technical guidelines.</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <h3>Prioritizing High-Security Systems and Public Administration PKI Migration</h3>
+        <ul>
+            <li>Germany prioritizes migrating high-security systems, particularly the Public Administration PKI ("Verwaltungs-PKI", V-PKI), which has approximately 500,000 subscribers and is used for S/MIME, TLS, and other applications.</li>
+        </ul>
+    
+        <h3>Advocating for Hybrid Solutions and Expressing Reservations about QKD</h3>
+        <ul>
+            <li>BSI recommends using PQC in a hybrid mode, combining it with existing RSA or ECC algorithms to enhance security during the transition phase.</li>
+            <li>Expresses reservations about QKD due to its maturity and security challenges, suggesting it may serve as a complementary measure in the future but not as a sole solution.</li>
+        </ul>
+    
+        <h3>Providing Open Source Tools and Resources</h3>
+        <ul>
+            <li>BSI offers <a href="https://botan.randombit.net/" target="_blank">Botan</a>, an open-source cryptographic library written in C++ that supports both quantum-vulnerable and post-quantum cryptography, facilitating implementation and testing of PQC algorithms.</li>
+        </ul>
+    
+        <p>
+            Germany's approach to PQC transition demonstrates a strong commitment to ensuring long-term cybersecurity in the face of quantum computing advancements. They are actively promoting awareness, providing guidance, supporting research, developing tools, and collaborating with national and international partners to ensure a smooth and secure migration to a quantum-resistant future.
+        </p>
+ 
+        <h2>References</h2>
+
     <table border="1" id="outputTable">
         <thead>
             <tr>
