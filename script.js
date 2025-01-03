@@ -36,9 +36,9 @@ let subtopicIndex = 0;
 // Subtopics dictionary
 const subtopics = {
   "Quizz": ["Quizz", "Threats", "Protocols", "Standardization Bodies", "Countries", "Industries"],
-  "Threats": ["Threats", "Discovery", "Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
+  "Threats": ["Threats", "Discovery", "Harvest now decrypt later", "Software Supply Chain Threat", "Digital Signature Threat"],
   "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
-  "Standardization Bodies": ["General", "CC", "CISA", "ETSI", "Global Platform", "GSMA", "OASIS", "TCG"],
+  "Standardization Bodies": ["Standardization bodies"],
   "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France"],
   "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises"],
   "Post Quantum Resistant Algorithms": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
