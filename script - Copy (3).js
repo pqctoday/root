@@ -35,14 +35,14 @@ let subtopicIndex = 0;
 
 // Subtopics dictionary
 const subtopics = {
-  "Quizz": ["Quizz", "Threats", "Protocols", "Standardization Bodies", "Countries", "Industries"],
-  "Threats": ["Threats", "Discovery", "Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
-  "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
+  "Quizz": ["General", "Threats", "Protocols", "Standardization Bodies", "Countries", "Industries"],
+  "Threats": ["General", "Discovery", "Harvest now decrypt later", "Software Supply Chain", "Non repudiation"],
+  "Protocols": ["General", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
   "Standardization Bodies": ["General", "CC", "CISA", "ETSI", "Global Platform", "GSMA", "OASIS", "TCG"],
-  "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France"],
-  "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises"],
-  "Post Quantum Resistant Algorithms": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
-  "Quantum Technology": ["Quantum", "QRNG", "QKD"],
+  "Countries": ["General", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France"],
+  "Industries": ["General", "Telecom", "Automotive", "Banking", "Government", "Enterprises"],
+  "Post Quantum Resistant Algorithms": ["General", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
+  "Quantum Technology": ["General", "QRNG", "QKD"],
 };
 
 function updateSubtopics(topic) {
@@ -51,24 +51,7 @@ function updateSubtopics(topic) {
     subtopics[topic].forEach(subtopic => {
       const subtopicItem = document.createElement('div');
       subtopicItem.className = 'carousel-item';
-
-      // Create a container for logo and text
-      const logoContainer = document.createElement('div');
-      logoContainer.className = 'subtopic-logo-container';
-
-      // Add a placeholder logo for each subtopic
-      const logo = document.createElement('img');
-      logo.src = `/assets/${subtopic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`; // Replace with your logo path logic
-      logo.alt = `${subtopic} logo`;
-      logo.className = 'subtopic-logo';
-
-      const text = document.createElement('span');
-      text.textContent = subtopic;
-
-      // Append the logo and text to the container
-      logoContainer.appendChild(logo);
-      subtopicItem.appendChild(logoContainer);
-      subtopicItem.appendChild(text);
+      subtopicItem.textContent = subtopic;
 
       // Navigate directly when a subtopic is clicked
       subtopicItem.addEventListener('click', () => {

@@ -1,4 +1,4 @@
-/* General Styles */
+/* ======== BASE STYLES ======== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -10,7 +10,7 @@ body {
   background-color: #f4f4f9;
 }
 
-/* Main Carousel */
+/* ======== CAROUSEL STYLES ======== */
 .carousel-container {
   width: 80%;
   margin: 20px auto;
@@ -53,6 +53,7 @@ body {
   display: flex;
   justify-content: flex-start;
   scroll-behavior: smooth;
+  border-bottom: 2px solid #ddd; /* Visual cue for scrolling */
 }
 
 .carousel::-webkit-scrollbar {
@@ -98,15 +99,18 @@ body {
   transition: transform 0.3s;
 }
 
-/* Subtopic Carousel */
+/* ======== SUBTOPIC CAROUSEL ======== */
 .subtopic-carousel {
   display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .subtopic-carousel.active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 1;
 }
 
 .subtopic-carousel .carousel-title {
@@ -118,7 +122,8 @@ body {
   position: relative;
 }
 
-.subtopic-carousel .carousel-button {
+.subtopic-carousel .carousel-button.subtopic-prev,
+.subtopic-carousel .carousel-button.subtopic-next {
   position: static;
   transform: none;
   margin: 0 10px;
@@ -135,6 +140,7 @@ body {
   display: flex;
   justify-content: flex-start;
   scroll-behavior: smooth;
+  border-bottom: 2px solid #ddd; /* Visual cue for scrolling */
 }
 
 .subtopic-carousel .carousel::-webkit-scrollbar {
@@ -150,15 +156,33 @@ body {
   background: #f4f4f9;
 }
 
-/* Subtopic Logos */
-.carousel-item .subtopic-logo {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-  object-fit: contain;
+/* Loading state for subtopic carousel */
+.subtopic-carousel.loading .carousel-track {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
-/* Buttons */
+/* ======== BUTTONS ======== */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
 .link-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -168,27 +192,19 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  display: none; /* Hidden by default, shown upon subtopic selection */
+  display: none; /* Hidden by default */
 }
 
 .link-button:hover {
   background-color: #0056b3;
 }
 
-/* Main Topic Iframe */
-#main-topic-iframe {
-  width: 100%;
-  max-width: 1200px;
-  height: 200px;
-  border: none;
-  display: block;
-  margin: 0 auto;
-}
+/* ======== RESPONSIVE MEDIA QUERIES ======== */
 
-/* Responsive Design */
+/* Tablet Devices */
 @media (max-width: 768px) {
   .carousel-container {
-    width: 100%;
+    width: 95%;
     padding: 0 20px;
   }
 
@@ -208,6 +224,7 @@ body {
   }
 }
 
+/* Mobile Devices */
 @media (max-width: 480px) {
   .carousel-title h1,
   .carousel-title h2 {
@@ -225,7 +242,22 @@ body {
     height: 50px;
   }
 
+  .carousel-title .prev,
+  .carousel-title .next {
+    top: auto;
+    bottom: 10px;
+  }
+
   .carousel-title .carousel-button {
     padding: 5px;
+  }
+
+  /* Make buttons full width */
+  .carousel-title .carousel-button,
+  .subtopic-carousel .carousel-button.subtopic-prev,
+  .subtopic-carousel .carousel-button.subtopic-next,
+  .link-button {
+    width: 100%;
+    margin: 5px 0;
   }
 }
