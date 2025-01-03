@@ -43,8 +43,6 @@ function populateMainTopics() {
 
     mainTopicGrid.appendChild(topicItem);
   });
-
-  updateGridColumns(); // Update grid layout after populating
 }
 
 // Populate subtopics
@@ -59,15 +57,8 @@ function populateSubtopics(topic) {
       subtopicItem.className = 'grid-item';
 
       const logo = document.createElement('img');
-      const logoPath = `/assets/${subtopic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`;
-      logo.src = logoPath;
+      logo.src = `/assets/${subtopic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`;
       logo.alt = `${subtopic} logo`;
-
-      // Fallback for missing logos
-      logo.onerror = () => {
-        console.warn(`Logo not found: ${logoPath}`);
-        logo.src = '/assets/default-dalle.webp'; // Replace with your fallback image path
-      };
 
       const text = document.createElement('span');
       text.textContent = subtopic;
@@ -83,15 +74,7 @@ function populateSubtopics(topic) {
       subtopicGrid.appendChild(subtopicItem);
     });
   }
-
-  updateGridColumns(); // Update grid layout after populating
 }
 
 // Initialize main topics on page load
 populateMainTopics();
-
-// Add event listener to handle window resize
-window.addEventListener('resize', updateGridColumns);
-
-// Update grid layout on initial page load
-window.addEventListener('DOMContentLoaded', updateGridColumns);
