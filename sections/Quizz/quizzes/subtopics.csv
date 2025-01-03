@@ -1,3 +1,17 @@
 topic_name,subtopic_name,short_description,data_file
 Protocols,SSH,Questions about SSH,quizzes/Protocols/SSH_quizz.csv
 Protocols,TLS,Questions about TLS,quizzes/Protocols/TLS_quizz.csv
+Threats,Digital Signature Threat,Questions about digital signature threats,quizzes/Threats/Digital_Signature_Threat_quizz.csv
+Threats,Discovery,Questions about discovery ,quizzes/Threats/Discovery_quizz.csv
+Threats,Harvest now decrypt later,Questions about harvest now decrypt later,quizzes/Threats/Harvest_now_decrypt_later_quizz.csv
+Threats,Software Supply Chain Threat,Questions about software supply chain threats,quizzes/Threats/Software_Supply_Chain_Threat_quizz.csv
+Industries,Automotive,Questions about the automotive industry,quizzes/Industries/Automotive_quizz.csv
+Industries,Banking,Questions about the banking industry,quizzes/Industries/Banking_quizz.csv
+Industries,Enterprises,Questions about enterprises,quizzes/Industries/Enterprises_quizz.csv
+Industries,Government,Questions about the government industry,quizzes/Industries/Government_quizz.csv
+Industries,Telecom,Questions about the telecom industry,quizzes/Industries/Telecom_quizz.csv
+Post Quantum Resistant Algorithms,ML-DSA,Questions about ML-DSA,quizzes/Post Quantum_Resistant Algorithms/ML-DSA_quizz.csv
+Post Quantum Resistant Algorithms,ML-KEM,Questions about ML-DSA,quizzes/Post Quantum_Resistant Algorithms/ML-DSA_quizz.csv
+Quantum technologies,QKD,Questions about QKD,quizzes/Quantum technologies/QKD_quizz.csv
+Quantum technologies,QRNG,Questions about QRNG,quizzes/Quantum technologies/QRNG_quizz.csv
+
