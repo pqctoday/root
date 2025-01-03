@@ -12,7 +12,7 @@ const subtopics = {
   "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
   "Standardization Bodies": ["Standardization Bodies"],
   "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France"],
-  "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises"],
+  "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises","Healthcare"],
   "Post Quantum Resistant Algorithms": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
   "Quantum Technology": ["Quantum", "QRNG", "QKD"],
 };
