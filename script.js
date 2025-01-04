@@ -12,8 +12,6 @@ const subtopics = {
   "Standards": ["Standards"],
   "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France","UK","Netherlands"],
   "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises","Healthcare"],
-  "Quizz": ["Quizz"],
-  "References": ["References"],
   "Experts": ["Experts"],
  };
 
