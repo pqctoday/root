@@ -1,0 +1,59 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+    /* Styling for the quiz button */
+    #quiz-button {
+        display: flex;
+        flex-direction: column; /* Stack the logo and text vertically */
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 150px; /* Optional: Set a fixed width for consistent appearance */
+        padding: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 20px auto; /* Center the button horizontally */
+        transition: background-color 3s ease-in-out; /* Slow hover effect */
+      }
+  
+      #quiz-button:hover {
+        background-color: #0056b3;
+      }
+  
+      #quiz-button img {
+        width: 50px; /* Adjust the size of the logo */
+        height: 50px;
+      }
+  
+      #quiz-button span {
+        margin-top: 5px; /* Add spacing between logo and label */
+        text-align: center;
