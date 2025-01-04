@@ -1,0 +1,6 @@
+question,answer1,answer2,answer3,answer4,correct_answers,dummy
+"What type of cryptographic algorithm is ML-KEM?", "A symmetric-key encryption algorithm.", "A key-encapsulation mechanism.", "A digital signature algorithm.", "A hash function.", 2,dummy
+"What is the underlying mathematical problem that ensures the security of ML-KEM?", "The integer factorization problem.", "The discrete logarithm problem.", "The module learning with errors (MLWE) problem.", "The shortest vector problem (SVP).", 3,dummy
+"What standard specifies ML-KEM?", "FIPS 186-5.", "FIPS 197.", "FIPS 203.", "FIPS 204.", 3,dummy
+"What are the three parameter sets defined for ML-KEM?", "ML-KEM-256 ML-KEM-512 and ML-KEM-1024.", "ML-KEM-512 ML-KEM-768 and ML-KEM-1024.", "ML-KEM-1 ML-KEM-3 and ML-KEM-5.", "ML-KEM-Low ML-KEM-Medium and ML-KEM-High.", 2,dummy
+"How does ML-KEM achieve IND-CCA2 security?", "By using a secure hash function.", "By using a large key size.", "By employing the Fujisaki-Okamoto (FO) transform.", "By using a quantum-resistant random number generator.", 3,dummy
