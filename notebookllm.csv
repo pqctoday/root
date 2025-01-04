@@ -1,0 +1,52 @@
+title,date,url,author,country,category,reference,type 
+2024-1487-transition-metaphorically.pdf,,,Germany,PQC Transition,,,"PDF" 
+AIVDCWITNOPQCHandbookDec2024.pdf,December 2024,,,Netherlands,PQC Migration,,"PDF" 
+Cryptographic_Products_and_Services_Market_Analysis_Final_Draft_v.9_clean_0.pdf,,,,EU,Cryptography Market,,"PDF" 
+D31_Keynote_MOODY_ETSI.pdf,,,,USA,PQC Standardization,,"PDF" 
+NIST.FIPS.203.pdf,August 2024,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf,NIST,USA,PQC,FIPS 203,PDF 
+NIST.FIPS.204.pdf,August 2024,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf,NIST,USA,PQC,FIPS 204,PDF 
+NIST.FIPS.205.pdf,August 2024,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf,NIST,USA,PQC,FIPS 205,PDF 
+NIST.SP.800-56Cr2.pdf,August 2020,https://doi.org/10.6028/NIST.SP.800-56Cr2,NIST,USA,Key Derivation,SP 800-56C Rev. 2,PDF 
+NIST.SP.800-57pt2r1.pdf,May 2019,https://doi.org/10.6028/NIST.SP.800-57pt2r1,NIST,USA,Key Management,SP 800-57 Part 2 Rev. 1,PDF 
+PQ.03-Post-Quantum-Cryptography-Guidelines-for-Telecom-Use-v1.0.pdf,,,,,PQC in Telecom,,"PDF" 
+Practical Preparations for the Post-Quantum World.pdf,,,,,Quantum Threat Mitigation,,"PDF" 
+REF_PQC-Report_FINAL_Send.pdf,,,,USA,PQC Migration Strategy,,"PDF" 
+RFC 9380: Hashing to Elliptic Curves,,,,,Hashing to Elliptic Curves,RFC 9380,HTML 
+csa NOV 2024.pdf,November 2024,,,USA,Crypto News,,"PDF" 
+itsp.40.111_1-e-australia.pdf,,,,Australia,Cryptography Guidelines,,"PDF" 
+itsp.40.111_1-e.pdf,,,,,Cryptography Guidelines,,"PDF" 
+quantum-threat-timeline-report-2024.pdf,2024,,,,Quantum Threat Timeline,,"PDF" 
+tr_103949v010101p.pdf,May 2023,,,,Security for Intelligent Transport Systems,,"PDF" 
+The BLAKE2 Cryptographic Hash and Message Authentication Code (MAC),November 2015,https://www.rfc-editor.org/info/rfc7693, Markku-Juhani O. Saarinen and Jean-Philippe Aumasson,,Hashing,RFC 7693,HTML 
+A Public-Key System Based on Algebraic Coding Theory,1978,,,USA,Code-based Cryptography,,Report 
+Bellcore attack in practice,2012,https://eprint.iacr.org/2012/553,Andrey Sidorenko Joachim van den Berg Remko Foekema Michiel Grashuis and Jaap de Vos,,,Security Analysis,,
+Preprint Cryptographic Message Syntax (CMS),September 2002,https://www.rfc-editor.org/info/rfc3369,Russ Housley,,Cryptographic Standards,RFC 3369,HTML 
+Cryptographic Token Key Initialization,,,,,Key Management,RFC 4758,HTML 
+Discussion about Kyber’s tweaked FO transform,2023,https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/WFRDl8DqYQ4,CRYSTALS-Kyber submission team,,PQC,,"Forum Post" 
+Dreigingsbeeld Statelijke Actoren 2,2022,https://www.nctv.nl/documenten/publicaties/2022/11/28/dreigingsbeeld-statelijke-actoren-2,AIVD MIVD and NCTV,Netherlands,Threat Assessment,,"Report" 
+Examples from CBOM repository,2024,https://github.com/IBM/CBOM/blob/main/EXAMPLES.md,IBM,,Software,,"Repository" 
+Factorization of RSA-250,February 2020,https://web.archive.org/web/20200228234716/https://lists.gforge.inria.fr/pipermail/cado-nfs-discuss/2020-February/001166.html,Paul Zimmerman,,Cryptography,,"Web Archive" 
+FIPS 197 Advanced encryption standard (AES),November 2001,,NIST,USA,Encryption,FIPS 197,Standard 
+FIPS 197: Advanced encryption standard (AES),November 2001,,NIST,USA,Encryption,FIPS 197,Standard 
+Five things we learned from the 2024 RSA Conference,May 2024,https://www.itpro.com/security/5-takeaways-from-rsa-conference-2024,Richard Millman,,Security Conferences,,"Article" 
+Fizz a TLS 1.3 Implementation,August 2024,https://github.com/facebookincubator/fizz,Meta,,Software,,"Repository" 
+Fully homomorphic encryption using ideal lattices,2009,https://doi.org/10.1145/1536414.1536440,Craig Gentry,,,Cryptography,,
+Conference Paper Guidance for Authentication Authorization and Accounting (AAA) Key Management,July 2007,https://doi.org/10.17487/RFC4962,,,Key Management,RFC 4962,HTML 
+HMAC Keyed-Hashing for Message Authentication,February 1997,https://www.rfc-editor.org/info/rfc2104,Hugo Krawczyk Mihir Bellare and Ran Canetti,,Cryptographic Standards,RFC 2104,HTML 
+HMAC-based Extract-and-Expand Key Derivation Function (HKDF),2010,https://doi.org/10.17487/RFC5869,Hugo Krawczyk and Pasi Eronen,,Key Derivation,RFC 5869,HTML 
+Implementing Grover Oracles for Quantum Key Search on AES and LowMC,2020,,,Quantum Cryptanalysis,,,Book Chapter 
+Internet Key Exchange Protocol Version 2 (IKEv2),October 2014,https://www.rfc-editor.org/info/rfc7296,Charlie Kaufman Paul E. Hoffman Yoav Nir Pasi Eronen and Tero Kivinen,,Network Security,RFC 7296,HTML 
+Kem combiners,2018,,,Key Encapsulation Mechanisms,,,Book Chapter 
+Kyber decisions part 2: FO transform,2023,https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/C0D3W1KoINY/m/99kIvydoAwAJ,CRYSTALS-Kyber submission team,,PQC,,"Forum Post"
+Multiple Public-Key Algorithm X.509 Certificates,August 2018,https://datatracker.ietf.org/doc/draft-truskovsky-lamps-pq-hybrid-x509/01/,Alexander Truskovsky Daniel Van Geest Scott Fluhrer Panos Kampanakis Mike Ounsworth and Serge Mister,,PQC Certificates,,Internet Draft 
+NTRU-HRSS-KEM-Submission to the NIST post-quantum cryptography project,2017,https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/round-1/submissions/NTRU_HRSS_KEM.zip,Andreas Hülsing Joost Rijneveld John M. Schanck and Peter Schwabe,,PQC,,"Submission"
+OpenPGP Message Format,November 2007,https://www.rfc-editor.org/info/rfc4880,Hal Finney Lutz Donnerhacke Jon Callas Rodney L. Thayer and David Shaw,,Cryptographic Standards,RFC 4880,HTML 
+PKCS #1 RSA Cryptography Specifications Version 2.2,November 2016,https://www.rfc-editor.org/info/rfc8017,Kathleen Moriarty Burt Kaliski Jakob Jonsson and Andreas Rusch,,Cryptographic Standards,RFC 8017,HTML 
+Pre-Shared Key Cipher Suites for TLS with SHA-256/384 and AES Galois Counter Mode,March 2009,https://www.rfc-editor.org/info/rfc5487,Mohamad Badra,,Network Security,RFC 5487,HTML 
+SHA-3 Derived Functions: cSHAKE KMAC TupleHash and ParallelHash,2016,https://doi.org/10.6028/NIST.SP.800-185,J. Kelsey S. Chang and R. Perlner,USA,Hashing,SP 800-185,Report 
+SHA-3 standard: Permutation-based hash and extendable-output functions,2015,https://doi.org/10.6028/NIST.FIPS.202,NIST,USA,Hashing,FIPS 202,Standard Shipping 
+End-to-End Encryption to Billions,March 2024,,,,Cryptography,,Presentation 
+The Keyed-Hash Message Authentication Code (HMAC),2008,,NIST,USA,Cryptographic Standards,FIPS 198-1,Standard 
+The return of coppersmith’s attack: Practical factorization of widely used rsa moduli,2017,https://doi.org/10.1145/3133956.3133969,Matús Nemec Marek Sys Petr Svenda Dusan Klinec and Vashek Matyas,,,Cryptography,"Conference Paper" 
+The X3DH Key Agreement Protocol,2016,https://signal.org/docs/specifications/x3dh/,Moxie Marlinspike and Trevor Perrin,,,Key Agreement,"Technical Whitepaper" 
+XMSS eXtended Merkle Signature Scheme,May 2018,https://www.rfc-editor.org/info/rfc8391,Andreas Huelsing Denis Butin Stefan-Lukas Gazdag Joost Rijneveld and Aziz Mohaisen,,Digital Signatures,RFC 8391,HTML
