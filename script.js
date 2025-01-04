@@ -61,45 +61,10 @@ function populateMainTopics() {
   updateGridColumns(); // Update grid layout after populating
 }
 
-// Populate subtopics
 function populateSubtopics(topic) {
-  subtopicTitle.textContent = topic;
-  subtopicGridContainer.style.display = 'block';
-  subtopicGrid.innerHTML = '';
-
-  if (subtopics[topic]) {
-    subtopics[topic].forEach(subtopic => {
-      const subtopicItem = document.createElement('div');
-      subtopicItem.className = 'grid-item';
-
-      const logo = document.createElement('img');
-      const logoPath = `/assets/${subtopic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`;
-      logo.src = logoPath;
-      logo.alt = `${subtopic} logo`;
-
-      // Fallback for missing logos
-      logo.onerror = () => {
-        console.warn(`Logo not found: ${logoPath}`);
-        logo.src = '/assets/default-dalle.webp'; // Replace with your fallback image path
-      };
-
-      const text = document.createElement('span');
-      text.textContent = subtopic;
-
-      subtopicItem.appendChild(logo);
-      subtopicItem.appendChild(text);
-
-      // Event listener for subtopic click
-      subtopicItem.addEventListener('click', () => {
-        window.location.href = `/sections/${topic}/${subtopic}/index.html`;
-      });
-
-      subtopicGrid.appendChild(subtopicItem);
-    });
-  }
-
-  updateGridColumns(); // Update grid layout after populating
+  window.location.href = `/subtopics.html?topic=${encodeURIComponent(topic)}`;
 }
+
 
 // Initialize main topics on page load
 populateMainTopics();

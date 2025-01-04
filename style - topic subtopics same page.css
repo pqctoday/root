@@ -23,7 +23,7 @@ body {
 
 @media (min-width: 768px) {
   .grid-layout {
-    grid-template-columns: repeat(6, 1fr); /* Ensure no more than 3 items per row */
+    grid-template-columns: repeat(4, 1fr); /* Ensure no more than 3 items per row */
   }
 }
 
@@ -107,24 +107,4 @@ body {
   #subtopic-grid-container h2 {
     font-size: 16px;
   }
-}
-
-footer {
-  margin-top: 20px;
-  text-align: center;
-}
-
-footer button {
-  padding: 10px 20px;
-  font-size: 14px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-footer button:hover {
-  background-color: #0056b3;
 }
