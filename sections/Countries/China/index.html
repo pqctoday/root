@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Guidelines for Singapore</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+
+        th:hover {
+            background-color: #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+ 
+  <h1>China's Post-Quantum Cryptography (PQC) Strategy</h1>
+   <!-- Quiz Button -->
+ <a id="quiz-button" href="../../Quizz/quiz.html?topic=Countries&subtopic=China" title="Start the quiz for Countries - China">
+    <img src="/assets/quizz-dalle.webp" alt="Quiz Logo" aria-hidden="true">
+    <span>Take the Quiz</span>
+  </a>
+  <ul>
+      <li>
+          <strong>Independent Standardization Efforts:</strong>
+          <ul>
+              <li>
+                  <strong>CACR Competition:</strong> The Chinese Association for Cryptologic Research (CACR) concluded its PQC competition in 2020. Three algorithms were selected: LAC.PKE for public-key encryption, and Aigis-enc and Aigis-sig for digital signatures.
+              </li>
+              <li>
+                  <strong>Motivations for Independence:</strong> This suggests a strategic intent to develop national cryptographic capabilities independent of US-led initiatives. China's history of prioritizing indigenous technology, coupled with potential concerns about backdoors or vulnerabilities in foreign-developed cryptography, could be driving factors.
+              </li>
+          </ul>
+      </li>
+      <li>
+          <strong>Parallel Investment in Quantum Key Distribution (QKD):</strong>
+          <ul>
+              <li>
+                  <strong>Extensive QKD Network:</strong> China has made substantial investments in QKD, deploying the world's first quantum satellite, Micius, in 2016, and establishing a 4,600 km quantum communication network in 2021.
+              </li>
+              <li>
+                  <strong>Strategic Importance of QKD:</strong> This focus on QKD, which leverages quantum mechanics for secure key exchange, complements China's PQC efforts. While the sources do not explicitly state the rationale, possible explanations include:
+                  <ul>
+                      <li>QKD's perceived immunity to certain quantum attacks that might affect PQC</li>
+                      <li>Alignment with China's broader quantum technology ambitions</li>
+                  </ul>
+              </li>
+          </ul>
+      </li>
+      <li>
+          <strong>Potential Data Harvesting:</strong>
+          <ul>
+              <li>
+                  <strong>"Store Now, Decrypt Later":</strong> A 2021 report suggests that China-associated threat groups may have initiated data harvesting campaigns as early as 2020. This aligns with the "store now, decrypt later" attack model, where encrypted data is collected today with the anticipation of decrypting it once sufficiently powerful quantum computers become available.
+              </li>
+              <li>
+                  <strong>Strategic Implications:</strong> Such proactive data collection, if confirmed, indicates a forward-thinking approach to exploiting future quantum capabilities for intelligence or strategic advantage.
+              </li>
+          </ul>
+      </li>
+      <li>
+          <strong>Limited Information:</strong> Despite these activities, the specific details of China's national PQC roadmap and implementation plans remain less transparent compared to some other countries.
+      </li>
+  </ul>
+  <p>Overall, China's strategy reveals a blend of self-reliance, proactive quantum technology development, and potential offensive preparations. This approach positions the country to be a major player in the post-quantum world, both in terms of defensive capabilities and potential offensive applications.</p>
+    <h2>References</h2>
+    <table border="1" id="outputTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('title')">Title</th>
+                <th onclick="sortTable('date')">Date</th>
+                <th>URL</th>
+                <th onclick="sortTable('author')">Author</th>
+                <th onclick="sortTable('country')">Country</th>
+                <th>Category</th>
+                <th onclick="sortTable('reference')">Reference</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+   
+
+    <footer>
+        <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
+    </footer>
+</body>
+</html>

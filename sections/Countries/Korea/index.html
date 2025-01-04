@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Guidelines for Singapore</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+
+        th:hover {
+            background-color: #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+     
+  <h1>South Korea's Post-Quantum Cryptography (PQC) Strategy</h1>
+  <!-- Quiz Button -->
+ <a id="quiz-button" href="../../Quizz/quiz.html?topic=Countries&subtopic=Korea" title="Start the quiz for Countries - Korea">
+    <img src="/assets/quizz-dalle.webp" alt="Quiz Logo" aria-hidden="true">
+    <span>Take the Quiz</span>
+  </a>
+  <ul>
+      <li>
+          <strong>National Standardization through KpqC:</strong> 
+          <p>South Korea has initiated its own PQC competition, known as KpqC (Korean Post-Quantum Cryptography), similar in structure to the NIST competition. The goal is to select PQC algorithms for digital signatures and key establishment/public key encryption. The first round concluded in December 2023, with four algorithms progressing in each category. The final round is anticipated to end in September 2024.</p>
+          <ul>
+              <li>The KpqC competition requires proposals to meet stringent criteria: publication in a top international conference or journal, or at least in the IACR Cryptology ePrint Archive. Technical descriptions, security proofs, and a reference implementation in ANSI C are mandatory.</li>
+              <li>This suggests that South Korea is committed to establishing robust, independently evaluated PQC standards.</li>
+          </ul>
+      </li>
+      <li>
+          <strong>Government-Led Roadmap:</strong> 
+          <p>The Ministry of Science and ICT has a published work plan, indicating a high-level commitment to PQC transition. While details of the roadmap's content are not provided in the sources, its existence points to a coordinated national effort.</p>
+      </li>
+      <li>
+          <strong>Ambitious Timeline:</strong> 
+          <p>South Korea aims to transform its national cryptography systems to post-quantum cryptography by 2035. This aligns with the US target for migrating federal systems.</p>
+      </li>
+      <li>
+          <strong>Quantum-Safe Communication Infrastructure:</strong> 
+          <p>In addition to PQC, South Korea is investing in quantum key distribution (QKD) as part of its "Digital New Deal" initiative.</p>
+          <ul>
+              <li>Pilot quantum cryptography networks have been deployed across 26 public and private institutions. This practical experimentation suggests a focus on real-world deployment and integration of QKD.</li>
+          </ul>
+      </li>
+  </ul>
+  <p>Overall, South Korea's strategy demonstrates a proactive approach to the quantum threat. The country is not only relying on international standards but also developing its own PQC expertise and infrastructure, suggesting a desire for technological independence in this crucial domain.</p>
+
+    <h2>References</h2>
+    <table border="1" id="outputTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('title')">Title</th>
+                <th onclick="sortTable('date')">Date</th>
+                <th>URL</th>
+                <th onclick="sortTable('author')">Author</th>
+                <th onclick="sortTable('country')">Country</th>
+                <th>Category</th>
+                <th onclick="sortTable('reference')">Reference</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+   
+
+    <footer>
+        <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
+    </footer>
+</body>
+</html>
