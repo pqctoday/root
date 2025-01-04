@@ -9,8 +9,8 @@ const subtopics = {
   "QRA": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
   "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
   "Standards": ["Standards"],
-  "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France", "UK", "Netherlands"],
-  "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises", "Healthcare"],
+  "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France","UK","Netherlands"],
+  "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises","Healthcare"],
   "Quizz": ["Quizz"],
   "References": ["References"],
   "Experts": ["Experts"],
@@ -43,20 +43,13 @@ if (subtopics[topic]) {
     subtopicItem.appendChild(logo);
     subtopicItem.appendChild(text);
 
-   // Correct logic to navigate to the subtopic page
-   subtopicItem.addEventListener('click', () => {
-    window.location.href = `/sections/${topic}/${subtopic}/index.html`;
-  });
-  
+    subtopicItem.addEventListener('click', () => {
+      window.location.href = `/sections/${topic}/${subtopic}/index.html`;
+    });
+
     subtopicGrid.appendChild(subtopicItem);
   });
 }
-
-// Configure Quizz logo link
-const quizzLogo = document.getElementById('quizz-logo');
-quizzLogo.addEventListener('click', () => {
-  window.location.href = `./sections/Quizz/quiz.html?topic=${encodeURIComponent(topic)}&subtopic=all`; // Redirect to the Quizz page for the entire topic
-});
 
 // Back button event listener
 const backButton = document.getElementById('back-to-main');

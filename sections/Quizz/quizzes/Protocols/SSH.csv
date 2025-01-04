@@ -4,4 +4,3 @@ What are the primary components of SSH that would be impacted by a quantum compu
 Can symmetric encryption in SSH be broken by quantum computers?,Yes, but with halved security due to Grover's algorithm,No, symmetric encryption is quantum-proof,Only if the key size is small,Only if combined with weak public-key cryptography,1,dummy
 What quantum-safe solutions exist for securing SSH?,Continue using RSA and DSA,Use lattice-based algorithms like Kyber for key exchange,Adopt post-quantum digital signatures like Dilithium,Use both Kyber and Dilithium as quantum-safe replacements,4,dummy
 What steps should organizations take now to mitigate quantum threats to SSH?,Perform a cryptographic inventory,Transition to hybrid key exchange mechanisms,Adopt post-quantum algorithms as they become standardized,All of the above,4,dummy
-
