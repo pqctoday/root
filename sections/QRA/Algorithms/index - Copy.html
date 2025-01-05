@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,8 +10,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-43RB2WJC2H');
-</script>
-<meta charset="UTF-8">
+</script> <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSV Table Display</title>
     <style>
@@ -29,37 +28,37 @@
             background-color: #f4f4f4;
         }
     </style>
+
 </head>
 <body>
-      <!-- Header -->
-   <header>
-    PQCT
-</header>
-<!-- Subheader -->
-<div class="subheader">
-    <a href="../../../../index.html" class="subheader-link">Home</a>
-</div>
+<div></div>
     <h1>Post Quantum Resistant Algorithms</h1>
+      <!-- Quiz Button -->
+      <a id="quiz-button" href="../../Quizz/quiz.html?topic=QRA&subtopic=Algorithms" title="Start the quizz for QRA">
+        <img src="/assets/quizz-dalle.webp" alt="Quiz Logo" aria-hidden="true">
+        <span>Take the Quiz</span>
+      </a>
     <p>The recognition that quantum computers pose a threat to currently used cryptographic systems has led to numerous efforts to mitigate this threat. These efforts are primarily consolidated through standardization processes, which aim to specify algorithms capable of resisting quantum attacks, test their security and efficiency, and guide their implementation and integration into larger IT systems.</p>
 
+    <h2>Post-Quantum Cryptography (PQC)</h2>
     <p>Post-quantum cryptography (PQC), also known as quantum-resistant cryptography, focuses on developing cryptosystems that are secure against both quantum and classical computers. PQC can be broadly categorized into five main families, each relying on different mathematical problems that are believed to be hard for both classical and quantum computers to solve:</p>
 
-    <h2>Lattice-based Cryptography</h2>
+    <h3>Lattice-based Cryptography</h3>
     <p>Lattice-based cryptography is based on the difficulty of solving problems related to lattices, which are mathematical structures consisting of regularly spaced points in space. Lattice-based cryptography provides very competitive schemes with good performance regarding bandwidth and efficiency.</p>
     <p>Examples: CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON.</p>
 
-    <h2>Code-based Cryptography</h2>
+    <h3>Code-based Cryptography</h3>
     <p>Code-based cryptography relies on the difficulty of decoding random linear codes. It is considered one of the most mature and well-understood approaches to PQC.</p>
     <p>Example: Classic McEliece</p>
 
-    <h2>Multivariate Cryptography</h2>
+    <h3>Multivariate Cryptography</h3>
     <p>Multivariate cryptography is based on the difficulty of solving systems of multivariate polynomial equations.</p>
 
-    <h2>Hash-based Cryptography</h2>
+    <h3>Hash-based Cryptography</h3>
     <p>Hash-based cryptography relies on the security of cryptographic hash functions. It is considered a conservative choice for post-quantum security, and it has been standardized for specific applications with long lifespans, those that cannot wait for the main standardization process, and those that are impractical to update.</p>
     <p>Examples: SPHINCS+, XMSS, LMS.</p>
 
-    <h2>Isogeny-based Cryptography</h2>
+    <h3>Isogeny-based Cryptography</h3>
     <p>Isogeny-based cryptography is a relatively new approach based on the difficulty of computing special maps between elliptic curves, known as isogenies. It typically suffers from expensive operations resulting in slower cryptographic schemes.</p>
 
     <h2>Standardized PQC Algorithms</h2>
@@ -93,56 +92,11 @@
         <li>Lack of Maturity: Some PQC algorithms are relatively new and haven't undergone the same extensive scrutiny as classical algorithms. This raises concerns about potential undiscovered vulnerabilities.</li>
     </ul>
     <p>To address these challenges, the transition to PQC should prioritize cryptographic agility, enabling the seamless integration of new algorithms and standards, and the adoption of hybrid approaches that combine classical and post-quantum cryptography during the transition phase.</p>
-    <div id="csvTable"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script>
-        function loadCSV(filePath) {
-            Papa.parse(filePath, {
-                download: true,
-                header: true,
-                complete: function(results) {
-                    renderTable(results.data);
-                }
-            });
-        }
-
-        function renderTable(data) {
-            const tableDiv = document.getElementById('csvTable');
-            const table = document.createElement('table');
-            const thead = document.createElement('thead');
-            const tbody = document.createElement('tbody');
-
-            // Create header row
-            const headerRow = document.createElement('tr');
-            Object.keys(data[0]).forEach(key => {
-                const th = document.createElement('th');
-                th.textContent = key;
-                headerRow.appendChild(th);
-            });
-            thead.appendChild(headerRow);
-
-            // Create data rows
-            data.forEach(row => {
-                const tr = document.createElement('tr');
-                Object.values(row).forEach(value => {
-                    const td = document.createElement('td');
-                    td.textContent = value;
-                    tr.appendChild(td);
-                });
-                tbody.appendChild(tr);
-            });
-
-            table.appendChild(thead);
-            table.appendChild(tbody);
-            tableDiv.appendChild(table);
-        }
-
-        // Load the CSV file
-        document.addEventListener('DOMContentLoaded', () => {
-            const csvFilePath = 'cryptoalgorithms_vulnerabilities.csv'; // Update with the actual path to your CSV file
-            loadCSV(csvFilePath);
-        });
-    </script>
+</div>
+  
+    
+        <footer>
+            <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
+        </footer>
 </body>
 </html>

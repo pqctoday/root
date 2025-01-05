@@ -1,0 +1,19 @@
+        <section>
+            <img src="../../assets/quizz-dalle.webp" alt="Quiz Logo representing the Quantum Threat Quiz">
+            <h1 id="quiz-title">Post Quantum Cryptography</h1>
+            <p id="quiz-description">Educate yourself about post-quantum cryptography today to be ready for tomorrow.</p>
+        </section>
+
+        <div id="quiz-container">
+            <a id="quiz-button" href="../../Quizz/quiz.html?topic=QRA&subtopic=Algorithms" title="Start the quiz for QRA">
+                <img src="/assets/quizz-dalle.webp" alt="Quiz Logo">
+                <span>Take the Quiz</span>
+            </a>
+
+                <!-- Quiz Button -->
+     <a id="quiz-button" href="../../Quizz/quiz.html?topic=QRA&subtopic=Certificates" title="Start the quizz for Certificates">
+        <img src="/assets/quizz-dalle.webp" alt="Quiz Logo" aria-hidden="true">
+        <span>Take the Quiz</span>
+      </a>
+
+      
