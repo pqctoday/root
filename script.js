@@ -10,7 +10,7 @@ const subtopics = {
   "QRA": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
   "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
   "Standards": ["Standards"],
-  "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France","UK","Netherlands","China","Korea"],
+  "Countries": ["Countries", "Roadmap","US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France","UK","Netherlands","China","Korea"],
   "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises","Healthcare"],
   "Experts": ["Experts"],
  };

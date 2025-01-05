@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PQC Migration roadmap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .filters label {
+            margin-right: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <h1>Potential Timeline for a PQC Migration</h1>
+
+    <p>Taking into account key organizations and their projected actions:</p>
+
+    <div class="filters">
+        <label for="countryFilter">Filter by Country:</label>
+        <select id="countryFilter">
+            <option value="">All</option>
+        </select>
+
+        <label for="phaseFilter">Filter by Phase:</label>
+        <select id="phaseFilter">
+            <option value="">All</option>
+        </select>
+    </div>
+
+    <table id="roadmapTable" class="display">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Phase</th>
+                <th>2025</th>
+                <th>2026</th>
+                <th>2027</th>
+                <th>2028</th>
+                <th>2029</th>
+                <th>2030-2035</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            const countryFilter = $('#countryFilter');
+            const phaseFilter = $('#phaseFilter');
+
+            $.get('roadmap.csv', function (data) {
+                const rows = data.split("\n");
+                const uniqueCountries = new Set();
+                const uniquePhases = new Set();
+                rows.shift(); // Remove header
+
+                rows.forEach(row => {
+                    if (row.trim() !== "") {
+                        const cols = row.split(",");
+                        uniqueCountries.add(cols[0].trim());
+                        uniquePhases.add(cols[1].trim());
+                        const tableRow = `<tr>${cols.slice(0, -1).map(col => `<td>${col.trim()}</td>`).join('')}</tr>`;
+                        $('#roadmapTable tbody').append(tableRow);
+                    }
+                });
+
+                uniqueCountries.forEach(country => {
+                    countryFilter.append(`<option value="${country}">${country}</option>`);
+                });
+
+                uniquePhases.forEach(phase => {
+                    console.log("Phase added:", phase); // Log each phase being added
+                    phaseFilter.append(`<option value="${phase}">${phase}</option>`);
+                });
+
+                const table = $('#roadmapTable').DataTable({
+                    paging: true,
+                    searching: true,
+                    order: [],
+                });
+
+countryFilter.on('change', function () {
+    const selectedCountry = $(this).val();
+    console.log('Selected Country:', selectedCountry);
+    table.column(0).search(selectedCountry ? `^${selectedCountry}$` : '', true, false).draw();
+});
+
+phaseFilter.on('change', function () {
+    const selectedPhase = $(this).val();
+    console.log('Selected Phase:', selectedPhase);
+    table.column(1).search(selectedPhase ? `^${selectedPhase}$` : '', true, false).draw();
+});
+
+            });
+        });
+    </script>
+</body>
+</html>
