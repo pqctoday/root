@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f4f4f9;
+}
+
+/* Grid Layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Default responsive behavior */
+  gap: 20px;
+  justify-items: center;
+  margin: 20px auto;
+  padding: 0 10px;
+  max-width: 1200px; /* Maximum width for the grid layout */
+}
+
+@media (min-width: 768px) {
+  .grid-layout {
+    grid-template-columns: repeat(6, 1fr); /* Ensure no more than 3 items per row */
+  }
+}
+
+.grid-layout .grid-item {
+  text-align: center;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.grid-layout .grid-item img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.grid-layout .grid-item span {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.grid-layout .grid-item:hover {
+  transform: scale(1.05);
+}
+
+/* Subtopic Grid Container */
+#subtopic-grid-container {
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .grid-layout .grid-item img {
+    width: 70px;
+  }
+
+  .grid-layout .grid-item span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .grid-layout .grid-item img {
+    width: 60px;
+  }
+
+  .grid-layout .grid-item span {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .grid-layout .grid-item img {
+    width: 50px;
+  }
+
+  .grid-layout .grid-item span {
+    font-size: 10px;
+  }
+
+  #subtopic-grid-container h2 {
+    font-size: 16px;
+  }
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+footer button:hover {
+  background-color: #0056b3;
+}
+
+
+To add a Quizz logo on the subtopic page that dynamically links to the quiz for the selected topic or subtopic, follow these steps:
+
+Step 1: Update subtopics.html
+Add a placeholder for the Quizz logo. Place it above or below the subtopic grid.
+
+html
+Copy code
+<div id="quizz-container" class="quizz-section">
+  <img id="quizz-logo" src="/assets/quizz-dalle.webp" alt="Quizz logo" />
+  <p>Take the Quizz for this topic!</p>
+</div>
+Step 2: Update subtopics.js
+In subtopics.js, add logic to dynamically configure the Quizz logo to link to the appropriate quiz page.
+
+Select the quizz-logo element.
+Set its click behavior to redirect to the quiz for the current topic.
+Here’s the updated script:
+
+javascript
+Copy code
+// Retrieve the topic from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const topic = urlParams.get('topic');
+
+// Subtopics dictionary (shared or imported)
+const subtopics = {
+  "Quantum": ["Quantum", "QRNG", "QKD"],
+  "Threats": ["Threats", "Discovery", "Blockchain", "Harvest now decrypt later", "Software Supply Chain", "Digital Signature"],
+  "QRA": ["Algorithms", "Certificates", "ML-KEM", "ML-DSA", "SLH-DSA"],
+  "Protocols": ["Protocols", "SSH", "TLS", "IPSEC", "SMIME", "PKI"],
+  "Standards": ["Standards"],
+  "Countries": ["Countries", "US", "Europe", "Canada", "Australia", "Singapore", "Germany", "France","UK","Netherlands"],
+  "Industries": ["Industries", "Telecom", "Automotive", "Banking", "Government", "Enterprises","Healthcare"],
+  "Quizz": ["Quizz"],
+  "References": ["References"],
+  "Experts": ["Experts"],
+};
+
+// Populate the subtopics grid
+const subtopicTitle = document.getElementById('subtopic-title');
+const subtopicGrid = document.getElementById('subtopic-grid-container');
+
+subtopicTitle.textContent = topic;
+
+if (subtopics[topic]) {
+  subtopics[topic].forEach(subtopic => {
+    const subtopicItem = document.createElement('div');
+    subtopicItem.className = 'grid-item';
+
+    const logo = document.createElement('img');
+    const logoPath = `/assets/${subtopic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`;
+    logo.src = logoPath;
+    logo.alt = `${subtopic} logo`;
+
+    logo.onerror = () => {
+      console.warn(`Logo not found: ${logoPath}`);
+      logo.src = '/assets/default-dalle.webp';
+    };
+
+    const text = document.createElement('span');
+    text.textContent = subtopic;
+
+    subtopicItem.appendChild(logo);
+    subtopicItem.appendChild(text);
+
+    subtopicItem.addEventListener('click', () => {
+      window.location.href = `/sections/${topic}/${subtopic}/index.html`;
+    });
+
+    subtopicGrid.appendChild(subtopicItem);
+  });
+}
+
+// Configure Quizz logo link
+const quizzLogo = document.getElementById('quizz-logo');
+quizzLogo.addEventListener('click', () => {
+  window.location.href = `/sections/${topic}/Quizz/index.html`; // Redirect to the Quizz page for the topic
+});
+
+// Back button event listener
+const backButton = document.getElementById('back-to-main');
+backButton.addEventListener('click', () => {
+  window.location.href = '/index.html'; // Adjust to your main topics page
+});
+
+.quizz-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.quizz-section img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.quizz-section img:hover {
+  transform: scale(1.1);
+}
+
+.quizz-section p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+}

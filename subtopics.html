@@ -3,26 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Subtopics</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Subtopics - Post Quantum Cryptography</title>
+  <link rel="stylesheet" href="subtopics.css">
 </head>
 <body>
-  <!-- Page Title -->
-  <h1 id="subtopic-title"></h1>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">PQCT</div>
+    </div>
+  </header>
 
-  <!-- Quizz Section -->
-  <div id="quizz-container" class="quizz-section">
-    <img id="quizz-logo" src="/assets/quizz-dalle.webp" alt="Quizz logo">
-    <p>Take the Quizz for this topic!</p>
+  <!-- Subheader -->
+  <div class="subheader">
+    <a href="/index.html" class="subheader-link">Home</a>
+    
   </div>
 
-  <!-- Subtopic Grid -->
-  <div id="subtopic-grid-container" class="grid-layout"></div>
+  <!-- Subtopics Title -->
+  <main class="content">
+    <h1 id="subtopic-title" class="subtopics-title">SUB TOPICS</h1>
+    <p class="subtopics-subtitle">Select The Sub Topic You Wish To Learn About</p>
 
-  <!-- Footer with Back Button -->
-  <footer>
-    <button id="back-to-main">Back to Main</button>
-  </footer>
+    <!-- Subtopics Grid -->
+    <section id="subtopic-grid-container" class="subtopics-grid">
+      <!-- Subtopics dynamically populated -->
+      <div class="subtopic-card">
+        <img src="/assets/quantum-dalle.webp" alt="Quantum Icon">
+        <span>Quantum</span>
+      </div>
+      <div class="subtopic-card">
+        <img src="/assets/threats-dalle.webp" alt="Threats Icon">
+        <span>Threats</span>
+      </div>
+      <div class="subtopic-card">
+        <img src="/assets/protocols-dalle.webp" alt="Protocols Icon">
+        <span>Protocols</span>
+      </div>
+    </section>
+
+    <!-- Quizz Section -->
+    <section id="quizz-container" class="quizz-section">
+      <h2 class="quizz-title">QUIZZ</h2>
+      <p class="quizz-subtitle">Take the Quizz for this topic!</p>
+      <button class="quizz-button" id="start-quiz">START</button>
+    </section>
+  </main>
+
+ <!-- Footer -->
+<footer class="footer" style="text-align: center;">
+  <p class="footer-text">
+    This work is licensed under 
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="footer-link">
+      Creative Commons Zero (CC0) 1.0 Universal Public Domain Dedication
+    </a>.
+  </p>
+</footer>
+
 
   <script src="subtopics.js"></script>
 </body>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Page</title>
+</head>
+<body>
+
+<section>
+  <div style="text-align: center; margin: 20px 0;">
+    <img src="../../assets/quizz-dalle.webp" alt="Quiz Logo representing the Quantum Threat Quiz" style="max-width: 15%; height: auto;">
+  </div>
+
+  <h2 id="quiz-title">Quantum Threat Quiz</h2>
+  <p id="quiz-description">Get ready to test your knowledge on the quantum threat and related topics!</p>
+</section>
+
+<div id="quiz-container">
+    <div id="quiz-selection">
+        <h1>Select a Quiz</h1>
+        <label for="topic-dropdown">Choose a topic:</label>
+        <select id="topic-dropdown">
+          <option value="">Select Topic</option>
+        </select>
+
+        <label for="subtopic-dropdown">Choose a subtopic:</label>
+        <select id="subtopic-dropdown" disabled>
+          <option value="">Select Subtopic</option>
+        </select>
+
+        <button id="start-quiz-button" disabled>Start Quiz</button>
+    </div>
+    
+    <div id="quiz-area" style="display: none;">
+        <!-- Progress Bar -->
+        <div id="progress-bar-container">
+          <div id="progress-bar"></div>
+        </div>
+
+        <!-- Question and Answers -->
+        <div id="question-area"></div>
+        <div id="answer-area"></div>
+        <button id="next-question-button" disabled>Next Question</button>
+        <button id="submit-quiz-button" style="display: none;">Submit Quiz</button>
+    </div>
+    
+    <div id="results-area" style="display: none;">
+        <h2>Your Score:</h2>
+        <p id="score"></p>
+        <button id="show-answers-button">Show Correct Answers</button>
+        <button id="restart-button">Restart</button>
+    </div>
+      
+    <div id="correct-answers-section" style="display: none;">
+        <h2>Correct Answers</h2>
+        <div id="correct-answers-list"></div>
+    </div>
+</div>
+
+<script src="quiz.js"></script>
+</body>
+<footer>
+  <p style="text-align: center; margin-top: 20px;">
+    <a href="../../../../index.html">Back to Main Page</a>
+  </p>
+</footer>
+</html>

@@ -1,0 +1,103 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1.6; /* Improves text readability */
+}
+
+body {
+  font-size: 16px;
+  background-color: #f9f9f9; /* Light background for better contrast */
+  color: #333; /* Dark text color for readability */
+}
+
+/* Quiz Container */
+#quiz-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto; /* Add vertical spacing around container */
+  padding: 20px;
+  background-color: #fff; /* White background for content */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded corners for modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Table (responsive) */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  display: block;
+  overflow-x: auto;
+  background-color: #fff; /* Consistent background color */
+  border-radius: 4px; /* Rounded edges */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px 8px; /* More padding for better touch support */
+  text-align: left;
+  font-size: 0.9em; /* Slightly smaller text in tables */
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Quiz Sections */
+#quiz-selection, #quiz-area, #results-area {
+  margin-bottom: 20px;
+}
+
+#quiz-area {
+  display: none; /* Hidden by default */
+}
+
+/* Answers list */
+#answer-area label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer; /* Pointer cursor for clickable options */
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em; /* Base font size for consistency */
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+button:hover {
+  background-color: #45a049; /* Slightly darker green */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* MEDIA QUERIES for small devices */
+@media (max-width: 768px) {
+  #quiz-container {
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  th, td {
+      padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
