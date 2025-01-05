@@ -1,0 +1,5 @@
+ <!-- Quiz Button -->
+ <a id="quiz-button" href="../../Quizz/quiz.html?topic=Industries&subtopic=Automotive" title="Start the quizz for Automotive Industry">
+    <img src="/assets/quizz-dalle.webp" alt="Quiz Logo" aria-hidden="true">
+    <span>Take the Quiz</span>
+  </a>

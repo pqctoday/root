@@ -6,7 +6,10 @@
     <title>Quantum Key Distribution</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,12 +45,20 @@
     </style>
 </head>
 <body>
+    <!-- Header -->
+  <header class="header" style="display: flex; align-items: center;">
+    <a href="/assets/PQCT_Logo_V01.png" style="margin-right: 10px;"></a>
+      <img src="/assets/PQCT_Logo_V01.png" alt="PQCToday Logo" style="width: 7%; height: auto;">
+    </a>
+    <div class="logo">PQCToday</div>
+  </header>
+    <!-- Subheader -->
+    <div class="subheader">
+        <a href="../../../../index.html" class="subheader-link">Home</a>
+    </div>
+
     <h1>Quantum Key Distribution</h1>
-    <!-- Quiz Button -->
-    <a id="quiz-button" href="../../Quizz/quiz.html?topic=Quantum&subtopic=QKD" title="Start the quiz for QKD">
-        <img src="/assets/quizz-dalle.webp" alt="Quiz Logo" aria-hidden="true">
-        <span>Take the Quiz</span>
-      </a>
+
     <p>Quantum key distribution (QKD) is a method for generating and distributing symmetric cryptographic keys with information-theoretical security based on quantum information theory. QKD leverages quantum mechanics to enable secure communication between two parties. It allows those parties, traditionally referred to as Alice and Bob, to establish a shared secret key that can be used to encrypt and decrypt messages. The security of QKD is based on the fundamental principles of quantum mechanics, which dictate that any attempt to measure a quantum system inevitably alters its state. This property allows legitimate parties to detect the presence of an eavesdropper, commonly known as Eve, on the communication channel.</p>
     <p>Here's how QKD leverages quantum technology for secure key distribution:</p>
     <ul>
@@ -88,7 +99,13 @@
         </tbody>
     </table>
      
-
+<!-- Quiz Footer Section -->
+<div id="quiz-footer">
+    <h2>QUIZZ</h2>
+    <p>Take the Quiz for this topic!</p>
+    <a href="../../Quizz/quiz.html?topic=Quantum&subtopic=QKD" class="quiz-button">START</a>
+  </div>
+  
     <footer>
         <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
     </footer>

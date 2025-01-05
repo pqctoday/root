@@ -1,0 +1,5 @@
+<!-- Quiz Button -->
+ <a id="quiz-button" href="../../Quizz/quiz.html?topic=Threats&subtopic=Blockchain" title="Start the quiz for Threats on Blockchain">
+    <img src="/assets/quizz-dalle.webp" alt="Quiz Logo" aria-hidden="true">
+    <span>Take the Quiz</span>
+  </a>

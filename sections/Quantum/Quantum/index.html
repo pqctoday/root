@@ -27,16 +27,27 @@
             background-color: #f4f4f4;
         }
     </style>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
 </head>
 <body>
+   <!-- Header -->
+  <header class="header" style="display: flex; align-items: center;">
+    <a href="/assets/PQCT_Logo_V01.png" style="margin-right: 10px;"></a>
+      <img src="/assets/PQCT_Logo_V01.png" alt="PQCToday Logo" style="width: 7%; height: auto;">
+    </a>
+    <div class="logo">PQCToday</div>
+  </header>
+    <!-- Subheader -->
+    <div class="subheader">
+        <a href="../../../../index.html" class="subheader-link">Home</a>
+    </div>
+
     <section>
         <h1>Summary of Quantum Hardware Technologies</h1>
-              <!-- Quiz Button -->
- <a id="quiz-button" href="../../Quizz/quiz.html?topic=Quantum&subtopic=Quantum" title="Start the quiz for Quantum technologies">
-    <img src="/assets/quizz-dalle.webp" alt="Quiz Logo" aria-hidden="true">
-    <span>Take the Quiz</span>
-  </a>
+        
 
         <p>Here is a summary of the main types of quantum hardware, their benefits and challenges, the current state of each technology, key vendors, and potential and proven applications:</p>
         <table>
@@ -165,7 +176,13 @@
             loadCSV(csvFilePath);
         });
     </script>
-   
+   <!-- Quiz Footer Section -->
+<div id="quiz-footer">
+    <h2>QUIZZ</h2>
+    <p>Take the Quiz for this topic!</p>
+    <a href="../../Quizz/quiz.html?topic=Quantum&subtopic=Quantum" class="quiz-button">START</a>
+  </div>
+  
     <footer>
         <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
     </footer>

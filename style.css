@@ -21,6 +21,11 @@ a {
   color: inherit;
 }
 
+.logo {
+  font-family: "Bruno Ace", serif;
+  font-style: normal;
+}
+
 /* Header */
 .header {
   width: 100%;

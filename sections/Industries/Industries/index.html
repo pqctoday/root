@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+     <!-- Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
+     <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+         gtag('config', 'G-43RB2WJC2H');
+     </script>
    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
 <script>
@@ -17,6 +27,18 @@
      
 </head>
 <body>
+     <!-- Header -->
+  <header class="header" style="display: flex; align-items: center;">
+    <a href="/assets/PQCT_Logo_V01.png" style="margin-right: 10px;"></a>
+      <img src="/assets/PQCT_Logo_V01.png" alt="PQCToday Logo" style="width: 7%; height: auto;">
+    </a>
+    <div class="logo">PQCToday</div>
+  </header>
+
+    <!-- Subheader -->
+    <div class="subheader">
+        <a href="../../../../index.html" class="subheader-link">Home</a>
+    </div>
     <div id="csvTable"></div>
     <section id="automotive"></section>
         <h2>Quantum Threats in the Automotive Industry</h2>
@@ -42,7 +64,17 @@
         <h2>Quantum Threats in the Telecom Industry</h2>
         <p>The telecom industry must address quantum threats that could disrupt communication networks, compromise data integrity, and affect customer privacy. Implementing quantum-resistant security measures is crucial for maintaining secure and reliable telecommunications.</p>
     </section>
-
+<!-- Quiz Footer Section -->
+<div id="quiz-footer">
+    <h2>QUIZZ</h2>
+    <p>Take the Quiz for this topic!</p>
+    <a href="../../Quizz/quiz.html?topic=Industries&subtopic=Automotive" class="quiz-button">START</a>
+  </div>
+  
+  <!-- Footer -->
+    <footer>
+        <p><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">Creative Commons Zero (CC0) 1.0 Universal Public Domain Dedication</a></p>
+    </footer>
 </body>
 <footer></footer>
     <a href="../../../index.html">Back to Source Page</a>

@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSV Table Display</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+     <!-- Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
+     <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+         gtag('config', 'G-43RB2WJC2H');
+     </script>
     <style>
         table {
             width: 100%;
@@ -23,13 +33,21 @@
     </style>
 </head>
 <body>
-    <h1>The Quantum Threat to Government Industry</h1>
-         <!-- Quiz Button -->
- <a id="quiz-button" href="../../Quizz/quiz.html?topic=Industries&subtopic=Government" title="Start the quizz for Government Industry">
-    <img src="/assets/quizz-dalle.webp" alt="Quiz Logo" aria-hidden="true">
-    <span>Take the Quiz</span>
-  </a>
+     <!-- Header -->
+  <header class="header" style="display: flex; align-items: center;">
+    <a href="/assets/PQCT_Logo_V01.png" style="margin-right: 10px;"></a>
+      <img src="/assets/PQCT_Logo_V01.png" alt="PQCToday Logo" style="width: 7%; height: auto;">
+    </a>
+    <div class="logo">PQCToday</div>
+  </header>
 
+    <!-- Subheader -->
+    <div class="subheader">
+        <a href="../../../../index.html" class="subheader-link">Home</a>
+    </div>
+
+    <h1>The Quantum Threat to Government Industry</h1>
+        
     <p>The potential for quantum computers to break current cryptographic systems poses a significant threat to governments worldwide. Governments rely heavily on cryptography for a wide range of functions, including:</p>
     <ul>
         <li>Protecting classified information and state secrets</li>
@@ -170,6 +188,16 @@
     <footer>
         <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
     </footer>
-
+<!-- Quiz Footer Section -->
+<div id="quiz-footer">
+    <h2>QUIZZ</h2>
+    <p>Take the Quiz for this topic!</p>
+    <a href="../../Quizz/quiz.html?topic=Industries&subtopic=Government" class="quiz-button">START</a>
+  </div>
+  
+  <!-- Footer -->
+    <footer>
+        <p><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">Creative Commons Zero (CC0) 1.0 Universal Public Domain Dedication</a></p>
+    </footer>
 </body>
 </html>

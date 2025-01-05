@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-43RB2WJC2H"></script>
 <script>
@@ -14,12 +17,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-        <!-- Quiz Button -->
-        <a id="quiz-button" href="../../Quizz/quiz.html?topic=Protocols&subtopic=IPSEC" title="Start the quiz for Protocols - IPSEC">
-            <img src="/assets/quizz-dalle.webp" alt="Quiz Logo" aria-hidden="true">
-            <span>Take the Quiz</span>
-          </a>
-          
+       <!-- Header -->
+<header class="header" style="display: flex; align-items: center;">
+    <a href="/assets/PQCT_Logo_V01.png" style="margin-right: 10px;"></a>
+      <img src="/assets/PQCT_Logo_V01.png" alt="PQCToday Logo" style="width: 7%; height: auto;">
+    </a>
+    <div class="logo">PQCToday</div>
+  </header>
+<!-- Subheader -->
+<div class="subheader">
+    <a href="../../../../index.html" class="subheader-link">Home</a>
+
+</div><h1>The Quantum Threats</h1>
     <section>
         <h2>Harvest Now / Decrypt Later</h2>
         <p>This threat involves adversaries collecting encrypted data now with the intention of decrypting it later when quantum computers become powerful enough to break current encryption algorithms. This poses a significant risk to the confidentiality of sensitive information.</p>
@@ -35,8 +44,15 @@
 
     
 </body>
-      
-        <footer>
-            <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
-        </footer>
+      <!-- Quiz Footer Section -->
+<div id="quiz-footer">
+    <h2>QUIZZ</h2>
+    <p>Take the Quiz for this topic!</p>
+    <a href="../../Quizz/quiz.html?topic=Threats&subtopic=Threats" class="quiz-button">START</a>
+  </div>
+  
+    <footer>
+        <p style="text-align: center; margin-top: 20px;"><a href="../../../../index.html">Back to Main Page</a></p>
+    </footer>
+    
 </html>
