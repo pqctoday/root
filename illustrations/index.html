@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLS Handshake Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+        #animation-container {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            overflow: hidden; /* Hide elements outside the container */
+        }
+        .message, .key {
+            opacity: 0; /* Initially hide messages and keys */
+        }
+    </style>
+</head>
+<body>
+    <div id="animation-container"></div>
+
+    <script>
+        // Function to load SVG into the container
+        function loadSVG(url, container) {
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load SVG: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(svgData => {
+                    container.innerHTML = svgData;
+                    initAnimation(); // Initialize animation after SVG is loaded
+                })
+                .catch(error => console.error(error.message));
+        }
+
+        // Load the SVG
+        const container = document.getElementById("animation-container");
+        loadSVG("tls-handshake.svg", container);
+
+        function initAnimation() {
+            const tl = gsap.timeline({
+                defaults: {
+                    ease: "power2.inOut"
+                },
+                onStart: () => console.log("Animation started"),
+                onComplete: () => console.log("Animation completed")
+            });
+
+            // --- Client Hello ---
+            if (document.querySelector("#clientHello")) {
+                tl.addLabel("clientHello")
+                  .fromTo("#clientHello", { x: 60, autoAlpha: 0 }, { duration: 1, x: "+=200", autoAlpha: 1 })
+                  .to("#clientHello", { duration: 1, x: "+=200", autoAlpha: 0 }, "+=1");
+            } else {
+                console.warn("Element '#clientHello' not found.");
+            }
+
+            // --- Server Hello ---
+            if (document.querySelector("#serverHello")) {
+                tl.addLabel("serverHello")
+                  .fromTo("#serverHello", { x: 680, autoAlpha: 0 }, { duration: 1, x: "-=200", autoAlpha: 1 })
+                  .to("#serverHello", { duration: 1, x: "-=200", autoAlpha: 0 }, "+=1");
+            } else {
+                console.warn("Element '#serverHello' not found.");
+            }
+
+            // --- Server Certificate ---
+            if (document.querySelector("#serverCertificate")) {
+                tl.addLabel("serverCertificate")
+                  .fromTo("#serverCertificate", { x: 680, autoAlpha: 0 }, { duration: 1, x: "-=200", autoAlpha: 1 })
+                  .to("#serverCertificate", { duration: 1, x: "-=200", autoAlpha: 0 }, "+=1");
+            } else {
+                console.warn("Element '#serverCertificate' not found.");
+            }
+
+            // --- Key Exchange (Simplified Example) ---
+            if (document.querySelector("#clientKey") && document.querySelector("#serverKey")) {
+                tl.addLabel("keyExchange")
+                  .fromTo("#clientKey", { x: 60, autoAlpha: 0 }, { duration: 1, x: "+=200", autoAlpha: 1 })
+                  .to("#clientKey", { duration: 1, x: "+=200", autoAlpha: 0 }, "+=0.5")
+                  .fromTo("#serverKey", { x: 680, autoAlpha: 0 }, { duration: 1, x: "-=200", autoAlpha: 1 }, "keyExchange+=0.5")
+                  .to("#serverKey", { duration: 1, x: "-=200", autoAlpha: 0 }, "+=0.5");
+            } else {
+                console.warn("Element '#clientKey' or '#serverKey' not found.");
+            }
+
+            // --- Encryption (Simplified Example) ---
+            if (document.querySelector("#padlock")) {
+                tl.addLabel("encryption")
+                  .to("#padlock", { duration: 0.5, scale: 1.2, fill: "#FFD600", repeat: 3, yoyo: true });
+            } else {
+                console.warn("Element '#padlock' not found.");
+            }
+        }
+    </script>
+</body>
+</html>

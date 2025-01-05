@@ -1,0 +1,55 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="messageGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#1E88E5" />
+            <stop offset="100%" stop-color="#42A5F5" />
+        </linearGradient>
+        <linearGradient id="keyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FFD600" />
+            <stop offset="100%" stop-color="#FFAB00" />
+        </linearGradient>
+    </defs>
+
+    <g id="client">
+        <rect x="20" y="250" width="80" height="60" fill="#F0F0F0" stroke="#606060" rx="5" />
+        <text x="60" y="240" text-anchor="middle" font-size="14">Client</text>
+        <circle cx="60" cy="280" r="25" fill="#F0F0F0" stroke="#606060" />
+        <text x="60" y="285" text-anchor="middle" font-size="20" font-weight="bold">C</text>
+    </g>
+
+    <g id="server">
+        <rect x="680" y="250" width="80" height="60" fill="#F0F0F0" stroke="#606060" rx="5" />
+        <text x="720" y="240" text-anchor="middle" font-size="14">Server</text>
+        <circle cx="720" cy="280" r="25" fill="#F0F0F0" stroke="#606060" />
+        <text x="720" y="285" text-anchor="middle" font-size="20" font-weight="bold">S</text>
+    </g>
+
+    <g id="clientHello" class="message">
+        <rect x="120" y="80" width="160" height="30" fill="url(#messageGradient)" stroke="#606060" rx="5" />
+        <text x="130" y="100" font-size="12" fill="white">Client Hello</text>
+    </g>
+    <g id="serverHello" class="message">
+        <rect x="520" y="130" width="160" height="30" fill="url(#messageGradient)" stroke="#606060" rx="5" />
+        <text x="530" y="150" font-size="12" fill="white">Server Hello</text>
+    </g>
+    <g id="serverCertificate" class="message">
+        <rect x="520" y="180" width="160" height="30" fill="url(#messageGradient)" stroke="#606060" rx="5" />
+        <text x="530" y="200" font-size="12" fill="white">Certificate</text>
+        <path d="M550 200 L555 185 M550 200 L545 185" stroke="white" stroke-width="2" />
+    </g>
+
+    <g id="clientKey" class="key">
+        <path d="M120 400 Q140 370 160 400" stroke="url(#keyGradient)" stroke-width="5" fill="none" />
+        <circle cx="120" cy="400" r="5" fill="url(#keyGradient)" />
+    </g>
+    <g id="serverKey" class="key">
+        <path d="M680 450 Q700 420 720 450" stroke="url(#keyGradient)" stroke-width="5" fill="none" />
+        <circle cx="680" cy="450" r="5" fill="url(#keyGradient)" />
+    </g>
+
+    <g id="padlock">
+        <rect x="385" y="500" width="30" height="40" fill="#606060" stroke="#424242" rx="5" />
+        <path d="M395 490 A10 10 0 0 1 405 490" stroke="#424242" stroke-width="5" fill="none" />
+    </g>
+
+    </svg>

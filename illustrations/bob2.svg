@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
+  <!-- Bob -->
+  <circle cx="100" cy="100" r="50" fill="#4CAF50" stroke="#000" stroke-width="2" />
+  <circle cx="85" cy="90" r="5" fill="#fff" /> <!-- Left eye -->
+  <circle cx="115" cy="90" r="5" fill="#fff" /> <!-- Right eye -->
+  <line x1="90" y1="110" x2="110" y2="110" stroke="#000" stroke-width="2" /> <!-- Mouth -->
+  <text x="100" y="180" font-size="20" text-anchor="middle" fill="#000" font-family="Arial">Bob</text>
+
+  <!-- Bob's body -->
+  <rect x="75" y="150" width="50" height="80" fill="#4CAF50" stroke="#000" stroke-width="2" />
+
+  <!-- Bob's arms -->
+  <line x1="75" y1="160" x2="50" y2="200" stroke="#000" stroke-width="2" /> <!-- Left arm -->
+  <line x1="125" y1="160" x2="150" y2="200" stroke="#000" stroke-width="2" /> <!-- Right arm -->
+
+  <!-- Bob's legs -->
+  <line x1="85" y1="230" x2="75" y2="270" stroke="#000" stroke-width="2" /> <!-- Left leg -->
+  <line x1="115" y1="230" x2="125" y2="270" stroke="#000" stroke-width="2" /> <!-- Right leg -->
+</svg>
