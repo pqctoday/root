@@ -7,6 +7,33 @@ body {
     color: #202020;
 }
 
+.logo {
+    font-family: "Bruno Ace", serif;
+    font-style: normal;
+  }
+  
+  /* Titlepage styles */
+  .titlepage {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Link wrapping the logo */
+  .logo-link {
+    margin-right: 10px;
+  }
+  
+  /* Logo image styles */
+  .logo-image {
+    height: 1.5em;
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Text next to the logo */
+  .logo-text {
+    font-size: 1em;
+  }
+  
 /* Header */
 .header {
     width: 100%;
