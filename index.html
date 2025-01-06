@@ -11,13 +11,21 @@
 
 </head>
 <body>
-  <!-- Header -->
-  <header class="header" style="display: flex; align-items: center;">
-    <a href="assets/PQCT_Logo_V01.png" style="margin-right: 10px;">
-      <img src="assets/PQCT_Logo_V01.png" alt="PQCToday Logo" style="height: 1.5em; width: auto;">
-    </a>
-    <div class="logo" style="font-size: 1em;">PQCToday</div>
-  </header>
+<!-- Header -->
+<header class="header" style="display: flex; align-items: center;">
+  <a href="assets/PQCT_Logo_V01.png" style="margin-right: 10px;">
+    <img src="assets/PQCT_Logo_V01.png" alt="PQCToday Logo" id="logo-img" style="height: auto;">
+  </a>
+  <div class="logo" id="logo-text" style="font-size: 2rem;">PQCToday</div>
+</header>
+<script>
+  window.addEventListener('load', function() {
+    const logoText = document.getElementById('logo-text');
+    const logoImg = document.getElementById('logo-img');
+    const logoTextHeight = logoText.offsetHeight;
+    logoImg.style.height = (1.5 * logoTextHeight) + 'px';
+  });
+</script>
 
   <!-- Main Banner -->
   <main class="main-banner">

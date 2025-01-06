@@ -33,13 +33,21 @@
     </style>
 </head>
 <body>
-     <!-- Header -->
-  <header class="header" style="display: flex; align-items: center;">
-    <a href="/assets/PQCT_Logo_V01.png" style="margin-right: 10px;"></a>
-      <img src="/assets/PQCT_Logo_V01.png" alt="PQCToday Logo" style="width: 7%; height: auto;">
+    <!-- Header -->
+<header class="header" style="display: flex; align-items: center;">
+    <a href="/assets/PQCT_Logo_V01.png" style="margin-right: 10px;">
+      <img src="/assets/PQCT_Logo_V01.png" alt="PQCToday Logo" id="logo-img" style="height: auto;">
     </a>
-    <div class="logo">PQCToday</div>
+    <div class="logo" id="logo-text" style="font-size: 2rem;">PQCToday</div>
   </header>
+  <script>
+    window.addEventListener('load', function() {
+      const logoText = document.getElementById('logo-text');
+      const logoImg = document.getElementById('logo-img');
+      const logoTextHeight = logoText.offsetHeight;
+      logoImg.style.height = (1.5 * logoTextHeight) + 'px';
+    });
+  </script>
 
     <!-- Subheader -->
     <div class="subheader">
