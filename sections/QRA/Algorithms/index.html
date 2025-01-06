@@ -43,22 +43,61 @@
             <p>Post-quantum cryptography (PQC), also known as quantum-resistant cryptography...</p>
 
             <h3>Lattice-based Cryptography</h3>
+            <p>This approach relies on the difficulty of solving mathematical problems related to lattices. Lattice-based cryptography is considered one of the most promising PQC approaches due to its strong security guarantees and efficiency.</p>
             <p>Examples: CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON.</p>
-
-            <h3>Code-based Cryptography</h3>
+                        <h3>Code-based Cryptography</h3>
             <p>Example: Classic McEliece</p>
-
+            <h3>Code-based Cryptography</h3>
+            <p>This approach uses error-correcting codes to create cryptographic systems. Examples include the McEliece and Niederreiter encryption algorithms. Code-based cryptography has a long history and has proven resilient against classical attacks, making it a strong contender in the PQC landscape.</p>
             <h3>Multivariate Cryptography</h3>
+            <p>This approach involves solving systems of multivariate polynomial equations, which is believed to be hard for both classical and quantum computers. Multivariate cryptography offers potential advantages in terms of key sizes and efficiency, but further research is needed to fully assess its security in the post-quantum era.</p>
             <h3>Hash-based Cryptography</h3>
+            <p>This approach uses hash functions as the foundation for cryptographic schemes. It is known for its strong security properties but can have limitations in terms of efficiency and key sizes. Hash-based cryptography has been well-studied and provides a robust foundation for certain PQC applications.</p>
             <h3>Isogeny-based Cryptography</h3>
-
-            <h2>Standardized PQC Algorithms</h2>
-            <ul>
-                <li>Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM)</li>
-                <li>Module-Lattice-Based Digital Signature Algorithm (ML-DSA)</li>
-                <li>Stateless Hash-Based Signature Algorithm (SLH-DSA)</li>
-            </ul>
-
+            <p>This approach uses the mathematics of elliptic curve isogenies to create cryptographic systems. It is relatively new but has shown promising security and performance characteristics. Isogeny-based cryptography offers potential advantages in terms of key sizes and efficiency, but it requires further research and analysis.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PQC Family</th>
+                        <th>Strengths</th>
+                        <th>Weaknesses</th>
+                        <th>Potential Applications</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lattice-based cryptography</td>
+                        <td>Strong security guarantees, efficiency</td>
+                        <td>Relatively new, ongoing research</td>
+                        <td>Key exchange, encryption, digital signatures</td>
+                    </tr>
+                    <tr>
+                        <td>Code-based cryptography</td>
+                        <td>Long history, proven resilience against classical attacks</td>
+                        <td>Larger key sizes</td>
+                        <td>Encryption, digital signatures</td>
+                    </tr>
+                    <tr>
+                        <td>Multivariate polynomial cryptography</td>
+                        <td>Potential advantages in key sizes and efficiency</td>
+                        <td>Security still under investigation</td>
+                        <td>Encryption, digital signatures</td>
+                    </tr>
+                    <tr>
+                        <td>Hash-based cryptography</td>
+                        <td>Strong security properties</td>
+                        <td>Limitations in efficiency and key sizes</td>
+                        <td>Digital signatures, message authentication</td>
+                    </tr>
+                    <tr>
+                        <td>Isogeny-based cryptography</td>
+                        <td>Promising security and performance</td>
+                        <td>Relatively new, requires further research</td>
+                        <td>Key exchange, encryption</td>
+                    </tr>
+                </tbody>
+            </table>
+            
             <h2>PQC Algorithms in Progress</h2>
             <ul>
                 <li>Fourth Round KEMs</li>
