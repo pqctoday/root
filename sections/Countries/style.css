@@ -141,3 +141,42 @@ h1, h2, h3, p, ul, ol {
   margin-left: 20px; /* Add space to the left */
   margin-right: 20px; /* Add space to the right */
 }
+
+/* Ensure the table is responsive */
+#roadmapTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: calc(10px + 0.5vw); /* Adjust font size dynamically */
+  word-wrap: break-word; /* Ensure text wraps within cells */
+  table-layout: auto; /* Let the browser determine column widths */
+  overflow-x: auto; /* Enable horizontal scrolling on small screens */
+}
+
+/* Styling for table borders and padding */
+#roadmapTable, #roadmapTable th, #roadmapTable td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Header background color */
+#roadmapTable th {
+  background-color: #f4f4f4;
+}
+
+/* Font size adjustment for smaller screens */
+@media screen and (max-width: 768px) {
+  #roadmapTable {
+      font-size: 12px; /* Set a smaller font size for narrow screens */
+  }
+}
+
+/* Horizontal scrolling for small screens */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Responsive adjustments for table cells */
+#roadmapTable td {
+  white-space: normal; /* Allow text wrapping */
+}

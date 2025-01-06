@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
@@ -16,36 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PQC Migration roadmap</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        h2, h3 {
-            color: #333;
-        }
-        .filters {
-            margin-bottom: 20px;
-        }
-        .filters label {
-            margin-right: 10px;
-        }
-    </style>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
@@ -79,22 +51,24 @@
         </select>
     </div>
 
-    <table id="roadmapTable" class="display">
-        <thead>
-            <tr>
-                <th>Country</th>
-                <th>Phase</th>
-                <th>2025</th>
-                <th>2026</th>
-                <th>2027</th>
-                <th>2028</th>
-                <th>2029</th>
-                <th>2030-2035</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table id="roadmapTable" class="display">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Phase</th>
+                    <th>2025</th>
+                    <th>2026</th>
+                    <th>2027</th>
+                    <th>2028</th>
+                    <th>2029</th>
+                    <th>2030-2035</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 
     <script>
         $(document).ready(function () {
@@ -147,12 +121,9 @@ phaseFilter.on('change', function () {
             });
         });
     </script>
-    !-- Quiz Footer Section -->
-
-      
-      <!-- Footer -->
-        <footer>
-            <p><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">Creative Commons Zero (CC0) 1.0 Universal Public Domain Dedication</a></p>
-        </footer>
+     <!-- Footer -->
+     <footer>
+        <p><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">Creative Commons Zero (CC0) 1.0 Universal Public Domain Dedication</a></p>
+    </footer>
 </body>
 </html>
