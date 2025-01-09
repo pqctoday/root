@@ -1,0 +1,16 @@
+question,answer1,answer2,answer3,answer4,correct_answers,dummy
+Which network protocols rely on public-key cryptography and are thus vulnerable to Shor's algorithm?,TLS/SSL,SSH,IPsec,DNSSEC,1;2;3;4,dummy
+"Which of these protocols could be used to securely distribute symmetric keys, even in a post-quantum world?",Diffie-Hellman,RSA,Quantum Key Distribution (QKD),Elliptic Curve Cryptography (ECC),3,dummy
+What is a key challenge in securing routing protocols like BGP against quantum attacks?,The reliance on digital signatures for route authentication,The complexity of the BGP protocol,The lack of quantum-resistant alternatives,The distributed nature of the Internet,1,dummy
+Which of the following are considered post-quantum key exchange algorithms?,CRYSTALS-Kyber,Classic McEliece,Falcon,All of the above,4,dummy
+What is a potential impact of quantum computing on DNS security?,Spoofing DNS records to redirect traffic,Denial of service attacks,Eavesdropping on DNS queries,All of the above,1;2;3,dummy
+Which VPN protocols are likely to be impacted by quantum computers?,OpenVPN,WireGuard,IPsec,All of the above,1;3,dummy
+How can the security of TLS be improved in a post-quantum world?,By using hybrid key exchange mechanisms,By increasing key sizes,By switching to quantum-resistant algorithms,Both a and c,4,dummy
+What is a potential vulnerability in the SSH protocol related to quantum computing?,The use of RSA or ECC for key exchange,The reliance on symmetric encryption,The transmission of passwords in plaintext,None of the above,1,dummy
+Which of these post-quantum digital signature algorithms is being considered for standardization?,Dilithium,Rainbow,SPHINCS+,All of the above,4,dummy
+What is the potential impact of quantum computing on 5G network security?,Compromised device authentication and key agreement,Interception of user data,Disruption of network services,All of the above,4,dummy
+How might quantum computers affect the security of online banking transactions?,By breaking the encryption used to protect sensitive data,By enabling faster brute-force attacks on passwords,By allowing attackers to impersonate legitimate users,All of the above,4,dummy
+Which of these are potential mitigation strategies for the quantum threat to network protocols?,Transitioning to post-quantum cryptography,Implementing quantum-resistant VPNs,Using QKD for key distribution,All of the above,4,dummy
+What is the role of standardization bodies like NIST in addressing the quantum threat to network protocols?,Developing and evaluating post-quantum cryptographic algorithms,Providing guidance on migrating to post-quantum security,Promoting interoperability and security best practices,All of the above,4,dummy
+What is one way to assess the quantum readiness of your network infrastructure?,Analyzing the cryptographic algorithms used in your network protocols,Conducting penetration testing with simulated quantum attacks,Evaluating the performance impact of post-quantum cryptography,All of the above,4,dummy
+Why is it important to consider the quantum threat when designing new network protocols?,To ensure long-term security and prevent future vulnerabilities,To comply with emerging regulatory requirements,To maintain interoperability with existing systems,All of the above,1;3,dummy
