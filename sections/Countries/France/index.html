@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Guidelines for France</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -150,5 +149,13 @@
         <footer>
             <p><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">Creative Commons Zero (CC0) 1.0 Universal Public Domain Dedication</a></p>
         </footer>
+<script src="/common/csv-table.js"></script>
+<script>
+loadAndRenderTable({
+    csvPath: '../../../references.csv',
+    category: 'Discovery',
+    tableSelector: '#outputTable'
+});
+</script>
 </body>
 </html>
