@@ -91,6 +91,7 @@ Before committing:
 2. Verify all topic cards display correctly
 3. Test navigation between pages
 4. Check browser console for errors
+5. Run automated tests: `npm test` (see [TESTING.md](docs/TESTING.md))
 
 ## 📝 Contributing
 

@@ -1,0 +1,17 @@
+{
+  "name": "pqctoday-tests",
+  "version": "1.0.0",
+  "description": "Automated tests for PQCToday website",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report"
+  },
+  "keywords": ["playwright", "testing", "pqc"],
+  "author": "",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
