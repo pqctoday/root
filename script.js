@@ -1,4 +1,8 @@
 // Logo sizing
+/**
+ * Adjusts logo image height based on logo text height
+ * Ensures logo image is 1.5x the height of the text
+ */
 window.addEventListener('load', function () {
   const logoText = document.getElementById('logo-text');
   const logoImg = document.getElementById('logo-img');
@@ -17,7 +21,12 @@ const subtopicTitle = document.getElementById('subtopic-title');
 // Subtopics dictionary
 // Subtopics are now loaded from data.js
 
-// Populate main topics
+/**
+ * Populates the main topics grid with topic cards
+ * Creates clickable cards for each topic with icon and label
+ * @function populateMainTopics
+ * @returns {void}
+ */
 function populateMainTopics() {
   mainTopicGrid.innerHTML = '';
   Object.keys(subtopics).forEach(topic => {
@@ -59,6 +68,12 @@ function populateMainTopics() {
   });
 }
 
+/**
+ * Navigates to the subtopics page for a given topic
+ * @function populateSubtopics
+ * @param {string} topic - The topic name to display subtopics for
+ * @returns {void}
+ */
 function populateSubtopics(topic) {
   window.location.href = `/root/subtopics.html?topic=${encodeURIComponent(topic)}`;
 }

@@ -1,3 +1,8 @@
+/**
+ * Subtopics Page Logic
+ * Dynamically loads and displays subtopics based on URL parameter
+ */
+
 // Retrieve the topic from the URL
 const urlParams = new URLSearchParams(window.location.search);
 const topic = urlParams.get('topic');
