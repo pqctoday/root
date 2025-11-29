@@ -33,32 +33,42 @@ subtopicGrid.innerHTML = ''; // Clear existing grid items to prevent duplication
 // Populate subtopics grid
 filteredSubtopics.forEach((subtopic) => {
 
-  // Create subtopic card
-  const subtopicItem = document.createElement('div');
+  // Create subtopic card as button for accessibility
+  const subtopicItem = document.createElement('button');
   subtopicItem.className = 'subtopic-card';
+  subtopicItem.setAttribute('type', 'button');
+  subtopicItem.setAttribute('aria-label', `Learn about ${subtopic} in ${topic}`);
 
   // Create logo image
   const logo = document.createElement('img');
   const logoPath = `/root/assets/${subtopic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`;
   logo.src = logoPath;
-  logo.alt = `${subtopic} logo`;
+  logo.alt = `${subtopic} - Learn about ${subtopic} in ${topic}`;
 
   // Handle missing images
   logo.onerror = () => {
     logo.src = '/root/assets/default-dalle.webp';
   };
 
-  // Create subtopic text
+  // Create text label
   const text = document.createElement('span');
   text.textContent = subtopic;
 
-  // Append elements to subtopic card
+  // Append elements
   subtopicItem.appendChild(logo);
   subtopicItem.appendChild(text);
 
-  // Add click event to navigate to subtopic page
+  // Add click event listener
   subtopicItem.addEventListener('click', () => {
     window.location.href = `/root/sections/${topic}/${subtopic}/index.html`;
+  });
+
+  // Add keyboard event listener
+  subtopicItem.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      window.location.href = `/root/sections/${topic}/${subtopic}/index.html`;
+    }
   });
 
   // Append subtopic card to grid

@@ -11,7 +11,9 @@ body {
   color: #202020;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 0;
   padding: 0;
 }
@@ -19,6 +21,38 @@ h1, h2, p {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Keyboard Focus Indicators */
+*:focus {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.grid-item:focus,
+.subtopic-card:focus,
+button:focus,
+a:focus {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.2);
 }
 
 /* Logo Styles */
@@ -85,7 +119,8 @@ a {
 }
 
 /* Card Styles - Common */
-.topic-card, .subtopic-card {
+.topic-card,
+.subtopic-card {
   background: #FFFFFF;
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -98,7 +133,8 @@ a {
   align-items: center;
 }
 
-.topic-card:hover, .subtopic-card:hover {
+.topic-card:hover,
+.subtopic-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
@@ -119,7 +155,8 @@ a {
 }
 
 /* Grid Layout - Common */
-.topics-grid, .subtopics-grid {
+.topics-grid,
+.subtopics-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
@@ -131,37 +168,45 @@ a {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .topics-grid, .subtopics-grid {
+
+  .topics-grid,
+  .subtopics-grid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
-  .topics-grid, .subtopics-grid {
+
+  .topics-grid,
+  .subtopics-grid {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
-  
-  .topic-card, .subtopic-card {
+
+  .topic-card,
+  .subtopic-card {
     padding: 10px;
   }
-  
+
   .card-icon {
     width: 60px;
     height: 60px;
   }
-  
+
   .card-title {
     font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .topics-grid, .subtopics-grid {
+
+  .topics-grid,
+  .subtopics-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
-  .topic-card, .subtopic-card {
+  .topic-card,
+  .subtopic-card {
     padding: 10px;
   }
 

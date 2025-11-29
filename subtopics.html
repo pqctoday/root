@@ -14,22 +14,24 @@
 </head>
 
 <body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Header -->
   <header class="header" style="display: flex; align-items: center;">
-    <a style="margin-right: 10px;">
+    <a href="/root/index.html" aria-label="PQCToday home page" style="margin-right: 10px;">
       <img src="/root/assets/PQCT_Logo_V01.png" alt="PQCToday Logo" id="logo-img" style="height: calc(2 * 2rem);">
     </a>
     <div class="logo" id="logo-text" style="font-size: 2rem;">PQCToday</div>
   </header>
 
   <!-- Subheader -->
-  <div class="subheader">
+  <nav class="subheader" aria-label="Breadcrumb navigation">
     <a href="/root/index.html" class="subheader-link">Home</a>
-
-  </div>
+  </nav>
 
   <!-- Subtopics Title -->
-  <main class="content">
+  <main class="content" id="main-content">
     <h1 id="subtopic-title" class="subtopics-title">SUB TOPICS</h1>
     <p class="subtopics-subtitle">Select The Sub Topic You Wish To Learn About</p>
 
@@ -50,11 +52,10 @@
       </div>
     </section>
 
-    <!-- Quizz Section -->
     <section id="quizz-container" class="quizz-section">
       <h2 class="quizz-title">QUIZZ</h2>
       <p class="quizz-subtitle">Take the Quizz for this topic!</p>
-      <button class="quizz-button" id="start-quiz">START</button>
+      <button class="quizz-button" id="start-quiz" aria-label="Start quiz about this topic">START</button>
     </section>
   </main>
 

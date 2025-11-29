@@ -30,20 +30,28 @@ const subtopicTitle = document.getElementById('subtopic-title');
 function populateMainTopics() {
   mainTopicGrid.innerHTML = '';
   Object.keys(subtopics).forEach(topic => {
-    const topicItem = document.createElement('div');
+    // Create button element for accessibility
+    const topicItem = document.createElement('button');
     topicItem.className = 'grid-item';
+    topicItem.setAttribute('type', 'button');
+    topicItem.setAttribute('aria-label', `Learn about ${topic} in post-quantum cryptography`);
 
     const logo = document.createElement('img');
-    logo.src = `/root/assets/${topic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`;
-    logo.alt = `${topic} logo`;
+    logo.className = 'card-icon';
+    logo.src = `/root/assets/${topic.toLowerCase()}-dalle.webp`;
+    logo.alt = `${topic} - Learn about ${topic} in post-quantum cryptography`;
+    logo.onerror = () => {
+      logo.src = `/root/assets/default-icon.webp`;
+    };
 
-    const text = document.createElement('span');
-    text.textContent = topic;
+    const label = document.createElement('span');
+    label.className = 'card-title';
+    label.textContent = topic;
 
     topicItem.appendChild(logo);
-    topicItem.appendChild(text);
+    topicItem.appendChild(label);
 
-    // Event listener for topic click
+    // Add click and keyboard event listeners
     topicItem.addEventListener('click', () => {
       if (topic === 'Quizz') {
         window.location.href = '/root/sections/Quizz/index.html';
@@ -62,6 +70,29 @@ function populateMainTopics() {
         return;
       }
       populateSubtopics(topic);
+    });
+
+    topicItem.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        if (topic === 'Quizz') {
+          window.location.href = '/root/sections/Quizz/index.html';
+          return;
+        }
+        if (topic === 'References') {
+          window.location.href = '/root/sections/References/index.html';
+          return;
+        }
+        if (topic === 'Experts') {
+          window.location.href = '/root/sections/Experts/index.html';
+          return;
+        }
+        if (topic === 'Standardization') {
+          window.location.href = '/root/sections/Standardization/index.html';
+          return;
+        }
+        populateSubtopics(topic);
+      }
     });
 
     mainTopicGrid.appendChild(topicItem);
