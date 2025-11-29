@@ -1,50 +1,8 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F1F1F1;
-    color: #202020;
-}
+/* Subtopics Page Specific Styles */
 
-.logo {
-    font-family: "Bruno Ace", serif;
-    font-style: normal;
-  }
-  
-  /* Titlepage styles */
-  .titlepage {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Link wrapping the logo */
-  .logo-link {
-    margin-right: 10px;
-  }
-  
-  /* Logo image styles */
-  .logo-image {
-    height: 1.5em;
-    width: auto; /* Maintain aspect ratio */
-  }
-  
-  /* Text next to the logo */
-  .logo-text {
-    font-size: 1em;
-  }
-  
-/* Header */
-.header {
-    width: 100%;
-    height: 81px;
-    background-color: #5893CD;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+/* Override body background for subtopics page */
+body {
+    background-color: #F1F1F1;
 }
 
 /* Subheader */
@@ -86,39 +44,17 @@ body {
     margin-bottom: 20px;
 }
 
-/* Subtopic Grid */
+/* Subtopic Grid Container */
 #subtopic-grid-container {
     margin: 20px;
     text-align: center;
 }
 
 .subtopics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-items: center;
     margin: 0 auto 40px;
-    max-width: 1200px;
 }
 
-.subtopic-card {
-    background: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.subtopic-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-}
-
+/* Subtopic Card Specific Styles */
 .subtopic-card img {
     width: 80px;
     height: 80px;
@@ -133,13 +69,12 @@ body {
     text-align: center;
 }
 
-/* Adjust the quiz section to add more separation */
+/* Quiz Section */
 .quizz-section {
     background-color: #5893CD;
     padding: 20px;
     border-radius: 8px;
     margin: 20px auto;
-    /* Added top margin for spacing */
     max-width: 600px;
     text-align: center;
 }
@@ -173,35 +108,8 @@ body {
     transform: scale(1.1);
 }
 
-/* Footer */
-.footer {
-    width: 100%;
-    background-color: #363636;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-}
-
-.footer-text {
-    font-size: 14px;
-}
-
-.footer-link {
-    font-size: 14px;
-    color: #5893CD;
-    text-decoration: none;
-}
-
-.footer-link:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design */
+/* Responsive Design - Subtopics Specific */
 @media (max-width: 768px) {
-    .subtopics-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
     .subtopic-card {
         padding: 10px;
     }
@@ -227,11 +135,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .subtopics-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
     .subtopic-card {
         width: 120px;
     }
