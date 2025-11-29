@@ -9,7 +9,7 @@ const topic = urlParams.get('topic');
 if (!topic || !subtopics[topic]) {
   console.error('Invalid or missing topic parameter.');
   alert('The selected topic is not valid. Redirecting to the main page.');
-  window.location.href = '/index.html';
+  window.location.href = '/root/index.html';
 }
 
 
@@ -34,13 +34,13 @@ filteredSubtopics.forEach((subtopic) => {
 
   // Create logo image
   const logo = document.createElement('img');
-  const logoPath = `/assets/${subtopic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`;
+  const logoPath = `/root/assets/${subtopic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`;
   logo.src = logoPath;
   logo.alt = `${subtopic} logo`;
 
   // Handle missing images
   logo.onerror = () => {
-    logo.src = '/assets/default-dalle.webp';
+    logo.src = '/root/assets/default-dalle.webp';
   };
 
   // Create subtopic text
@@ -53,7 +53,7 @@ filteredSubtopics.forEach((subtopic) => {
 
   // Add click event to navigate to subtopic page
   subtopicItem.addEventListener('click', () => {
-    window.location.href = `/sections/${topic}/${subtopic}/index.html`;
+    window.location.href = `/root/sections/${topic}/${subtopic}/index.html`;
   });
 
   // Append subtopic card to grid
@@ -67,7 +67,7 @@ const quizzButton = document.getElementById('start-quiz');
 if (quizzButton) {
   quizzButton.addEventListener('click', () => {
     // Construct the URL to the quiz page, passing topic and subtopic parameters
-    const quizUrl = `./sections/Quizz/quiz.html?topic=${encodeURIComponent(topic)}&subtopic=all`;
+    const quizUrl = `/root/sections/Quizz/quiz.html?topic=${encodeURIComponent(topic)}&subtopic=all`;
     window.location.href = quizUrl;
   });
 }
@@ -77,6 +77,6 @@ if (quizzButton) {
 const backButton = document.getElementById('back-to-main');
 if (backButton) {
   backButton.addEventListener('click', () => {
-    window.location.href = '/index.html';
+    window.location.href = '/root/index.html';
   });
 }

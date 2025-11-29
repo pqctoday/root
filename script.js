@@ -25,7 +25,7 @@ function populateMainTopics() {
     topicItem.className = 'grid-item';
 
     const logo = document.createElement('img');
-    logo.src = `/assets/${topic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`;
+    logo.src = `/root/assets/${topic.toLowerCase().replace(/\s+/g, '-')}-dalle.webp`;
     logo.alt = `${topic} logo`;
 
     const text = document.createElement('span');
@@ -37,19 +37,19 @@ function populateMainTopics() {
     // Event listener for topic click
     topicItem.addEventListener('click', () => {
       if (topic === 'Quizz') {
-        window.location.href = '/sections/Quizz/index.html';
+        window.location.href = '/root/sections/Quizz/index.html';
         return;
       }
       if (topic === 'References') {
-        window.location.href = '/sections/References/index.html';
+        window.location.href = '/root/sections/References/index.html';
         return;
       }
       if (topic === 'Experts') {
-        window.location.href = '/sections/Experts/index.html';
+        window.location.href = '/root/sections/Experts/index.html';
         return;
       }
       if (topic === 'Standardization') {
-        window.location.href = '/sections/Standardization/index.html';
+        window.location.href = '/root/sections/Standardization/index.html';
         return;
       }
       populateSubtopics(topic);
@@ -60,7 +60,7 @@ function populateMainTopics() {
 }
 
 function populateSubtopics(topic) {
-  window.location.href = `/subtopics.html?topic=${encodeURIComponent(topic)}`;
+  window.location.href = `/root/subtopics.html?topic=${encodeURIComponent(topic)}`;
 }
 
 
